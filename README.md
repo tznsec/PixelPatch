@@ -2,9 +2,9 @@
 
 Strona projektu i buildy testowe pierwszej wersji gry.
 
-- **Strona (GitHub Pages):** https://tznsec.github.io/pixelpatch/
-- **Build PC:** https://github.com/tznsec/pixelpatch/releases/latest/download/PixelPatch.exe
-- **Android (APK):** https://github.com/tznsec/pixelpatch/releases/latest/download/PixelPatch.apk
+- **Strona (GitHub Pages):** https://tznsec.github.io/PixelPatch/
+- **Build PC:** https://github.com/tznsec/PixelPatch/releases/latest/download/PixelPatch.exe
+- **Android (APK):** https://github.com/tznsec/PixelPatch/releases/latest/download/PixelPatch.apk
 
 ## O projekcie
 
