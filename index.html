@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixel Patch: Garage Days — dzień 1 z 365. Rok do premiery na Steam</title>
+  <meta name="description" content="Pixel Patch: Garage Days — pierwsza wersja naszej gry. Zaczynamy dziś i mamy dokładnie 365 dni, żeby doprowadzić ją do premiery na Steam. Odliczanie, plan roku i zrzuty z builda.">
+  <meta name="theme-color" content="#050a08">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Przejdź do treści</a>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- intro / splash: V0idVex × kormeliuszk -->
+  <div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Intro Pixel Patch: Garage Days" hidden>
+    <div class="splash-inner">
+      <div class="splash-brand">
+        <img src="assets/logo.png" alt="" width="56" height="56">
+        <span class="splash-logo"><b>PIXEL PATCH</b><small>Garage Days</small></span>
+      </div>
+
+      <div class="duo">
+        <div class="guy-col left">
+          <svg class="guy guy-a" viewBox="0 0 20 24" aria-hidden="true">
+            <rect class="p-cap" x="5" y="0" width="8" height="3"/>
+            <rect class="p-capdark" x="12" y="2" width="5" height="1"/>
+            <rect class="p-skin" x="5" y="3" width="8" height="6"/>
+            <rect class="p-hair" x="5" y="3" width="1" height="2"/>
+            <rect class="p-eye" x="6" y="5" width="1" height="1"/>
+            <rect class="p-eye" x="9" y="5" width="1" height="1"/>
+            <rect class="p-mouth" x="7" y="7" width="2" height="1"/>
+            <rect class="p-skin" x="8" y="8" width="2" height="1"/>
+            <rect class="p-shirt" x="4" y="9" width="9" height="7"/>
+            <rect class="p-apron" x="6" y="12" width="6" height="4"/>
+            <rect class="p-shirt" x="13" y="10" width="6" height="2"/>
+            <rect class="p-skin" x="19" y="10" width="1" height="2"/>
+            <rect class="p-shirt" x="3" y="10" width="2" height="5"/>
+            <rect class="p-skin" x="3" y="15" width="1" height="1"/>
+            <rect class="p-pants" x="6" y="16" width="2" height="6"/>
+            <rect class="p-pants" x="10" y="16" width="2" height="6"/>
+            <rect class="p-shoe" x="5" y="22" width="3" height="2"/>
+            <rect class="p-shoe" x="9" y="22" width="4" height="2"/>
+          </svg>
+          <div class="guy-tag"><b>V0idVex</b><span class="tzn">TZNsec</span></div>
+        </div>
+
+        <div class="impact" aria-hidden="true">
+          <span class="impact-text">PIĄTKA!</span>
+          <svg class="spark" viewBox="0 0 16 16" width="64" height="64" shape-rendering="crispEdges">
+            <g fill="#ffb332">
+              <rect x="7" y="0" width="2" height="4"/><rect x="7" y="12" width="2" height="4"/>
+              <rect x="0" y="7" width="4" height="2"/><rect x="12" y="7" width="4" height="2"/>
+              <rect x="2" y="2" width="2" height="2"/><rect x="12" y="2" width="2" height="2"/>
+              <rect x="2" y="12" width="2" height="2"/><rect x="12" y="12" width="2" height="2"/>
+            </g>
+            <rect x="5" y="5" width="6" height="6" fill="#ffffff"/>
+            <rect x="6" y="6" width="4" height="4" fill="#55ffa0"/>
+          </svg>
+        </div>
+
+        <div class="guy-col right">
+          <svg class="guy guy-b" viewBox="0 0 20 24" aria-hidden="true">
+            <rect class="p-cap" x="5" y="0" width="8" height="3"/>
+            <rect class="p-capdark" x="12" y="2" width="5" height="1"/>
+            <rect class="p-skin" x="5" y="3" width="8" height="6"/>
+            <rect class="p-hair" x="5" y="3" width="1" height="2"/>
+            <rect class="p-eye" x="6" y="5" width="1" height="1"/>
+            <rect class="p-eye" x="9" y="5" width="1" height="1"/>
+            <rect class="p-mouth" x="7" y="7" width="2" height="1"/>
+            <rect class="p-skin" x="8" y="8" width="2" height="1"/>
+            <rect class="p-shirt" x="4" y="9" width="9" height="7"/>
+            <rect class="p-apron" x="6" y="12" width="6" height="4"/>
+            <rect class="p-shirt" x="13" y="10" width="6" height="2"/>
+            <rect class="p-skin" x="19" y="10" width="1" height="2"/>
+            <rect class="p-shirt" x="3" y="10" width="2" height="5"/>
+            <rect class="p-skin" x="3" y="15" width="1" height="1"/>
+            <rect class="p-pants" x="6" y="16" width="2" height="6"/>
+            <rect class="p-pants" x="10" y="16" width="2" height="6"/>
+            <rect class="p-shoe" x="5" y="22" width="3" height="2"/>
+            <rect class="p-shoe" x="9" y="22" width="4" height="2"/>
+          </svg>
+          <div class="guy-tag"><b>kormeliuszk</b><span class="k2">K2STUDIO</span></div>
+        </div>
+      </div>
+
+      <p class="splash-foot">TZNsec × K2STUDIO · 2026</p>
+    </div>
+
+    <button class="splash-skip" id="splash-skip" type="button">Pomiń intro</button>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Pixel Patch — początek strony">
+      <img src="assets/logo.png" alt="" width="44" height="44">
+      <span class="brand-text">PIXEL PATCH<small>Garage Days · dzień 1</small></span>
+    </a>
+    <nav class="nav" aria-label="Nawigacja">
+      <a href="#start">Start</a>
+      <a href="#plan">Plan</a>
+      <a href="#funkcje">Funkcje</a>
+      <a href="#galeria">Galeria</a>
+      <a class="nav-cta" href="#steam">Steam</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============================ HERO ============================ -->
+    <section class="hero wrap">
+      <div class="hero-copy reveal">
+        <p class="status"><span class="dot"></span> Dzień 1 z 365 — zaczynamy dziś</p>
+        <h1 class="pixel-title">
+          <span class="sr-only">Pixel Patch</span>
+          <svg class="title-svg" viewBox="0 0 29 15" role="img" aria-label="Pixel Patch">
+            <g class="title-line line-a" transform="translate(0 0)">
+              <g transform="translate(0 0)">
+                <g class="glyph" style="--i:0">
+                  <rect x="0" y="0" width="4" height="1"/>
+                  <rect x="0" y="1" width="1" height="1"/>
+                  <rect x="4" y="1" width="1" height="1"/>
+                  <rect x="0" y="2" width="1" height="1"/>
+                  <rect x="4" y="2" width="1" height="1"/>
+                  <rect x="0" y="3" width="4" height="1"/>
+                  <rect x="0" y="4" width="1" height="1"/>
+                  <rect x="0" y="5" width="1" height="1"/>
+                  <rect x="0" y="6" width="1" height="1"/>
+                </g>
+              </g>
+              <g transform="translate(6 0)">
+                <g class="glyph" style="--i:1">
+                  <rect x="0" y="0" width="5" height="1"/>
+                  <rect x="2" y="1" width="1" height="1"/>
+                  <rect x="2" y="2" width="1" height="1"/>
+                  <rect x="2" y="3" width="1" height="1"/>
+                  <rect x="2" y="4" width="1" height="1"/>
+                  <rect x="2" y="5" width="1" height="1"/>
+                  <rect x="0" y="6" width="5" height="1"/>
+                </g>
+              </g>
+              <g transform="translate(12 0)">
+                <g class="glyph" style="--i:2">
+                  <rect x="0" y="0" width="1" height="1"/>
+                  <rect x="4" y="0" width="1" height="1"/>
+                  <rect x="0" y="1" width="1" height="1"/>
+                  <rect x="4" y="1" width="1" height="1"/>
+                  <rect x="1" y="2" width="1" height="1"/>
+                  <rect x="3" y="2" width="1" height="1"/>
+                  <rect x="2" y="3" width="1" height="1"/>
+                  <rect x="1" y="4" width="1" height="1"/>
+                  <rect x="3" y="4" width="1" height="1"/>
+                  <rect x="0" y="5" width="1" height="1"/>
+                  <rect x="4" y="5" width="1" height="1"/>
+                  <rect x="0" y="6" width="1" height="1"/>
+                  <rect x="4" y="6" width="1" height="1"/>
+                </g>
+              </g>
+              <g transform="translate(18 0)">
+                <g class="glyph" style="--i:3">
+                  <rect x="0" y="0" width="5" height="1"/>
+                  <rect x="0" y="1" width="1" height="1"/>
+                  <rect x="0" y="2" width="1" height="1"/>
+                  <rect x="0" y="3" width="4" height="1"/>
+                  <rect x="0" y="4" width="1" height="1"/>
+                  <rect x="0" y="5" width="1" height="1"/>
+                  <rect x="0" y="6" width="5" height="1"/>
+                </g>
+              </g>
+              <g transform="translate(24 0)">
+                <g class="glyph" style="--i:4">
+                  <rect x="0" y="0" width="1" height="1"/>
+                  <rect x="0" y="1" width="1" height="1"/>
+                  <rect x="0" y="2" width="1" height="1"/>
+                  <rect x="0" y="3" width="1" height="1"/>
+                  <rect x="0" y="4" width="1" height="1"/>
+                  <rect x="0" y="5" width="1" height="1"/>
+                  <rect x="0" y="6" width="5" height="1"/>
+                </g>
+              </g>
+            </g>
+            <g class="title-line line-b" transform="translate(0 8)">
+              <g transform="translate(0 0)">
+                <g class="glyph" style="--i:5">
+                  <rect x="0" y="0" width="4" height="1"/>
+                  <rect x="0" y="1" width="1" height="1"/>
+                  <rect x="4" y="1" width="1" height="1"/>
+                  <rect x="0" y="2" width="1" height="1"/>
+                  <rect x="4" y="2" width="1" height="1"/>
+                  <rect x="0" y="3" width="4" height="1"/>
+                  <rect x="0" y="4" width="1" height="1"/>
+                  <rect x="0" y="5" width="1" height="1"/>
+                  <rect x="0" y="6" width="1" height="1"/>
+                </g>
+              </g>
+              <g transform="translate(6 0)">
+                <g class="glyph" style="--i:6">
+                  <rect x="1" y="0" width="3" height="1"/>
+                  <rect x="0" y="1" width="1" height="1"/>
+                  <rect x="4" y="1" width="1" height="1"/>
+                  <rect x="0" y="2" width="1" height="1"/>
+                  <rect x="4" y="2" width="1" height="1"/>
+                  <rect x="0" y="3" width="5" height="1"/>
+                  <rect x="0" y="4" width="1" height="1"/>
+                  <rect x="4" y="4" width="1" height="1"/>
+                  <rect x="0" y="5" width="1" height="1"/>
+                  <rect x="4" y="5" width="1" height="1"/>
+                  <rect x="0" y="6" width="1" height="1"/>
+                  <rect x="4" y="6" width="1" height="1"/>
+                </g>
+              </g>
+              <g transform="translate(12 0)">
+                <g class="glyph" style="--i:7">
+                  <rect x="0" y="0" width="5" height="1"/>
+                  <rect x="2" y="1" width="1" height="1"/>
+                  <rect x="2" y="2" width="1" height="1"/>
+                  <rect x="2" y="3" width="1" height="1"/>
+                  <rect x="2" y="4" width="1" height="1"/>
+                  <rect x="2" y="5" width="1" height="1"/>
+                  <rect x="2" y="6" width="1" height="1"/>
+                </g>
+              </g>
+              <g transform="translate(18 0)">
+                <g class="glyph" style="--i:8">
+                  <rect x="1" y="0" width="3" height="1"/>
+                  <rect x="0" y="1" width="1" height="1"/>
+                  <rect x="4" y="1" width="1" height="1"/>
+                  <rect x="0" y="2" width="1" height="1"/>
+                  <rect x="0" y="3" width="1" height="1"/>
+                  <rect x="0" y="4" width="1" height="1"/>
+                  <rect x="0" y="5" width="1" height="1"/>
+                  <rect x="4" y="5" width="1" height="1"/>
+                  <rect x="1" y="6" width="3" height="1"/>
+                </g>
+              </g>
+              <g transform="translate(24 0)">
+                <g class="glyph" style="--i:9">
+                  <rect x="0" y="0" width="1" height="1"/>
+                  <rect x="4" y="0" width="1" height="1"/>
+                  <rect x="0" y="1" width="1" height="1"/>
+                  <rect x="4" y="1" width="1" height="1"/>
+                  <rect x="0" y="2" width="1" height="1"/>
+                  <rect x="4" y="2" width="1" height="1"/>
+                  <rect x="0" y="3" width="5" height="1"/>
+                  <rect x="0" y="4" width="1" height="1"/>
+                  <rect x="4" y="4" width="1" height="1"/>
+                  <rect x="0" y="5" width="1" height="1"/>
+                  <rect x="4" y="5" width="1" height="1"/>
+                  <rect x="0" y="6" width="1" height="1"/>
+                  <rect x="4" y="6" width="1" height="1"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </h1>
+        <p class="version">wersja 1.0 · <b>Garage Days</b></p>
+        <p class="lead">
+          Pierwsza wersja Pixel Patch. Mamy dokładnie <em>jeden rok</em>, żeby doprowadzić ją
+          do premiery na Steam. Bez skrótów: od pierwszego prostokąta do wersji 1.0.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#plan">Plan roku</a>
+          <a class="btn ghost" href="#galeria">Zobacz grę</a>
+        </div>
+        <p class="hero-meta">Start <b>25.10.2026</b> · premiera <b>25.10.2027</b> na PC i Androidzie</p>
+      </div>
+
+      <div class="hero-art reveal" aria-hidden="true">
+        <div class="monitor">
+          <div class="monitor-screen">
+            <img src="assets/screen-menu.png" alt="" width="1280" height="960">
+          </div>
+          <div class="monitor-led"></div>
+          <div class="monitor-neck"></div>
+          <div class="monitor-base"></div>
+        </div>
+        <div class="float-tag tag-build">START 25.10.2026</div>
+        <div class="float-tag tag-plat">META 25.10.2027</div>
+        <div class="float-heart" aria-hidden="true">
+          <svg viewBox="0 0 9 8" width="54" height="48" shape-rendering="crispEdges">
+            <g fill="#6bffb8">
+              <rect x="1" y="0" width="2" height="1"/><rect x="6" y="0" width="2" height="1"/>
+              <rect x="0" y="1" width="9" height="1"/><rect x="0" y="2" width="9" height="1"/>
+            </g>
+            <g fill="#2fd98a">
+              <rect x="1" y="3" width="7" height="1"/><rect x="2" y="4" width="5" height="1"/>
+              <rect x="3" y="5" width="3" height="1"/><rect x="4" y="6" width="1" height="1"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ ODLICZANIE ============================ -->
+    <section class="countdown wrap reveal" id="countdown" aria-label="Odliczanie do premiery">
+      <div class="cd-head">
+        <p class="cd-label">Do premiery <b>Pixel Patch</b> zostało</p>
+        <p class="cd-day">wersja <b>Garage Days</b> · dzień <b id="cd-day">1</b> z 365</p>
+      </div>
+      <div class="cd-grid" role="timer" aria-live="off">
+        <div><span id="cd-d">364</span><small>dni</small></div>
+        <div><span id="cd-h">23</span><small>godz.</small></div>
+        <div><span id="cd-m">59</span><small>min</small></div>
+        <div><span id="cd-s">59</span><small>sek.</small></div>
+      </div>
+      <div class="cd-bar"><span id="cd-fill"></span></div>
+    </section>
+
+    <!-- ============================ START ============================ -->
+    <section class="section wrap" id="start">
+      <div class="section-head reveal">
+        <p class="kicker">Dzień pierwszy</p>
+        <h2>Zaczynamy z jednym buildem i całym rokiem</h2>
+        <p class="lede">
+          Nie ma jeszcze wishlisty ani trailera. Jest projekt, działający build i data.
+          Garage Days to pierwsza wersja Pixel Patch — symulator serwisu komputerowego,
+          w którym liczy się każda naprawa i każdy dzień w studiu.
+        </p>
+      </div>
+      <div class="start-grid">
+        <article class="panel reveal">
+          <h3>Co mamy</h3>
+          <p>Działającą grę na PC i Androida: dom, studio, miasto, zlecenia, naprawy, zapisy i multiplayer.</p>
+        </article>
+        <article class="panel reveal">
+          <h3>Co robimy</h3>
+          <p>Domknąć pętlę dnia, dodać zawartość, dopracować UI i przygotować kartę Steam oraz demo.</p>
+        </article>
+        <article class="panel reveal">
+          <h3>Czego nie robimy</h3>
+          <p>Early Access, mikrotransakcji i obietnic bez pokrycia. Premiera wtedy, kiedy gra będzie gotowa.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================ PLAN ============================ -->
+    <section class="section wrap" id="plan">
+      <div class="section-head reveal">
+        <p class="kicker">Plan</p>
+        <h2>Plan do premiery</h2>
+        <p class="lede">Dzień 1. Jesteśmy w pierwszym kwartale — Q2, Q3 i Q4 są jeszcze przed nami.</p>
+      </div>
+      <ol class="roadmap">
+        <li class="road-card reveal">
+          <div class="road-top"><span class="road-q">Q1</span><span class="road-time">miesiące 1–3</span><span class="tag wip">w toku</span></div>
+          <h3>Fundamenty</h3>
+          <p>Silnik, poruszanie, pokoje, HUD i zapisy. Pierwszy build, który da się uruchomić.</p>
+          <div class="bar" data-progress="4"><span></span></div>
+        </li>
+        <li class="road-card reveal">
+          <div class="road-top"><span class="road-q">Q2</span><span class="road-time">miesiące 4–6</span><span class="tag plan">przed nami</span></div>
+          <h3>Świat</h3>
+          <p>Miasto, NPC, sklep, bank, paczkomat, auto i ekonomia. Świat przestaje być tłem.</p>
+          <div class="bar" data-progress="0"><span></span></div>
+        </li>
+        <li class="road-card reveal">
+          <div class="road-top"><span class="road-q">Q3</span><span class="road-time">miesiące 7–9</span><span class="tag plan">przed nami</span></div>
+          <h3>Zawartość</h3>
+          <p>Zlecenia, minigry napraw, pracownicy, multiplayer i pełna wersja na telefon.</p>
+          <div class="bar" data-progress="0"><span></span></div>
+        </li>
+        <li class="road-card reveal">
+          <div class="road-top"><span class="road-q">Q4</span><span class="road-time">miesiące 10–12</span><span class="tag plan">przed nami</span></div>
+          <h3>Premiera</h3>
+          <p>Polish, optymalizacja, karta Steam, demo i wersja 1.0.</p>
+          <div class="bar" data-progress="0"><span></span></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================ FUNKCJE ============================ -->
+    <section class="section wrap" id="funkcje">
+      <div class="section-head reveal">
+        <p class="kicker">Zawartość</p>
+        <h2>Sześć rzeczy, które robią Pixel Patch</h2>
+      </div>
+      <div class="features">
+        <article class="feature reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="1"/><path d="M9 21h6M12 17v4"/></svg>
+          </span>
+          <h3>Pixel art 640×480</h3>
+          <p>Wszystko rysowane kodem: font, ludzie, meble i efekty. Bez importowanych grafik.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M14 7a4 4 0 0 0-5 5l-6 6 3 3 6-6a4 4 0 0 0 5-5l-2 2-2-2 2-2z"/></svg>
+          </span>
+          <h3>Naprawy i negocjacje</h3>
+          <p>Diagnoza, części, minigra naprawy i targowanie się o cenę z klientem.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 21V9h5v12M10 21V3h5v18M17 21v-8h4v8"/></svg>
+          </span>
+          <h3>Miasto i auto</h3>
+          <p>Dom, studio, sklep, bank, paczkomat i warsztat tuningowy. Pieszo albo autem.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-3.5 4-3.5S22 18 22 20"/></svg>
+          </span>
+          <h3>NPC i pracownicy</h3>
+          <p>Mieszkańcy z nickami, kasjer, klienci w kolejce i ekipa do zatrudnienia.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7 11l10-4M7 13l10 4"/></svg>
+          </span>
+          <h3>Multiplayer LAN</h3>
+          <p>Hostujesz świat na porcie 7777, druga osoba wpada przez IP albo Tailscale.</p>
+        </article>
+        <article class="feature reveal">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          </span>
+          <h3>PC + Android</h3>
+          <p>Jeden projekt, dwa buildy. Na telefonie pełny ekran, joystick i przyciski dotykowe.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================ GALERIA ============================ -->
+    <section class="section wrap" id="galeria">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 — z builda</p>
+        <h2>Tak to dziś wygląda</h2>
+      </div>
+      <div class="gallery">
+        <button class="shot span-7 reveal" data-full="assets/screen-menu.png" aria-label="Powiększ: menu główne">
+          <img src="assets/screen-menu.png" alt="Menu główne gry z logo i wyborem trybu" loading="lazy" width="1280" height="960">
+          <span class="shot-cap"><b>Menu</b><span>start i zapisy</span></span>
+        </button>
+        <button class="shot span-5 reveal" data-full="assets/screen-studio.png" aria-label="Powiększ: wybór studia">
+          <img src="assets/screen-studio.png" alt="Ekran wyboru studia" loading="lazy" width="1280" height="960">
+          <span class="shot-cap"><b>Studio</b><span>cztery starty</span></span>
+        </button>
+        <button class="shot span-12 reveal" data-full="assets/screen-game.png" aria-label="Powiększ: warsztat">
+          <img src="assets/screen-game.png" alt="Warsztat w grze z otwartym menu pauzy" loading="lazy" width="1280" height="960">
+          <span class="shot-cap"><b>Warsztat</b><span>pauza, HUD, klienci</span></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================ STEAM ============================ -->
+    <section class="section wrap" id="steam">
+      <div class="steam-panel reveal">
+        <div class="steam-copy">
+          <p class="eyebrow">05 — meta</p>
+          <h2>Pixel Patch na Steam</h2>
+          <p class="lede">
+            Pierwsza wersja — Garage Days — ma trafić na Steam w 2027 roku.
+            Najpierw build, który działa. Potem karta Steam i demo.
+            Premiera wtedy, kiedy gra będzie gotowa.
+          </p>
+          <div class="steam-actions">
+            <button class="btn primary" id="wishlist">Dodaj do wishlisty</button>
+            <a class="btn ghost" href="https://github.com/tznsec/pixelpatch/releases/latest/download/PixelPatch.exe">Pobierz build PC</a>
+            <a class="btn ghost" href="https://github.com/tznsec/pixelpatch/releases/latest/download/PixelPatch.apk">Pobierz APK</a>
+          </div>
+        </div>
+        <ol class="steam-steps">
+          <li><span>01</span><div><b>Build 1.0</b><small>domknięta pętla dnia i zawartość</small></div></li>
+          <li><span>02</span><div><b>Karta Steam + demo</b><small>wishlisty, trailer, Next Fest</small></div></li>
+          <li><span>03</span><div><b>Premiera</b><small>Windows + Steam Deck</small></div></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="" width="52" height="52">
+        <div>
+          <b>PIXEL PATCH</b>
+          <small>wersja Garage Days</small>
+        </div>
+      </div>
+      <div class="foot-meta">
+        <p>Start: <b>25.10.2026</b> · Premiera: <b>25.10.2027</b></p>
+        <p>Godot 4.7 · PC + Android · <span class="dim">TZNsec &amp; K2STUDIO</span></p>
+      </div>
+      <div class="foot-links">
+        <a href="https://github.com/tznsec/pixelpatch/releases/latest/download/PixelPatch.exe">Build PC</a>
+        <a href="https://github.com/tznsec/pixelpatch/releases/latest/download/PixelPatch.apk">APK</a>
+        <button class="foot-intro" id="replay-intro" type="button">Intro</button>
+        <a href="https://github.com/tznsec/pixelpatch" target="_blank" rel="noopener">GitHub</a>
+        <a href="#top">Do góry ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększony zrzut" hidden>
+    <button class="lb-close" id="lb-close" aria-label="Zamknij">X</button>
+    <img id="lb-img" src="" alt="">
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
