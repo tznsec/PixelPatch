@@ -59,6 +59,31 @@
   tickCountdown();
   window.setInterval(tickCountdown, 1000);
 
+
+  // ---- liczniki statusu (dzień, premiera, wiek builda, czas) -------------
+  const stDay = document.getElementById("st-day");
+  const stLeft = document.getElementById("st-left");
+  const stBuild = document.getElementById("st-build");
+  const stClock = document.getElementById("st-clock");
+  const BUILD_DATE = new Date(2026, 9, 26, 0, 0, 0);
+
+  function tickStatus() {
+    if (!stDay) return;
+    const now = new Date();
+    const day = Math.min(365, Math.floor((now.getTime() - START.getTime()) / 86400000) + 1);
+    const left = Math.max(0, Math.floor((END.getTime() - now.getTime()) / 86400000));
+    const build = Math.max(0, Math.floor((now.getTime() - BUILD_DATE.getTime()) / 86400000));
+    stDay.textContent = String(day);
+    stLeft.textContent = String(left);
+    stBuild.textContent = String(build);
+    stClock.textContent = now.toLocaleTimeString("pl-PL", {
+      hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false,
+    });
+  }
+
+  tickStatus();
+  window.setInterval(tickStatus, 1000);
+
   // ---- intro / splash ----------------------------------------------------
   const splash = document.getElementById("splash");
   const splashSkip = document.getElementById("splash-skip");

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixel Patch: Garage Days — dzień 1 z 365. Rok do premiery na Steam</title>
-  <meta name="description" content="Pixel Patch: Garage Days — pierwsza wersja naszej gry. Zaczynamy dziś i mamy dokładnie 365 dni, żeby doprowadzić ją do premiery na Steam. Odliczanie, plan roku i zrzuty z builda.">
+  <title>Pixel Patch: Alpha Computer — dzień 1 z 365. Dwie wersje, rok do Steam</title>
+  <meta name="description" content="Pixel Patch: Alpha Computer — najnowsza wersja naszej gry. Starsza Garage Days wciąż jest do pobrania. Odliczanie, plan roku, galeria i liczniki projektu.">
   <meta name="theme-color" content="#050a08">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
@@ -18,7 +18,7 @@
     <div class="splash-inner">
       <div class="splash-brand">
         <img src="assets/logo.png" alt="" width="56" height="56">
-        <span class="splash-logo"><b>PIXEL PATCH</b><small>Garage Days</small></span>
+        <span class="splash-logo"><b>PIXEL PATCH</b><small>Alpha Computer</small></span>
       </div>
 
       <div class="duo">
@@ -94,10 +94,11 @@
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Pixel Patch — początek strony">
       <img src="assets/logo.png" alt="" width="44" height="44">
-      <span class="brand-text">PIXEL PATCH<small>Garage Days · dzień 1</small></span>
+      <span class="brand-text">PIXEL PATCH<small>Alpha Computer · dzień 1</small></span>
     </a>
     <nav class="nav" aria-label="Nawigacja">
       <a href="#start">Start</a>
+      <a href="#wersje">Wersje</a>
       <a href="#plan">Plan</a>
       <a href="#funkcje">Funkcje</a>
       <a href="#galeria">Galeria</a>
@@ -252,16 +253,17 @@
             </g>
           </svg>
         </h1>
-        <p class="version">wersja 1.0 · <b>Garage Days</b></p>
+        <p class="version">wersja 0.10-alpha · <b>Alpha Computer</b></p>
         <p class="lead">
-          Pierwsza wersja Pixel Patch. Mamy dokładnie <em>jeden rok</em>, żeby doprowadzić ją
-          do premiery na Steam. Bez skrótów: od pierwszego prostokąta do wersji 1.0.
+          Alpha Computer to nowa wersja Pixel Patch — z naprawami dotykowymi, pracownikami,
+          kasynem i widokiem F1. Starsza <em>Garage Days</em> wciąż jest do pobrania.
+          Mamy rok do premiery na Steam.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#plan">Plan roku</a>
+          <a class="btn primary" href="#wersje">Pobierz wersje</a>
           <a class="btn ghost" href="#galeria">Zobacz grę</a>
         </div>
-        <p class="hero-meta">Start <b>25.10.2026</b> · premiera <b>25.10.2027</b> na PC i Androidzie</p>
+        <p class="hero-meta">Start <b>25.10.2026</b> · Steam <b>2027</b> · PC i Android</p>
       </div>
 
       <div class="hero-art reveal" aria-hidden="true">
@@ -294,7 +296,7 @@
     <section class="countdown wrap reveal" id="countdown" aria-label="Odliczanie do premiery">
       <div class="cd-head">
         <p class="cd-label">Do premiery <b>Pixel Patch</b> zostało</p>
-        <p class="cd-day">wersja <b>Garage Days</b> · dzień <b id="cd-day">1</b> z 365</p>
+        <p class="cd-day">wersja <b>Alpha Computer</b> · dzień <b id="cd-day">1</b> z 365</p>
       </div>
       <div class="cd-grid" role="timer" aria-live="off">
         <div><span id="cd-d">364</span><small>dni</small></div>
@@ -305,6 +307,57 @@
       <div class="cd-bar"><span id="cd-fill"></span></div>
     </section>
 
+    <!-- ============================ LICZNIKI ============================ -->
+    <section class="status-strip wrap reveal" aria-label="Liczniki projektu">
+      <div><span id="st-day">1</span><small>dzień projektu</small></div>
+      <div><span id="st-left">364</span><small>dni do premiery</small></div>
+      <div><span id="st-build">0</span><small>dni od builda</small></div>
+      <div><span id="st-clock">--:--</span><small>czas lokalny</small></div>
+    </section>
+
+    <!-- ============================ WERSJE ============================ -->
+    <section class="section wrap" id="wersje">
+      <div class="section-head reveal">
+        <p class="kicker">Wersje</p>
+        <h2>Alpha Computer i Garage Days</h2>
+        <p class="lede">
+          Najnowsza wersja to Alpha Computer. Starsza Garage Days zostaje — możesz pobrać obie
+          i porównać, jak zmienia się gra.
+        </p>
+      </div>
+      <div class="versions">
+        <article class="version-card new reveal">
+          <div class="vc-top"><span class="vc-tag new">NAJNOWSZA</span><span class="vc-ver">v0.10-alpha</span></div>
+          <h3>Alpha Computer</h3>
+          <p>Duży update: telefon, pracownicy, magazyn z tierami, kasyno i widok F1.</p>
+          <ul>
+            <li>Naprawy dotykowe na Androidzie</li>
+            <li>Pracownicy i auto-naprawa</li>
+            <li>Kasyno, skrzyżowania i auta NPC</li>
+            <li>Sportowe auto i widok F1</li>
+          </ul>
+          <div class="vc-actions">
+            <a class="btn primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.exe">Pobierz PC</a>
+            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.apk">Pobierz APK</a>
+          </div>
+        </article>
+        <article class="version-card old reveal">
+          <div class="vc-top"><span class="vc-tag old">STARSZA</span><span class="vc-ver">v0.9.7</span></div>
+          <h3>Garage Days</h3>
+          <p>Pierwsza wersja, od której wszystko się zaczęło. Zostaje online.</p>
+          <ul>
+            <li>Podstawowy serwis i miasto</li>
+            <li>Multiplayer LAN</li>
+            <li>PC + Android</li>
+          </ul>
+          <div class="vc-actions">
+            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.9.7/PixelPatch.exe">Pobierz PC</a>
+            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.9.7/PixelPatch.apk">Pobierz APK</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- ============================ START ============================ -->
     <section class="section wrap" id="start">
       <div class="section-head reveal">
@@ -312,9 +365,7 @@
         <h2>Zaczynamy z jednym buildem i całym rokiem</h2>
         <p class="lede">
           Nie ma jeszcze wishlisty ani trailera. Jest projekt, działający build i data.
-          Garage Days to pierwsza wersja Pixel Patch — symulator serwisu komputerowego,
-          w którym liczy się każda naprawa i każdy dzień w studiu.
-        </p>
+          Alpha Computer to najnowsza wersja Pixel Patch — symulator serwisu komputerowego, w którym liczy się każda naprawa i każdy dzień w studiu.</p>
       </div>
       <div class="start-grid">
         <article class="panel reveal">
@@ -448,14 +499,11 @@
           <p class="eyebrow">05 — meta</p>
           <h2>Pixel Patch na Steam</h2>
           <p class="lede">
-            Pierwsza wersja — Garage Days — ma trafić na Steam w 2027 roku.
-            Najpierw build, który działa. Potem karta Steam i demo.
-            Premiera wtedy, kiedy gra będzie gotowa.
-          </p>
+            Alpha Computer i Garage Days są już do pobrania. Na Steam trafią w 2027 roku — najpierw karta Steam i demo, potem premiera.</p>
           <div class="steam-actions">
             <button class="btn primary" id="wishlist">Dodaj do wishlisty</button>
-            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/latest/download/PixelPatch.exe">Pobierz build PC</a>
-            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/latest/download/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.exe">Pobierz build PC</a>
+            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.apk">Pobierz APK</a>
           </div>
         </div>
         <ol class="steam-steps">
@@ -473,7 +521,7 @@
         <img src="assets/logo.png" alt="" width="52" height="52">
         <div>
           <b>PIXEL PATCH</b>
-          <small>wersja Garage Days</small>
+          <small>wersje Alpha Computer / Garage Days</small>
         </div>
       </div>
       <div class="foot-meta">
@@ -481,8 +529,8 @@
         <p>Godot 4.7 · PC + Android · <span class="dim">TZNsec &amp; K2STUDIO</span></p>
       </div>
       <div class="foot-links">
-        <a href="https://github.com/tznsec/PixelPatch/releases/latest/download/PixelPatch.exe">Build PC</a>
-        <a href="https://github.com/tznsec/PixelPatch/releases/latest/download/PixelPatch.apk">APK</a>
+        <a href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.exe">Build PC</a>
+        <a href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.apk">APK</a>
         <button class="foot-intro" id="replay-intro" type="button">Intro</button>
         <a href="https://github.com/tznsec/PixelPatch" target="_blank" rel="noopener">GitHub</a>
         <a href="#top">Do góry ↑</a>
