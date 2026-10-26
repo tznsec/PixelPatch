@@ -16,6 +16,85 @@
 <body>
   <a class="skip" href="#main">Przejdź do treści</a>
 
+  <!-- intro / splash: V0idVex × Kormeliuszk -->
+  <div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Intro Pixel Patch: Alpha Computer" hidden>
+    <div class="splash-inner">
+      <div class="splash-brand">
+        <img src="assets/logo.png" alt="" width="56" height="56">
+        <span class="splash-logo"><b>PIXEL PATCH</b><small>Alpha Computer · 0.11-alpha</small></span>
+      </div>
+
+      <div class="duo">
+        <div class="guy-col left">
+          <svg class="guy guy-a" viewBox="0 0 20 24" aria-hidden="true">
+            <rect class="p-cap" x="5" y="0" width="8" height="3"/>
+            <rect class="p-capdark" x="12" y="2" width="5" height="1"/>
+            <rect class="p-skin" x="5" y="3" width="8" height="6"/>
+            <rect class="p-hair" x="5" y="3" width="1" height="2"/>
+            <rect class="p-eye" x="6" y="5" width="1" height="1"/>
+            <rect class="p-eye" x="9" y="5" width="1" height="1"/>
+            <rect class="p-mouth" x="7" y="7" width="2" height="1"/>
+            <rect class="p-skin" x="8" y="8" width="2" height="1"/>
+            <rect class="p-shirt" x="4" y="9" width="9" height="7"/>
+            <rect class="p-apron" x="6" y="12" width="6" height="4"/>
+            <rect class="p-shirt" x="13" y="10" width="6" height="2"/>
+            <rect class="p-skin" x="19" y="10" width="1" height="2"/>
+            <rect class="p-shirt" x="3" y="10" width="2" height="5"/>
+            <rect class="p-skin" x="3" y="15" width="1" height="1"/>
+            <rect class="p-pants" x="6" y="16" width="2" height="6"/>
+            <rect class="p-pants" x="10" y="16" width="2" height="6"/>
+            <rect class="p-shoe" x="5" y="22" width="3" height="2"/>
+            <rect class="p-shoe" x="9" y="22" width="4" height="2"/>
+          </svg>
+          <div class="guy-tag"><b>V0idVex</b><span class="tzn">TZNsec</span></div>
+        </div>
+
+        <div class="impact" aria-hidden="true">
+          <span class="impact-text">PIĄTKA!</span>
+          <svg class="spark" viewBox="0 0 16 16" width="64" height="64" shape-rendering="crispEdges">
+            <g fill="#ffb332">
+              <rect x="7" y="0" width="2" height="4"/><rect x="7" y="12" width="2" height="4"/>
+              <rect x="0" y="7" width="4" height="2"/><rect x="12" y="7" width="4" height="2"/>
+              <rect x="2" y="2" width="2" height="2"/><rect x="12" y="2" width="2" height="2"/>
+              <rect x="2" y="12" width="2" height="2"/><rect x="12" y="12" width="2" height="2"/>
+            </g>
+            <rect x="5" y="5" width="6" height="6" fill="#ffffff"/>
+            <rect x="6" y="6" width="4" height="4" fill="#55ffa0"/>
+          </svg>
+        </div>
+
+        <div class="guy-col right">
+          <svg class="guy guy-b" viewBox="0 0 20 24" aria-hidden="true">
+            <rect class="p-cap" x="5" y="0" width="8" height="3"/>
+            <rect class="p-capdark" x="12" y="2" width="5" height="1"/>
+            <rect class="p-skin" x="5" y="3" width="8" height="6"/>
+            <rect class="p-hair" x="5" y="3" width="1" height="2"/>
+            <rect class="p-eye" x="6" y="5" width="1" height="1"/>
+            <rect class="p-eye" x="9" y="5" width="1" height="1"/>
+            <rect class="p-mouth" x="7" y="7" width="2" height="1"/>
+            <rect class="p-skin" x="8" y="8" width="2" height="1"/>
+            <rect class="p-shirt" x="4" y="9" width="9" height="7"/>
+            <rect class="p-apron" x="6" y="12" width="6" height="4"/>
+            <rect class="p-shirt" x="13" y="10" width="6" height="2"/>
+            <rect class="p-skin" x="19" y="10" width="1" height="2"/>
+            <rect class="p-shirt" x="3" y="10" width="2" height="5"/>
+            <rect class="p-skin" x="3" y="15" width="1" height="1"/>
+            <rect class="p-pants" x="6" y="16" width="2" height="6"/>
+            <rect class="p-pants" x="10" y="16" width="2" height="6"/>
+            <rect class="p-shoe" x="5" y="22" width="3" height="2"/>
+            <rect class="p-shoe" x="9" y="22" width="4" height="2"/>
+          </svg>
+          <div class="guy-tag"><b>Kormeliuszk</b><span class="k2">K2STUDIO</span></div>
+        </div>
+      </div>
+
+      <p class="splash-foot">TZNsec × K2STUDIO · V0idVex × Kormeliuszk · 2026</p>
+    </div>
+
+    <button class="splash-skip" id="splash-skip" type="button">Pomiń intro</button>
+  </div>
+
+
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Pixel Patch — początek strony">
       <img src="assets/logo.png" alt="" width="42" height="42">
@@ -30,7 +109,6 @@
       <a href="#gra">Gra</a>
       <a href="#nowosci">Nowości</a>
       <a href="#wersje">Wersje</a>
-      <a href="#plan">Plan</a>
       <a href="#galeria">Galeria</a>
     </nav>
 
@@ -44,39 +122,41 @@
 
     <!-- ============================ HERO ============================ -->
     <section class="hero wrap">
-      <div class="hero-copy reveal">
+      <div class="hero-copy">
         <p class="eyebrow"><span class="live-dot"></span> WYZWANIE 365 DNI · BUILD 0.11-ALPHA</p>
-        <h1>DWÓCH<br>ZIOMKÓW.<br><em>ROK.</em><br>JEDNA GRA.</h1>
-        <p class="lead">
-          TZNsec i K2STUDIO rzucili sobie wyzwanie: w rok zrobić grę od zera
-          i doprowadzić ją do premiery na Steam. <strong>Pixel Patch</strong> to
-          pixel-artowy symulator serwisu komputerowego — i publiczny zapis tej drogi.
+
+        <p class="hero-logo" aria-label="PIXEL PATCH">
+          <canvas id="pixelLogo" width="480" height="64" aria-hidden="true">PIXEL PATCH</canvas>
         </p>
-        <div class="hero-actions">
+
+        <h1 class="hero-title" aria-label="Dwóch ziomków. Rok. Jedna gra.">
+          <canvas id="pixelTitle" width="480" height="184" aria-hidden="true">DWÓCH ZIOMKÓW. ROK. JEDNA GRA.</canvas>
+        </h1>
+
+        <div class="hero-day" style="--d:.68s">
+          <span class="live-dot"></span>
+          <span>DZIEŃ <b id="hero-day">1</b> Z 365</span>
+          <span class="hero-day-sub">publiczny build 0.11-alpha</span>
+        </div>
+
+        <p class="lead" style="--d:.80s">
+          TZNsec i K2STUDIO wybrali po jednym przedstawicielu:
+          <strong>V0idVex</strong> i <strong>Kormeliuszk</strong>. Ci dwaj ziomkowie
+          rzucili sobie wyzwanie: w rok zrobić grę od zera i doprowadzić ją do
+          premiery na Steam. <strong>Pixel Patch</strong> to pixel-artowy symulator
+          serwisu komputerowego — i publiczny zapis tej drogi.
+        </p>
+
+        <div class="hero-actions" style="--d:.92s">
           <a class="btn btn-primary" href="#pobierz">Pobierz Alpha Computer</a>
           <a class="btn btn-ghost" href="#o-projekcie">Poznaj projekt</a>
         </div>
-        <dl class="hero-meta">
+
+        <dl class="hero-meta" style="--d:1.04s">
           <div><dt>Start</dt><dd>25.10.2026</dd></div>
           <div><dt>Cel</dt><dd>Steam 2027</dd></div>
           <div><dt>Platformy</dt><dd>PC + Android</dd></div>
         </dl>
-      </div>
-
-      <div class="hero-visual reveal">
-        <figure class="game-frame">
-          <div class="frame-bar">
-            <span><i></i><i></i><i></i></span>
-            <span>PIXELPATCH.EXE // 0.11-alpha</span>
-          </div>
-          <img src="assets/alpha-coop.png" alt="Wsp?lna gra w Pixel Patch: miasto, auto innego gracza i minimapa" width="1280" height="960">
-          <figcaption>Miasto, dzień 2. Deszcz, minimapa i budynki, do których można wejść.</figcaption>
-        </figure>
-        <div class="float-card">
-          <span class="float-kicker">DZIŚ W PROJEKCIE</span>
-          <b>Dzień <span id="hero-day">1</span> z 365</b>
-          <span>buildy, poprawki i nowe rzeczy co tydzień</span>
-        </div>
       </div>
     </section>
 
@@ -113,11 +193,12 @@
     <section class="section wrap" id="o-projekcie">
       <div class="section-head reveal">
         <p class="kicker">O projekcie</p>
-        <h2>To nie studio. To dwóch ziomków z wyzwaniem.</h2>
+        <h2>Dwie grupy. Dwóch przedstawicieli. Jedno wyzwanie.</h2>
         <p class="lede">
-          Nie mamy biura, budżetu ani zespołu. Mamy pomysł, upór i deadline.
-          Pixel Patch powstaje po godzinach — z kodem, pixel artem, dźwiękiem i testami
-          robionymi własnymi rękami.
+          TZNsec i K2STUDIO wybrały po jednym przedstawicielu — <strong>V0idVex</strong>
+          i <strong>Kormeliuszk</strong>. To oni rzucili sobie wyzwanie: w 365 dni
+          zrobić grę od zera i doprowadzić ją do premiery na Steam. Żadnego biura,
+          budżetu ani zespołu — tylko kod, pixel art, dźwięk i deadline.
         </p>
       </div>
 
@@ -126,25 +207,27 @@
           <p class="story-num">01</p>
           <h3>Skąd ten pomysł?</h3>
           <p>
-            Zaczęło się od rozmowy: „a co, gdyby zrobić grę w rok?”. Nie demo.
-            Nie prototyp na weekend. Prawdziwą grę, którą można pobrać, zagrać
-            i którą da się doprowadzić do Steama. Tak powstał Pixel Patch.
+            Dwie grupy — TZNsec i K2STUDIO — wybrały po jednym przedstawicielu.
+            V0idVex i Kormeliuszk rzucili sobie wyzwanie: w rok zrobić prawdziwą
+            grę, nie demo ani prototyp na weekend. Grę, którą można pobrać, zagrać
+            i doprowadzić do Steama. Tak powstał Pixel Patch.
           </p>
         </article>
         <article class="story-card reveal">
           <p class="story-num">02</p>
           <h3>Kto to robi?</h3>
           <p>
-            <strong>TZNsec</strong> i <strong>K2STUDIO</strong> — dwóch ziomków,
-            którzy lubią gry, komputery i robienie rzeczy od zera. Kod, pixel art,
-            muzyka, interfejs i testy powstają po godzinach, bez zewnętrznego zespołu.
+            Za projekt odpowiadają <strong>V0idVex</strong> i <strong>Kormeliuszk</strong>
+            — przedstawiciele TZNsec i K2STUDIO. Kod, pixel art, muzyka, interfejs
+            i testy powstają po godzinach, bez zewnętrznego zespołu.
           </p>
         </article>
         <article class="story-card reveal">
           <p class="story-num">03</p>
           <h3>Zasady wyzwania</h3>
           <ul class="check-list">
-            <li>Gra powstaje od zera, bez gotowego silnikowego szablonu gry.</li>
+            <li>Każda grupa wybrała jednego przedstawiciela do projektu.</li>
+            <li>Gra powstaje od zera, bez gotowego szablonu gry.</li>
             <li>Każda wersja jest publicznie dostępna do pobrania.</li>
             <li>Devlog i liczniki pokazują prawdziwy postęp, nie zapowiedzi.</li>
             <li>Cel: premiera na Steam w 365 dni od startu.</li>
@@ -331,43 +414,6 @@
       </p>
     </section>
 
-    <!-- ============================ PLAN ============================ -->
-    <section class="section wrap" id="plan">
-      <div class="section-head reveal">
-        <p class="kicker">Plan roku</p>
-        <h2>Od pierwszego builda do Steama</h2>
-        <p class="lede">Nie wszystko musi być gotowe dziś. Ważne, żeby każdy tydzień przybliżał nas do premiery.</p>
-      </div>
-
-      <ol class="timeline">
-        <li class="done reveal">
-          <span class="tl-when">START · 25.10.2026</span>
-          <h3>Garage Days</h3>
-          <p>Pierwszy publiczny build, podstawowy serwis komputerowy i miasto.</p>
-        </li>
-        <li class="done reveal">
-          <span class="tl-when">ALPHA · 0.10</span>
-          <h3>Alpha Computer</h3>
-          <p>Telefon, pracownicy, magazyn z tierami, kasyno, F1 i sportowe auto.</p>
-        </li>
-        <li class="now reveal">
-          <span class="tl-when">TERAZ · 0.11-alpha</span>
-          <h3>Co-op i świat</h3>
-          <p>Wspólna gra, dzień/noc, pory roku, wnętrza, minimapa i zdrowie.</p>
-        </li>
-        <li class="reveal">
-          <span class="tl-when">NASTĘPNIE</span>
-          <h3>Steam page + demo</h3>
-          <p>Karta Steam, lepszy onboarding, więcej miasta i pierwsze publiczne demo.</p>
-        </li>
-        <li class="reveal">
-          <span class="tl-when">2027</span>
-          <h3>Premiera</h3>
-          <p>Pełna wersja na PC i Steam. Android zostaje jako dodatkowa platforma.</p>
-        </li>
-      </ol>
-    </section>
-
     <!-- ============================ GALERIA ============================ -->
     <section class="section wrap" id="galeria">
       <div class="section-head reveal">
@@ -377,6 +423,10 @@
       </div>
 
       <div class="gallery">
+        <button class="shot reveal" data-src="assets/alpha-coop.png" aria-label="Powiększ: wspólna gra">
+          <img src="assets/alpha-coop.png" alt="Wspólna gra i auto innego gracza" loading="lazy" width="1280" height="960">
+          <span>Co-op · V0idVex i Kormeliuszk</span>
+        </button>
         <button class="shot reveal" data-src="assets/alpha-city.png" aria-label="Powiększ: miasto w dzień">
           <img src="assets/alpha-city.png" alt="Miasto w dzień" loading="lazy" width="1280" height="960">
           <span>Miasto · dzień</span>
@@ -396,10 +446,6 @@
         <button class="shot reveal" data-src="assets/alpha-driving.png" aria-label="Powiększ: widok jazdy">
           <img src="assets/alpha-driving.png" alt="Widok jazdy z minimapą" loading="lazy" width="1280" height="960">
           <span>Jazda · F1</span>
-        </button>
-        <button class="shot reveal" data-src="assets/alpha-coop.png" aria-label="Powiększ: wspólna gra">
-          <img src="assets/alpha-coop.png" alt="Wspólna gra i auto innego gracza" loading="lazy" width="1280" height="960">
-          <span>Co-op</span>
         </button>
       </div>
     </section>
@@ -464,11 +510,12 @@
       <img src="assets/logo.png" alt="" width="36" height="36">
       <div>
         <b>PIXEL PATCH</b>
-        <span>projekt TZNsec &amp; K2STUDIO</span>
+        <span>projekt TZNsec &amp; K2STUDIO · V0idVex &amp; Kormeliuszk</span>
       </div>
     </div>
-    <p>Zrobione po godzinach. Publicznie. Od pierwszego commita do premiery.</p>
+    <p>V0idVex i Kormeliuszk. Zrobione po godzinach. Publicznie. Od pierwszego commita do premiery.</p>
     <div class="footer-links">
+      <button class="footer-replay" id="replay-intro" type="button">Odtwórz intro</button>
       <a href="https://github.com/tznsec/PixelPatch" target="_blank" rel="noopener">GitHub ↗</a>
       <a href="#wersje">Wersje</a>
       <a href="#top">Do góry ↑</a>
@@ -481,5 +528,6 @@
   </div>
 
   <script src="script.js" defer></script>
+  <script src="pixel-intro.js" defer></script>
 </body>
 </html>
