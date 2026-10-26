@@ -65,6 +65,7 @@
   const stLeft = document.getElementById("st-left");
   const stBuild = document.getElementById("st-build");
   const stClock = document.getElementById("st-clock");
+  const heroDay = document.getElementById("hero-day");
   const BUILD_DATE = new Date(2026, 9, 26, 0, 0, 0);
 
   function tickStatus() {
@@ -76,6 +77,7 @@
     stDay.textContent = String(day);
     stLeft.textContent = String(left);
     stBuild.textContent = String(build);
+    if (heroDay) heroDay.textContent = String(day);
     stClock.textContent = now.toLocaleTimeString("pl-PL", {
       hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false,
     });
