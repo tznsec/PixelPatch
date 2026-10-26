@@ -134,13 +134,13 @@
     }
 
     const t0 = performance.now();
-    const total = 0.86;
-    let started = false;
+    const total = 0.95;
     function frame() {
       const t = (performance.now() - t0) / 1000;
       if (t >= total) {
         ctx.clearRect(0, 0, w, h);
         ctx.drawImage(off, 0, 0);
+        window.clearInterval(timer);
         return;
       }
       ctx.clearRect(0, 0, w, h);
@@ -150,10 +150,10 @@
           ctx.drawImage(off, b.x, b.y, b.w, b.h, b.x, b.y, b.w, b.h);
         }
       }
-      if (t < 0.62) {
+      if (t < 0.66) {
         for (let i = 0; i < dust.length; i++) {
           const d = dust[i];
-          if (t >= d.start && t < d.start + 0.22) {
+          if (t >= d.start && t < d.start + 0.24) {
             ctx.fillStyle = d.color;
             ctx.globalAlpha = 0.55;
             ctx.fillRect(d.x, d.y, d.s, d.s);
@@ -161,13 +161,9 @@
           }
         }
       }
-      window.requestAnimationFrame(frame);
     }
-    window.requestAnimationFrame(function first() {
-      if (started) return;
-      started = true;
-      frame();
-    });
+    const timer = window.setInterval(frame, 33);
+    frame();
   }
 
   function startHeroPixelAnimations(force) {
