@@ -3,311 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixel Patch: Alpha Computer — dwie wersje, rok do premiery na Steam</title>
-  <meta name="description" content="Pixel Patch: Alpha Computer — najnowsza wersja naszej gry. Starsza Garage Days wciąż jest do pobrania. Odliczanie, plan roku, galeria i liczniki projektu.">
+  <title>Pixel Patch — dwóch ziomków, rok, jedna gra</title>
+  <meta name="description" content="Pixel Patch to pixel-artowy symulator serwisu komputerowego. TZNsec i K2STUDIO rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Zobacz devlog, wersje do pobrania i plan roku.">
   <meta name="theme-color" content="#050a08">
+  <meta property="og:title" content="Pixel Patch — dwóch ziomków, rok, jedna gra">
+  <meta property="og:description" content="Wyzwanie 365 dni: od pustego projektu do premiery na Steam. Pixel-artowy symulator serwisu komputerowego. Pobierz Alpha Computer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/alpha-coop.png">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#main">Przejdź do treści</a>
-  <div class="scanlines" aria-hidden="true"></div>
-
-  <!-- intro / splash: V0idVex × kormeliuszk -->
-  <div class="splash" id="splash" role="dialog" aria-modal="true" aria-label="Intro Pixel Patch: Garage Days" hidden>
-    <div class="splash-inner">
-      <div class="splash-brand">
-        <img src="assets/logo.png" alt="" width="56" height="56">
-        <span class="splash-logo"><b>PIXEL PATCH</b><small>Alpha Computer</small></span>
-      </div>
-
-      <div class="duo">
-        <div class="guy-col left">
-          <svg class="guy guy-a" viewBox="0 0 20 24" aria-hidden="true">
-            <rect class="p-cap" x="5" y="0" width="8" height="3"/>
-            <rect class="p-capdark" x="12" y="2" width="5" height="1"/>
-            <rect class="p-skin" x="5" y="3" width="8" height="6"/>
-            <rect class="p-hair" x="5" y="3" width="1" height="2"/>
-            <rect class="p-eye" x="6" y="5" width="1" height="1"/>
-            <rect class="p-eye" x="9" y="5" width="1" height="1"/>
-            <rect class="p-mouth" x="7" y="7" width="2" height="1"/>
-            <rect class="p-skin" x="8" y="8" width="2" height="1"/>
-            <rect class="p-shirt" x="4" y="9" width="9" height="7"/>
-            <rect class="p-apron" x="6" y="12" width="6" height="4"/>
-            <rect class="p-shirt" x="13" y="10" width="6" height="2"/>
-            <rect class="p-skin" x="19" y="10" width="1" height="2"/>
-            <rect class="p-shirt" x="3" y="10" width="2" height="5"/>
-            <rect class="p-skin" x="3" y="15" width="1" height="1"/>
-            <rect class="p-pants" x="6" y="16" width="2" height="6"/>
-            <rect class="p-pants" x="10" y="16" width="2" height="6"/>
-            <rect class="p-shoe" x="5" y="22" width="3" height="2"/>
-            <rect class="p-shoe" x="9" y="22" width="4" height="2"/>
-          </svg>
-          <div class="guy-tag"><b>V0idVex</b><span class="tzn">TZNsec</span></div>
-        </div>
-
-        <div class="impact" aria-hidden="true">
-          <span class="impact-text">PIĄTKA!</span>
-          <svg class="spark" viewBox="0 0 16 16" width="64" height="64" shape-rendering="crispEdges">
-            <g fill="#ffb332">
-              <rect x="7" y="0" width="2" height="4"/><rect x="7" y="12" width="2" height="4"/>
-              <rect x="0" y="7" width="4" height="2"/><rect x="12" y="7" width="4" height="2"/>
-              <rect x="2" y="2" width="2" height="2"/><rect x="12" y="2" width="2" height="2"/>
-              <rect x="2" y="12" width="2" height="2"/><rect x="12" y="12" width="2" height="2"/>
-            </g>
-            <rect x="5" y="5" width="6" height="6" fill="#ffffff"/>
-            <rect x="6" y="6" width="4" height="4" fill="#55ffa0"/>
-          </svg>
-        </div>
-
-        <div class="guy-col right">
-          <svg class="guy guy-b" viewBox="0 0 20 24" aria-hidden="true">
-            <rect class="p-cap" x="5" y="0" width="8" height="3"/>
-            <rect class="p-capdark" x="12" y="2" width="5" height="1"/>
-            <rect class="p-skin" x="5" y="3" width="8" height="6"/>
-            <rect class="p-hair" x="5" y="3" width="1" height="2"/>
-            <rect class="p-eye" x="6" y="5" width="1" height="1"/>
-            <rect class="p-eye" x="9" y="5" width="1" height="1"/>
-            <rect class="p-mouth" x="7" y="7" width="2" height="1"/>
-            <rect class="p-skin" x="8" y="8" width="2" height="1"/>
-            <rect class="p-shirt" x="4" y="9" width="9" height="7"/>
-            <rect class="p-apron" x="6" y="12" width="6" height="4"/>
-            <rect class="p-shirt" x="13" y="10" width="6" height="2"/>
-            <rect class="p-skin" x="19" y="10" width="1" height="2"/>
-            <rect class="p-shirt" x="3" y="10" width="2" height="5"/>
-            <rect class="p-skin" x="3" y="15" width="1" height="1"/>
-            <rect class="p-pants" x="6" y="16" width="2" height="6"/>
-            <rect class="p-pants" x="10" y="16" width="2" height="6"/>
-            <rect class="p-shoe" x="5" y="22" width="3" height="2"/>
-            <rect class="p-shoe" x="9" y="22" width="4" height="2"/>
-          </svg>
-          <div class="guy-tag"><b>kormeliuszk</b><span class="k2">K2STUDIO</span></div>
-        </div>
-      </div>
-
-      <p class="splash-foot">TZNsec × K2STUDIO · 2026</p>
-    </div>
-
-    <button class="splash-skip" id="splash-skip" type="button">Pomiń intro</button>
-  </div>
 
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Pixel Patch — początek strony">
-      <img src="assets/logo.png" alt="" width="44" height="44">
-      <span class="brand-text">PIXEL PATCH<small>Alpha Computer · 0.10-alpha</small></span>
+      <img src="assets/logo.png" alt="" width="42" height="42">
+      <span>
+        <b>PIXEL PATCH</b>
+        <small>Alpha Computer · 0.11-alpha</small>
+      </span>
     </a>
-    <nav class="nav" aria-label="Nawigacja">
-      <a href="#start">Start</a>
+
+    <nav class="nav" id="nav" aria-label="Nawigacja">
+      <a href="#o-projekcie">O projekcie</a>
+      <a href="#gra">Gra</a>
+      <a href="#nowosci">Nowości</a>
       <a href="#wersje">Wersje</a>
       <a href="#plan">Plan</a>
-      <a href="#funkcje">Funkcje</a>
       <a href="#galeria">Galeria</a>
-      <a class="nav-cta" href="#steam">Steam</a>
     </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-small" href="#pobierz">Pobierz grę</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
+    </div>
   </header>
 
   <main id="main">
+
     <!-- ============================ HERO ============================ -->
     <section class="hero wrap">
       <div class="hero-copy reveal">
-        <p class="status"><span class="dot"></span> Dzień <span id="hero-day">1</span> z 365 — rok do premiery</p>
-        <h1 class="pixel-title">
-          <span class="sr-only">Pixel Patch</span>
-          <svg class="title-svg" viewBox="0 0 29 15" role="img" aria-label="Pixel Patch">
-            <g class="title-line line-a" transform="translate(0 0)">
-              <g transform="translate(0 0)">
-                <g class="glyph" style="--i:0">
-                  <rect x="0" y="0" width="4" height="1"/>
-                  <rect x="0" y="1" width="1" height="1"/>
-                  <rect x="4" y="1" width="1" height="1"/>
-                  <rect x="0" y="2" width="1" height="1"/>
-                  <rect x="4" y="2" width="1" height="1"/>
-                  <rect x="0" y="3" width="4" height="1"/>
-                  <rect x="0" y="4" width="1" height="1"/>
-                  <rect x="0" y="5" width="1" height="1"/>
-                  <rect x="0" y="6" width="1" height="1"/>
-                </g>
-              </g>
-              <g transform="translate(6 0)">
-                <g class="glyph" style="--i:1">
-                  <rect x="0" y="0" width="5" height="1"/>
-                  <rect x="2" y="1" width="1" height="1"/>
-                  <rect x="2" y="2" width="1" height="1"/>
-                  <rect x="2" y="3" width="1" height="1"/>
-                  <rect x="2" y="4" width="1" height="1"/>
-                  <rect x="2" y="5" width="1" height="1"/>
-                  <rect x="0" y="6" width="5" height="1"/>
-                </g>
-              </g>
-              <g transform="translate(12 0)">
-                <g class="glyph" style="--i:2">
-                  <rect x="0" y="0" width="1" height="1"/>
-                  <rect x="4" y="0" width="1" height="1"/>
-                  <rect x="0" y="1" width="1" height="1"/>
-                  <rect x="4" y="1" width="1" height="1"/>
-                  <rect x="1" y="2" width="1" height="1"/>
-                  <rect x="3" y="2" width="1" height="1"/>
-                  <rect x="2" y="3" width="1" height="1"/>
-                  <rect x="1" y="4" width="1" height="1"/>
-                  <rect x="3" y="4" width="1" height="1"/>
-                  <rect x="0" y="5" width="1" height="1"/>
-                  <rect x="4" y="5" width="1" height="1"/>
-                  <rect x="0" y="6" width="1" height="1"/>
-                  <rect x="4" y="6" width="1" height="1"/>
-                </g>
-              </g>
-              <g transform="translate(18 0)">
-                <g class="glyph" style="--i:3">
-                  <rect x="0" y="0" width="5" height="1"/>
-                  <rect x="0" y="1" width="1" height="1"/>
-                  <rect x="0" y="2" width="1" height="1"/>
-                  <rect x="0" y="3" width="4" height="1"/>
-                  <rect x="0" y="4" width="1" height="1"/>
-                  <rect x="0" y="5" width="1" height="1"/>
-                  <rect x="0" y="6" width="5" height="1"/>
-                </g>
-              </g>
-              <g transform="translate(24 0)">
-                <g class="glyph" style="--i:4">
-                  <rect x="0" y="0" width="1" height="1"/>
-                  <rect x="0" y="1" width="1" height="1"/>
-                  <rect x="0" y="2" width="1" height="1"/>
-                  <rect x="0" y="3" width="1" height="1"/>
-                  <rect x="0" y="4" width="1" height="1"/>
-                  <rect x="0" y="5" width="1" height="1"/>
-                  <rect x="0" y="6" width="5" height="1"/>
-                </g>
-              </g>
-            </g>
-            <g class="title-line line-b" transform="translate(0 8)">
-              <g transform="translate(0 0)">
-                <g class="glyph" style="--i:5">
-                  <rect x="0" y="0" width="4" height="1"/>
-                  <rect x="0" y="1" width="1" height="1"/>
-                  <rect x="4" y="1" width="1" height="1"/>
-                  <rect x="0" y="2" width="1" height="1"/>
-                  <rect x="4" y="2" width="1" height="1"/>
-                  <rect x="0" y="3" width="4" height="1"/>
-                  <rect x="0" y="4" width="1" height="1"/>
-                  <rect x="0" y="5" width="1" height="1"/>
-                  <rect x="0" y="6" width="1" height="1"/>
-                </g>
-              </g>
-              <g transform="translate(6 0)">
-                <g class="glyph" style="--i:6">
-                  <rect x="1" y="0" width="3" height="1"/>
-                  <rect x="0" y="1" width="1" height="1"/>
-                  <rect x="4" y="1" width="1" height="1"/>
-                  <rect x="0" y="2" width="1" height="1"/>
-                  <rect x="4" y="2" width="1" height="1"/>
-                  <rect x="0" y="3" width="5" height="1"/>
-                  <rect x="0" y="4" width="1" height="1"/>
-                  <rect x="4" y="4" width="1" height="1"/>
-                  <rect x="0" y="5" width="1" height="1"/>
-                  <rect x="4" y="5" width="1" height="1"/>
-                  <rect x="0" y="6" width="1" height="1"/>
-                  <rect x="4" y="6" width="1" height="1"/>
-                </g>
-              </g>
-              <g transform="translate(12 0)">
-                <g class="glyph" style="--i:7">
-                  <rect x="0" y="0" width="5" height="1"/>
-                  <rect x="2" y="1" width="1" height="1"/>
-                  <rect x="2" y="2" width="1" height="1"/>
-                  <rect x="2" y="3" width="1" height="1"/>
-                  <rect x="2" y="4" width="1" height="1"/>
-                  <rect x="2" y="5" width="1" height="1"/>
-                  <rect x="2" y="6" width="1" height="1"/>
-                </g>
-              </g>
-              <g transform="translate(18 0)">
-                <g class="glyph" style="--i:8">
-                  <rect x="1" y="0" width="3" height="1"/>
-                  <rect x="0" y="1" width="1" height="1"/>
-                  <rect x="4" y="1" width="1" height="1"/>
-                  <rect x="0" y="2" width="1" height="1"/>
-                  <rect x="0" y="3" width="1" height="1"/>
-                  <rect x="0" y="4" width="1" height="1"/>
-                  <rect x="0" y="5" width="1" height="1"/>
-                  <rect x="4" y="5" width="1" height="1"/>
-                  <rect x="1" y="6" width="3" height="1"/>
-                </g>
-              </g>
-              <g transform="translate(24 0)">
-                <g class="glyph" style="--i:9">
-                  <rect x="0" y="0" width="1" height="1"/>
-                  <rect x="4" y="0" width="1" height="1"/>
-                  <rect x="0" y="1" width="1" height="1"/>
-                  <rect x="4" y="1" width="1" height="1"/>
-                  <rect x="0" y="2" width="1" height="1"/>
-                  <rect x="4" y="2" width="1" height="1"/>
-                  <rect x="0" y="3" width="5" height="1"/>
-                  <rect x="0" y="4" width="1" height="1"/>
-                  <rect x="4" y="4" width="1" height="1"/>
-                  <rect x="0" y="5" width="1" height="1"/>
-                  <rect x="4" y="5" width="1" height="1"/>
-                  <rect x="0" y="6" width="1" height="1"/>
-                  <rect x="4" y="6" width="1" height="1"/>
-                </g>
-              </g>
-            </g>
-          </svg>
-        </h1>
-        <p class="version">wersja 0.10-alpha · <b>Alpha Computer</b></p>
+        <p class="eyebrow"><span class="live-dot"></span> WYZWANIE 365 DNI · BUILD 0.11-ALPHA</p>
+        <h1>DWÓCH<br>ZIOMKÓW.<br><em>ROK.</em><br>JEDNA GRA.</h1>
         <p class="lead">
-          Alpha Computer to nowa wersja Pixel Patch — z naprawami dotykowymi, pracownikami,
-          kasynem i widokiem F1. Starsza <em>Garage Days</em> wciąż jest do pobrania.
-          Mamy rok do premiery na Steam.
+          TZNsec i K2STUDIO rzucili sobie wyzwanie: w rok zrobić grę od zera
+          i doprowadzić ją do premiery na Steam. <strong>Pixel Patch</strong> to
+          pixel-artowy symulator serwisu komputerowego — i publiczny zapis tej drogi.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#wersje">Pobierz wersje</a>
-          <a class="btn ghost" href="#galeria">Zobacz grę</a>
+          <a class="btn btn-primary" href="#pobierz">Pobierz Alpha Computer</a>
+          <a class="btn btn-ghost" href="#o-projekcie">Poznaj projekt</a>
         </div>
-        <p class="hero-meta">Start <b>25.10.2026</b> · Steam <b>2027</b> · PC i Android</p>
+        <dl class="hero-meta">
+          <div><dt>Start</dt><dd>25.10.2026</dd></div>
+          <div><dt>Cel</dt><dd>Steam 2027</dd></div>
+          <div><dt>Platformy</dt><dd>PC + Android</dd></div>
+        </dl>
       </div>
 
-      <div class="hero-art reveal" aria-hidden="true">
-        <div class="monitor">
-          <div class="monitor-screen">
-            <img src="assets/screen-menu.png" alt="" width="1280" height="960">
+      <div class="hero-visual reveal">
+        <figure class="game-frame">
+          <div class="frame-bar">
+            <span><i></i><i></i><i></i></span>
+            <span>PIXELPATCH.EXE // 0.11-alpha</span>
           </div>
-          <div class="monitor-led"></div>
-          <div class="monitor-neck"></div>
-          <div class="monitor-base"></div>
-        </div>
-        <div class="float-tag tag-build">START 25.10.2026</div>
-        <div class="float-tag tag-plat">META 25.10.2027</div>
-        <div class="float-heart" aria-hidden="true">
-          <svg viewBox="0 0 9 8" width="54" height="48" shape-rendering="crispEdges">
-            <g fill="#6bffb8">
-              <rect x="1" y="0" width="2" height="1"/><rect x="6" y="0" width="2" height="1"/>
-              <rect x="0" y="1" width="9" height="1"/><rect x="0" y="2" width="9" height="1"/>
-            </g>
-            <g fill="#2fd98a">
-              <rect x="1" y="3" width="7" height="1"/><rect x="2" y="4" width="5" height="1"/>
-              <rect x="3" y="5" width="3" height="1"/><rect x="4" y="6" width="1" height="1"/>
-            </g>
-          </svg>
+          <img src="assets/alpha-coop.png" alt="Wsp?lna gra w Pixel Patch: miasto, auto innego gracza i minimapa" width="1280" height="960">
+          <figcaption>Miasto, dzień 2. Deszcz, minimapa i budynki, do których można wejść.</figcaption>
+        </figure>
+        <div class="float-card">
+          <span class="float-kicker">DZIŚ W PROJEKCIE</span>
+          <b>Dzień <span id="hero-day">1</span> z 365</b>
+          <span>buildy, poprawki i nowe rzeczy co tydzień</span>
         </div>
       </div>
     </section>
 
-    <!-- ============================ ODLICZANIE ============================ -->
-    <section class="countdown wrap reveal" id="countdown" aria-label="Odliczanie do premiery">
-      <div class="cd-head">
-        <p class="cd-label">Do premiery <b>Pixel Patch</b> zostało</p>
-        <p class="cd-day">wersja <b>Alpha Computer</b> · dzień <b id="cd-day">1</b> z 365</p>
-      </div>
-      <div class="cd-grid" role="timer" aria-live="off">
-        <div><span id="cd-d">364</span><small>dni</small></div>
-        <div><span id="cd-h">23</span><small>godz.</small></div>
-        <div><span id="cd-m">59</span><small>min</small></div>
-        <div><span id="cd-s">59</span><small>sek.</small></div>
-      </div>
-      <div class="cd-bar"><span id="cd-fill"></span></div>
-    </section>
-
-    <!-- ============================ LICZNIKI ============================ -->
+    <!-- ============================ STATUS ============================ -->
     <section class="status-strip wrap reveal" aria-label="Liczniki projektu">
       <div><span id="st-day">1</span><small>dzień projektu</small></div>
       <div><span id="st-left">364</span><small>dni do premiery</small></div>
@@ -315,21 +88,215 @@
       <div><span id="st-clock">--:--</span><small>czas lokalny</small></div>
     </section>
 
+    <!-- ============================ ODLICZANIE ============================ -->
+    <section class="countdown-section wrap reveal">
+      <div class="countdown">
+        <div class="cd-head">
+          <div>
+            <p class="kicker">Cel: Steam</p>
+            <h2>Do premiery zostało</h2>
+          </div>
+          <p class="cd-label">wersja <b>Alpha Computer</b> · dzień <b id="cd-day">1</b> z 365</p>
+        </div>
+        <div class="cd-grid" aria-live="polite">
+          <div><span id="cd-d">364</span><small>dni</small></div>
+          <div><span id="cd-h">00</span><small>godzin</small></div>
+          <div><span id="cd-m">00</span><small>minut</small></div>
+          <div><span id="cd-s">00</span><small>sekund</small></div>
+        </div>
+        <div class="cd-bar"><span id="cd-fill"></span></div>
+        <p class="cd-note">Premiera zaplanowana na <b>25.10.2027</b>. Wcześniej: karta Steam, demo i kolejne buildy.</p>
+      </div>
+    </section>
+
+    <!-- ============================ O PROJEKCIE ============================ -->
+    <section class="section wrap" id="o-projekcie">
+      <div class="section-head reveal">
+        <p class="kicker">O projekcie</p>
+        <h2>To nie studio. To dwóch ziomków z wyzwaniem.</h2>
+        <p class="lede">
+          Nie mamy biura, budżetu ani zespołu. Mamy pomysł, upór i deadline.
+          Pixel Patch powstaje po godzinach — z kodem, pixel artem, dźwiękiem i testami
+          robionymi własnymi rękami.
+        </p>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card reveal">
+          <p class="story-num">01</p>
+          <h3>Skąd ten pomysł?</h3>
+          <p>
+            Zaczęło się od rozmowy: „a co, gdyby zrobić grę w rok?”. Nie demo.
+            Nie prototyp na weekend. Prawdziwą grę, którą można pobrać, zagrać
+            i którą da się doprowadzić do Steama. Tak powstał Pixel Patch.
+          </p>
+        </article>
+        <article class="story-card reveal">
+          <p class="story-num">02</p>
+          <h3>Kto to robi?</h3>
+          <p>
+            <strong>TZNsec</strong> i <strong>K2STUDIO</strong> — dwóch ziomków,
+            którzy lubią gry, komputery i robienie rzeczy od zera. Kod, pixel art,
+            muzyka, interfejs i testy powstają po godzinach, bez zewnętrznego zespołu.
+          </p>
+        </article>
+        <article class="story-card reveal">
+          <p class="story-num">03</p>
+          <h3>Zasady wyzwania</h3>
+          <ul class="check-list">
+            <li>Gra powstaje od zera, bez gotowego silnikowego szablonu gry.</li>
+            <li>Każda wersja jest publicznie dostępna do pobrania.</li>
+            <li>Devlog i liczniki pokazują prawdziwy postęp, nie zapowiedzi.</li>
+            <li>Cel: premiera na Steam w 365 dni od startu.</li>
+          </ul>
+        </article>
+        <article class="story-card reveal accent">
+          <p class="story-num">04</p>
+          <h3>Po co to pokazujemy?</h3>
+          <p>
+            Bo najciekawsze w grach jest to, jak powstają. Pokazujemy kolejne buildy,
+            wpadki, poprawki i rzeczy, które udało się dowieźć. Możesz pobrać grę,
+            zagrać i zobaczyć, jak zmienia się z update'u na update.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================ GRA ============================ -->
+    <section class="section wrap" id="gra">
+      <div class="section-head reveal">
+        <p class="kicker">Gra</p>
+        <h2>Pixel-artowy serwis komputerowy. Z miastem, autem i ludźmi.</h2>
+        <p class="lede">
+          Przyjmujesz zlecenia, diagnozujesz komputery, wymieniasz części i liczysz
+          pieniądze. Pomiędzy naprawami wychodzisz do miasta, jeździsz autem,
+          zaglądasz do kasyna i dbasz o to, żeby starczyło na czynsz.
+        </p>
+      </div>
+
+      <div class="game-grid">
+        <div class="game-shot reveal">
+          <img src="assets/alpha-driving.png" alt="Widok jazdy samochodem w Pixel Patch: droga, minimapa, budynki po bokach" width="1280" height="960">
+          <div class="shot-tag">WIDOK F1 · MIASTO</div>
+        </div>
+        <div class="game-features">
+          <article class="feature reveal">
+            <span class="feature-icon">01</span>
+            <h3>Naprawiaj</h3>
+            <p>Diagnoza, minigry, części z tierami T1–T3. Tania część nie naprawi już drogiego podzespołu.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon">02</span>
+            <h3>Rozwijaj</h3>
+            <p>Większy lokal, magazyn, pracownicy i auto. Technik naprawia komputery, gdy Ty zajmujesz się miastem.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon">03</span>
+            <h3>Żyj w mieście</h3>
+            <p>Dzień i noc, cztery pory roku, sklepy, kino, siłownia, kasyno, szpital i własny dom.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon">04</span>
+            <h3>Graj z ziomkiem</h3>
+            <p>Wspólny portfel, te same zlecenia, czat, wymiana kasy i auta innych graczy na drodze.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ NOWOŚCI ============================ -->
+    <section class="section wrap" id="nowosci">
+      <div class="section-head reveal">
+        <p class="kicker">Nowości</p>
+        <h2>Alpha Computer 0.11-alpha</h2>
+        <p class="lede">
+          Największy update od początku projektu. Doszła wspólna gra, zmieniło się
+          miasto, doszły wnętrza i pogoda. Poniżej rzeczy, które warto sprawdzić.
+        </p>
+      </div>
+
+      <div class="update-grid">
+        <article class="update-card reveal wide">
+          <div class="update-art">
+            <img src="assets/alpha-coop.png" alt="Dwóch graczy i auto w mieście podczas wspólnej gry" width="1280" height="960">
+          </div>
+          <div class="update-copy">
+            <p class="update-tag">CO-OP</p>
+            <h3>Jeden portfel, jedna lista zleceń</h3>
+            <p>
+              Podłączacie się przez LAN lub Tailscale. Widzicie swoje postacie i auta,
+              dzielicie kasę i zlecenia. Na PC wciskasz <kbd>T</kbd>, żeby pisać na czacie.
+              Przy innym graczu <kbd>E</kbd> otwiera wymianę pieniędzy.
+            </p>
+          </div>
+        </article>
+
+        <article class="update-card reveal">
+          <h3>Dzień, noc i pory roku</h3>
+          <p>Świt, południe, wieczór i noc. Wiosenny deszcz, letnie światło, jesienne liście i zimowy śnieg.</p>
+          <div class="mini-tags"><span>DZIEŃ / NOC</span><span>4 PORY ROKU</span></div>
+        </article>
+
+        <article class="update-card reveal">
+          <h3>Kasyno i szpital</h3>
+          <p>Pełne wnętrza zamiast samych drzwi. Automaty, ruletka, bar, lekarz, łóżko i apteka.</p>
+          <div class="mini-tags"><span>WNĘTRZA</span><span>ZDROWIE</span></div>
+        </article>
+
+        <article class="update-card reveal">
+          <h3>Jazda z mapą</h3>
+          <p>Widok F1 dostał minimapę i budynki po bokach. Wiesz, gdzie jesteś i kiedy zwolnić, żeby wejść.</p>
+          <div class="mini-tags"><span>MINIMAPA</span><span>PRZYSTANKI</span></div>
+        </article>
+
+        <article class="update-card reveal">
+          <h3>Potrącenia i zdrowie</h3>
+          <p>Na ulicy trzeba uważać. Auto może Cię potrącić, a w szpitalu zapłacisz za leczenie albo skorzystasz z NFZ.</p>
+          <div class="mini-tags"><span>RYZYKO</span><span>SZPITAL</span></div>
+        </article>
+
+        <article class="update-card reveal">
+          <h3>Q na zlecenia</h3>
+          <p>Przełączasz aktywne zlecenie bez wchodzenia do warsztatu — na PC klawiszem <kbd>Q</kbd>, na telefonie przyciskiem.</p>
+          <div class="mini-tags"><span>PC</span><span>MOBILE</span></div>
+        </article>
+      </div>
+    </section>
+
     <!-- ============================ WERSJE ============================ -->
     <section class="section wrap" id="wersje">
       <div class="section-head reveal">
         <p class="kicker">Wersje</p>
-        <h2>Alpha Computer i Garage Days</h2>
+        <h2>Pobierz grę. Każda wersja zostaje online.</h2>
         <p class="lede">
-          Najnowsza wersja to Alpha Computer. Starsza Garage Days zostaje — możesz pobrać obie
-          i porównać, jak zmienia się gra.
+          Alpha Computer to najnowsza gałąź. Starsze buildy zostają na GitHubie,
+          żeby można było zobaczyć, jak gra wyglądała wcześniej.
         </p>
       </div>
+
       <div class="versions">
-        <article class="version-card new reveal">
-          <div class="vc-top"><span class="vc-tag new">NAJNOWSZA</span><span class="vc-ver">v0.10-alpha</span></div>
+        <article class="version-card version-new reveal">
+          <div class="vc-top"><span class="vc-tag new">NAJNOWSZA</span><span class="vc-ver">v0.11-alpha</span></div>
           <h3>Alpha Computer</h3>
-          <p>Duży update: telefon, pracownicy, magazyn z tierami, kasyno i widok F1.</p>
+          <p class="vc-sub">Co-op, pogoda, wnętrza, minimapa i zdrowie.</p>
+          <ul>
+            <li>Wspólny portfel, zlecenia, czat i wymiana kasy</li>
+            <li>Dzień/noc i cztery pory roku</li>
+            <li>Kasyno i szpital w środku</li>
+            <li>Minimapa i budynki w widoku jazdy</li>
+            <li>Potrącenia, zdrowie i leczenie</li>
+            <li>Q do przełączania zleceń</li>
+          </ul>
+          <div class="vc-actions">
+            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.11-alpha/PixelPatch.exe">Pobierz PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.11-alpha/PixelPatch.apk">Pobierz APK</a>
+          </div>
+        </article>
+
+        <article class="version-card reveal">
+          <div class="vc-top"><span class="vc-tag">POPRZEDNIA</span><span class="vc-ver">v0.10-alpha</span></div>
+          <h3>Alpha Computer</h3>
+          <p class="vc-sub">Pierwszy duży update: telefon, pracownicy, tiered magazyn i F1.</p>
           <ul>
             <li>Naprawy dotykowe na Androidzie</li>
             <li>Pracownicy i auto-naprawa</li>
@@ -337,215 +304,182 @@
             <li>Sportowe auto i widok F1</li>
           </ul>
           <div class="vc-actions">
-            <a class="btn primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.exe">Pobierz PC</a>
-            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.exe">PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.apk">APK</a>
           </div>
         </article>
-        <article class="version-card old reveal">
+
+        <article class="version-card reveal">
           <div class="vc-top"><span class="vc-tag old">STARSZA</span><span class="vc-ver">v0.9.7</span></div>
           <h3>Garage Days</h3>
-          <p>Pierwsza wersja, od której wszystko się zaczęło. Zostaje online.</p>
+          <p class="vc-sub">Początek projektu. Zostaje online.</p>
           <ul>
             <li>Podstawowy serwis i miasto</li>
             <li>Multiplayer LAN</li>
             <li>PC + Android</li>
           </ul>
           <div class="vc-actions">
-            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.9.7/PixelPatch.exe">Pobierz PC</a>
-            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.9.7/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.9.7/PixelPatch.exe">PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.9.7/PixelPatch.apk">APK</a>
           </div>
         </article>
       </div>
-    </section>
 
-    <!-- ============================ START ============================ -->
-    <section class="section wrap" id="start">
-      <div class="section-head reveal">
-        <p class="kicker">Dzień pierwszy</p>
-        <h2>Zaczynamy z jednym buildem i całym rokiem</h2>
-        <p class="lede">
-          Nie ma jeszcze wishlisty ani trailera. Jest projekt, działający build i data.
-          Alpha Computer to najnowsza wersja Pixel Patch — symulator serwisu komputerowego, w którym liczy się każda naprawa i każdy dzień w studiu.</p>
-      </div>
-      <div class="start-grid">
-        <article class="panel reveal">
-          <h3>Co mamy</h3>
-          <p>Działającą grę na PC i Androida: dom, studio, miasto, zlecenia, naprawy, zapisy i multiplayer.</p>
-        </article>
-        <article class="panel reveal">
-          <h3>Co robimy</h3>
-          <p>Domknąć pętlę dnia, dodać zawartość, dopracować UI i przygotować kartę Steam oraz demo.</p>
-        </article>
-        <article class="panel reveal">
-          <h3>Czego nie robimy</h3>
-          <p>Early Access, mikrotransakcji i obietnic bez pokrycia. Premiera wtedy, kiedy gra będzie gotowa.</p>
-        </article>
-      </div>
+      <p class="versions-note reveal">
+        Android: plik APK (debug, arm64, Android 7+). PC: Windows 10/11 x64.
+        Buildy są darmowe i będą aktualizowane wraz z kolejnymi etapami wyzwania.
+      </p>
     </section>
 
     <!-- ============================ PLAN ============================ -->
     <section class="section wrap" id="plan">
       <div class="section-head reveal">
-        <p class="kicker">Plan</p>
-        <h2>Plan do premiery</h2>
-        <p class="lede">Dzień 1. Jesteśmy w pierwszym kwartale — Q2, Q3 i Q4 są jeszcze przed nami.</p>
+        <p class="kicker">Plan roku</p>
+        <h2>Od pierwszego builda do Steama</h2>
+        <p class="lede">Nie wszystko musi być gotowe dziś. Ważne, żeby każdy tydzień przybliżał nas do premiery.</p>
       </div>
-      <ol class="roadmap">
-        <li class="road-card reveal">
-          <div class="road-top"><span class="road-q">Q1</span><span class="road-time">miesiące 1–3</span><span class="tag wip">w toku</span></div>
-          <h3>Fundamenty</h3>
-          <p>Silnik, poruszanie, pokoje, HUD i zapisy. Pierwszy build, który da się uruchomić.</p>
-          <div class="bar" data-progress="4"><span></span></div>
+
+      <ol class="timeline">
+        <li class="done reveal">
+          <span class="tl-when">START · 25.10.2026</span>
+          <h3>Garage Days</h3>
+          <p>Pierwszy publiczny build, podstawowy serwis komputerowy i miasto.</p>
         </li>
-        <li class="road-card reveal">
-          <div class="road-top"><span class="road-q">Q2</span><span class="road-time">miesiące 4–6</span><span class="tag plan">przed nami</span></div>
-          <h3>Świat</h3>
-          <p>Miasto, NPC, sklep, bank, paczkomat, auto i ekonomia. Świat przestaje być tłem.</p>
-          <div class="bar" data-progress="0"><span></span></div>
+        <li class="done reveal">
+          <span class="tl-when">ALPHA · 0.10</span>
+          <h3>Alpha Computer</h3>
+          <p>Telefon, pracownicy, magazyn z tierami, kasyno, F1 i sportowe auto.</p>
         </li>
-        <li class="road-card reveal">
-          <div class="road-top"><span class="road-q">Q3</span><span class="road-time">miesiące 7–9</span><span class="tag plan">przed nami</span></div>
-          <h3>Zawartość</h3>
-          <p>Zlecenia, minigry napraw, pracownicy, multiplayer i pełna wersja na telefon.</p>
-          <div class="bar" data-progress="0"><span></span></div>
+        <li class="now reveal">
+          <span class="tl-when">TERAZ · 0.11-alpha</span>
+          <h3>Co-op i świat</h3>
+          <p>Wspólna gra, dzień/noc, pory roku, wnętrza, minimapa i zdrowie.</p>
         </li>
-        <li class="road-card reveal">
-          <div class="road-top"><span class="road-q">Q4</span><span class="road-time">miesiące 10–12</span><span class="tag plan">przed nami</span></div>
+        <li class="reveal">
+          <span class="tl-when">NASTĘPNIE</span>
+          <h3>Steam page + demo</h3>
+          <p>Karta Steam, lepszy onboarding, więcej miasta i pierwsze publiczne demo.</p>
+        </li>
+        <li class="reveal">
+          <span class="tl-when">2027</span>
           <h3>Premiera</h3>
-          <p>Polish, optymalizacja, karta Steam, demo i wersja 1.0.</p>
-          <div class="bar" data-progress="0"><span></span></div>
+          <p>Pełna wersja na PC i Steam. Android zostaje jako dodatkowa platforma.</p>
         </li>
       </ol>
-    </section>
-
-    <!-- ============================ FUNKCJE ============================ -->
-    <section class="section wrap" id="funkcje">
-      <div class="section-head reveal">
-        <p class="kicker">Zawartość</p>
-        <h2>Sześć rzeczy, które robią Pixel Patch</h2>
-      </div>
-      <div class="features">
-        <article class="feature reveal">
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="1"/><path d="M9 21h6M12 17v4"/></svg>
-          </span>
-          <h3>Pixel art 640×480</h3>
-          <p>Wszystko rysowane kodem: font, ludzie, meble i efekty. Bez importowanych grafik.</p>
-        </article>
-        <article class="feature reveal">
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M14 7a4 4 0 0 0-5 5l-6 6 3 3 6-6a4 4 0 0 0 5-5l-2 2-2-2 2-2z"/></svg>
-          </span>
-          <h3>Naprawy i negocjacje</h3>
-          <p>Diagnoza, części, minigra naprawy i targowanie się o cenę z klientem.</p>
-        </article>
-        <article class="feature reveal">
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 21V9h5v12M10 21V3h5v18M17 21v-8h4v8"/></svg>
-          </span>
-          <h3>Miasto i auto</h3>
-          <p>Dom, studio, sklep, bank, paczkomat i warsztat tuningowy. Pieszo albo autem.</p>
-        </article>
-        <article class="feature reveal">
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-3.5 4-3.5S22 18 22 20"/></svg>
-          </span>
-          <h3>NPC i pracownicy</h3>
-          <p>Mieszkańcy z nickami, kasjer, klienci w kolejce i ekipa do zatrudnienia.</p>
-        </article>
-        <article class="feature reveal">
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M7 11l10-4M7 13l10 4"/></svg>
-          </span>
-          <h3>Multiplayer LAN</h3>
-          <p>Hostujesz świat na porcie 7777, druga osoba wpada przez IP albo Tailscale.</p>
-        </article>
-        <article class="feature reveal">
-          <span class="ico" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
-          </span>
-          <h3>PC + Android</h3>
-          <p>Jeden projekt, dwa buildy. Na telefonie pełny ekran, joystick i przyciski dotykowe.</p>
-        </article>
-      </div>
     </section>
 
     <!-- ============================ GALERIA ============================ -->
     <section class="section wrap" id="galeria">
       <div class="section-head reveal">
-        <p class="eyebrow">04 — z builda</p>
-        <h2>Tak to dziś wygląda</h2>
+        <p class="kicker">Galeria</p>
+        <h2>Zrzuty z aktualnego builda</h2>
+        <p class="lede">Bez renderów i konceptów. To są prawdziwe ekrany z gry.</p>
       </div>
+
       <div class="gallery">
-        <button class="shot span-7 reveal" data-full="assets/screen-menu.png" aria-label="Powiększ: menu główne">
-          <img src="assets/screen-menu.png" alt="Menu główne gry z logo i wyborem trybu" loading="lazy" width="1280" height="960">
-          <span class="shot-cap"><b>Menu</b><span>start i zapisy</span></span>
+        <button class="shot reveal" data-src="assets/alpha-city.png" aria-label="Powiększ: miasto w dzień">
+          <img src="assets/alpha-city.png" alt="Miasto w dzień" loading="lazy" width="1280" height="960">
+          <span>Miasto · dzień</span>
         </button>
-        <button class="shot span-5 reveal" data-full="assets/screen-studio.png" aria-label="Powiększ: wybór studia">
-          <img src="assets/screen-studio.png" alt="Ekran wyboru studia" loading="lazy" width="1280" height="960">
-          <span class="shot-cap"><b>Studio</b><span>cztery starty</span></span>
+        <button class="shot reveal" data-src="assets/alpha-night.png" aria-label="Powiększ: miasto w nocy">
+          <img src="assets/alpha-night.png" alt="Miasto w nocy" loading="lazy" width="1280" height="960">
+          <span>Miasto · noc</span>
         </button>
-        <button class="shot span-12 reveal" data-full="assets/screen-game.png" aria-label="Powiększ: warsztat">
-          <img src="assets/screen-game.png" alt="Warsztat w grze z otwartym menu pauzy" loading="lazy" width="1280" height="960">
-          <span class="shot-cap"><b>Warsztat</b><span>pauza, HUD, klienci</span></span>
+        <button class="shot reveal" data-src="assets/alpha-casino.png" aria-label="Powiększ: wnętrze kasyna">
+          <img src="assets/alpha-casino.png" alt="Wnętrze kasyna" loading="lazy" width="1280" height="960">
+          <span>Kasyno</span>
+        </button>
+        <button class="shot reveal" data-src="assets/alpha-hospital.png" aria-label="Powiększ: wnętrze szpitala">
+          <img src="assets/alpha-hospital.png" alt="Wnętrze szpitala" loading="lazy" width="1280" height="960">
+          <span>Szpital</span>
+        </button>
+        <button class="shot reveal" data-src="assets/alpha-driving.png" aria-label="Powiększ: widok jazdy">
+          <img src="assets/alpha-driving.png" alt="Widok jazdy z minimapą" loading="lazy" width="1280" height="960">
+          <span>Jazda · F1</span>
+        </button>
+        <button class="shot reveal" data-src="assets/alpha-coop.png" aria-label="Powiększ: wspólna gra">
+          <img src="assets/alpha-coop.png" alt="Wspólna gra i auto innego gracza" loading="lazy" width="1280" height="960">
+          <span>Co-op</span>
         </button>
       </div>
     </section>
 
-    <!-- ============================ STEAM ============================ -->
-    <section class="section wrap" id="steam">
-      <div class="steam-panel reveal">
-        <div class="steam-copy">
-          <p class="eyebrow">05 — meta</p>
-          <h2>Pixel Patch na Steam</h2>
-          <p class="lede">
-            Alpha Computer i Garage Days są już do pobrania. Na Steam trafią w 2027 roku — najpierw karta Steam i demo, potem premiera.</p>
-          <div class="steam-actions">
-            <button class="btn primary" id="wishlist">Dodaj do wishlisty</button>
-            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.exe">Pobierz build PC</a>
-            <a class="btn ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.apk">Pobierz APK</a>
+    <!-- ============================ FAQ ============================ -->
+    <section class="section wrap" id="faq">
+      <div class="section-head reveal">
+        <p class="kicker">FAQ</p>
+        <h2>Najczęstsze pytania</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal">
+          <summary>Czy gra jest darmowa?</summary>
+          <p>Tak. Obecne buildy Alpha Computer i Garage Days są darmowe do pobrania. Przy premierze na Steam planujemy pełną wersję — szczegóły pojawią się na karcie Steam.</p>
+        </details>
+        <details class="reveal">
+          <summary>Czy da się grać we dwójkę?</summary>
+          <p>Tak. W 0.11-alpha jest co-op przez LAN lub Tailscale: wspólny portfel, te same zlecenia, czat i auta innych graczy. Na PC czat otwierasz klawiszem T.</p>
+        </details>
+        <details class="reveal">
+          <summary>Dlaczego APK jest debug?</summary>
+          <p>Bo to buildy testowe z wyzwania, nie sklepowa wersja. Są podpisane kluczem debug i działają na Androidzie 7+ (arm64).</p>
+        </details>
+        <details class="reveal">
+          <summary>Co się dzieje ze starszymi wersjami?</summary>
+          <p>Zostają na GitHub Releases. Możesz pobrać 0.10-alpha albo 0.9.7 i porównać, jak gra wyglądała wcześniej.</p>
+        </details>
+        <details class="reveal">
+          <summary>Jak śledzić postęp?</summary>
+          <p>Liczby na górze strony aktualizują się same: dzień projektu, dni do premiery, wiek builda i zegar. Większe zmiany opisujemy w sekcji Nowości.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============================ POBIERZ ============================ -->
+    <section class="section wrap" id="pobierz">
+      <div class="download-card reveal">
+        <div>
+          <p class="kicker">Pobierz</p>
+          <h2>Zagraj w Alpha Computer 0.11-alpha</h2>
+          <p>
+            Windows 10/11 x64 albo Android 7+ (arm64). Najnowszy build zawiera
+            co-op, pogodę, wnętrza i minimapę. Starsze wersje są niżej.
+          </p>
+          <div class="download-actions">
+            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.11-alpha/PixelPatch.exe">Pobierz na PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.11-alpha/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn btn-text" href="https://github.com/tznsec/PixelPatch/releases" target="_blank" rel="noopener">Wszystkie wydania ↗</a>
           </div>
         </div>
-        <ol class="steam-steps">
-          <li><span>01</span><div><b>Build 1.0</b><small>domknięta pętla dnia i zawartość</small></div></li>
-          <li><span>02</span><div><b>Karta Steam + demo</b><small>wishlisty, trailer, Next Fest</small></div></li>
-          <li><span>03</span><div><b>Premiera</b><small>Windows + Steam Deck</small></div></li>
-        </ol>
+        <div class="download-badge">
+          <span>WYZWANIE</span>
+          <b>365</b>
+          <span>DNI</span>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div class="foot-brand">
-        <img src="assets/logo.png" alt="" width="52" height="52">
-        <div>
-          <b>PIXEL PATCH</b>
-          <small>wersje Alpha Computer / Garage Days</small>
-        </div>
+  <footer class="site-footer wrap">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="" width="36" height="36">
+      <div>
+        <b>PIXEL PATCH</b>
+        <span>projekt TZNsec &amp; K2STUDIO</span>
       </div>
-      <div class="foot-meta">
-        <p>Start: <b>25.10.2026</b> · Premiera: <b>25.10.2027</b></p>
-        <p>Godot 4.7 · PC + Android · <span class="dim">TZNsec &amp; K2STUDIO</span></p>
-      </div>
-      <div class="foot-links">
-        <a href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.exe">Build PC</a>
-        <a href="https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.apk">APK</a>
-        <button class="foot-intro" id="replay-intro" type="button">Intro</button>
-        <a href="https://github.com/tznsec/PixelPatch" target="_blank" rel="noopener">GitHub</a>
-        <a href="#top">Do góry ↑</a>
-      </div>
+    </div>
+    <p>Zrobione po godzinach. Publicznie. Od pierwszego commita do premiery.</p>
+    <div class="footer-links">
+      <a href="https://github.com/tznsec/PixelPatch" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="#wersje">Wersje</a>
+      <a href="#top">Do góry ↑</a>
     </div>
   </footer>
 
-  <!-- lightbox -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększony zrzut" hidden>
-    <button class="lb-close" id="lb-close" aria-label="Zamknij">X</button>
-    <img id="lb-img" src="" alt="">
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Zamknij">×</button>
+    <img id="lightboxImg" src="" alt="">
   </div>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

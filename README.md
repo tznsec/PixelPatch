@@ -1,40 +1,48 @@
 # Pixel Patch: Alpha Computer
 
-Pixel-artowy symulator serwisu komputerowego. **Alpha Computer** to najnowsza wersja gry; starsza **Garage Days** wciąż jest dostępna.
+Pixel-artowy symulator serwisu komputerowego. **Alpha Computer** to najnowsza wersja gry; starsze **Garage Days** i poprzednie buildy zostają online.
 
 - **Strona:** https://tznsec.github.io/PixelPatch/
-- **Alpha Computer (v0.10-alpha):**
+- **Alpha Computer 0.11-alpha:**
+  - PC: https://github.com/tznsec/PixelPatch/releases/download/v0.11-alpha/PixelPatch.exe
+  - Android: https://github.com/tznsec/PixelPatch/releases/download/v0.11-alpha/PixelPatch.apk
+- **Alpha Computer 0.10-alpha:**
   - PC: https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.exe
   - Android: https://github.com/tznsec/PixelPatch/releases/download/v0.10-alpha/PixelPatch.apk
-- **Garage Days (v0.9.7):**
+- **Garage Days 0.9.7:**
   - PC: https://github.com/tznsec/PixelPatch/releases/download/v0.9.7/PixelPatch.exe
   - Android: https://github.com/tznsec/PixelPatch/releases/download/v0.9.7/PixelPatch.apk
 
-## Co nowego w Alpha Computer
+## Wyzwanie
 
-- **Naprawy na telefonie** — dotykowe przyciski W/A/S/D w minigrze sekwencji, reszta napraw klikana.
-- **Pracownicy** — mechanik, sprzedawca i technik; technik sam naprawia komputery, zużywa części i dolicza je do rachunku.
-- **Magazyn z tierami** — części T1/T2/T3; tania część nie naprawi już drogiego podzespołu. Magazyn ma pojemność i ekran sprzedaży.
-- **Większe miasto** — kasyno, kino, siłownia, hotel, pizzeria, myjnia i sklep z meblami; przejścia dla pieszych, auta NPC i rozmowy z przechodniami.
-- **Widok F1** — po wsiadnięciu do auta gra przełącza się na pseudo-3D jazdę: gaz/hamulec, skręt, ruch uliczny i skrzyżowania.
-- **Sportowe auto** — do kupienia w warsztacie; szybsze i z innym wyglądem.
-- **Nieruchomości i meble** — większy lokal (kolejka 4 zleceń), własny dom (sen +35 energii), kupowanie i ustawianie foteli, lamp, dywanów, automatów i plakatów.
-- **Telefon** — nowe aplikacje: bank, sklep, zlecenia, muzyka, mapa i powrót do domu.
-- **Wersja** — menu i boot pokazują `ALPHA COMPUTER`.
+TZNsec i K2STUDIO rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Pixel Patch jest publicznym zapisem tej drogi — kolejne buildy, devlog i liczniki projektu.
+
+## Co nowego w 0.11-alpha
+
+- **Co-op** — wspólny portfel, te same zlecenia, czat `T`, wymiana pieniędzy `E` na innym graczu.
+- **Auta innych graczy** — widoczne w mieście i w widoku jazdy.
+- **Minimapa i budynki** — w widoku F1 widać trasę, przystanki i odległość do najbliższego budynku.
+- **Dzień i noc oraz 4 pory roku** — deszcz, liście, śnieg, światła i zmiana nieba.
+- **Wnętrza kasyna i szpitala** — automaty, ruletka, bar, lekarz, łóżko i apteka.
+- **Zdrowie i potrącenia** — auta mogą potrącić gracza, szpital leczy.
+- **Q do przełączania zleceń** — na PC i przyciskiem na mobile.
+- **Szlif HUD i układu ekranu.**
 
 ## Sterowanie
 
-PC: WASD/strzałki — ruch, Shift — bieg, E — akcja, Tab — ekwipunek, P — telefon, B — warsztat, I — sklep, F — użycie, 1–9 — hotbar, F5/F9 — zapis/odczyt.
+PC: WASD/strzałki — ruch, Shift — bieg, E — akcja, Tab — ekwipunek, P — telefon, B — warsztat, I — sklep, F — użycie, 1–9 — hotbar, Q — zmiana zlecenia, T — czat (multiplayer), F5/F9 — zapis/odczyt.
 
-Android: joystick, TEL / UZYJ / EKWIP. / AKCJA, X w menu, II — pauza, dotyk w minigrach naprawy.
+Android: joystick, TEL / UZYJ / EKWIP. / AKCJA / Q ZLEC. / CZAT, X w menu, II — pauza, dotyk w minigrach naprawy.
 
 ## Struktura
 
 ```
 scripts/main.gd        # gra (proceduralna grafika, UI, minigry, multiplayer)
 scripts/economy.gd     # ekonomia, magazyn, tiery części
+scripts/customer.gd    # klienci i zlecenia
 scripts/computer.gd    # komputery klientów i tiery podzespołów
 scenes/main.tscn       # scena główna
+tests/smoke_test.gd    # testy dymne
 Strona/                # statyczna strona projektu (GitHub Pages)
 ```
 
