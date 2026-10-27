@@ -1,8 +1,11 @@
 # Pixel Patch: Alpha Computer — Snapshot 1
 
-Pixel-artowy symulator serwisu komputerowego. **Snapshot 2** to najnowsza wersja Alpha Computer; starsze buildy zostają online.
+Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.0** to pierwsza stabilna wersja; starsze buildy zostają online.
 
 - **Strona:** https://tznsec.github.io/PixelPatch/
+- **Code & Copper 1.0 (v1.0-code-and-copper):**
+  - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.0-code-and-copper/PixelPatch.exe
+  - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.0-code-and-copper/PixelPatch.apk
 - **Snapshot 2 (v0.13-snapshot2):**
   - PC: https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.exe
   - Android: https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.apk
@@ -20,7 +23,7 @@ Pixel-artowy symulator serwisu komputerowego. **Snapshot 2** to najnowsza wersja
 
 TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeliuszk**. To oni rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Pixel Patch jest publicznym zapisem tej drogi.
 
-## Co nowego w Snapshot 2
+## Co nowego w Code & Copper 1.0
 
 - **Płyta główna w naprawie** — widać PCB, CPU, RAM, GPU, PSU i dysk; aktywny podzespół jest podświetlony.
 - **Jakość naprawy** — combo, błędy i jakość wpływają na bonus do wypłaty.

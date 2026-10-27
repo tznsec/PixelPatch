@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixel Patch — Snapshot 2. Dwóch ziomków, rok, jedna gra</title>
+  <title>Pixel Patch — Code & Copper 1.0. Dwóch ziomków, rok, jedna gra</title>
   <meta name="description" content="Pixel Patch to pixel-artowy symulator serwisu komputerowego. TZNsec i K2STUDIO rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Zobacz devlog, kalkulator FPS i wersje do pobrania.">
   <meta name="theme-color" content="#050a08">
-  <meta property="og:title" content="Pixel Patch — Snapshot 2. Dwóch ziomków, rok, jedna gra">
-  <meta property="og:description" content="Wyzwanie 365 dni: od pustego projektu do premiery na Steam. Pixel-artowy symulator serwisu komputerowego. Pobierz Snapshot 2.">
+  <meta property="og:title" content="Pixel Patch — Code & Copper 1.0. Dwóch ziomków, rok, jedna gra">
+  <meta property="og:description" content="Wyzwanie 365 dni: od pustego projektu do premiery na Steam. Pixel-artowy symulator serwisu komputerowego. Pobierz Code & Copper.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/alpha-coop.png">
   <link rel="icon" href="assets/logo.png" type="image/png">
@@ -21,7 +21,7 @@
     <div class="splash-inner">
       <div class="splash-brand">
         <img src="assets/logo.png" alt="" width="56" height="56">
-        <span class="splash-logo"><b>PIXEL PATCH</b><small>Alpha Computer · Snapshot 2</small></span>
+        <span class="splash-logo"><b>PIXEL PATCH</b><small>Code & Copper · 1.0</small></span>
       </div>
 
       <div class="duo">
@@ -100,7 +100,7 @@
       <img src="assets/logo.png" alt="" width="42" height="42">
       <span>
         <b>PIXEL PATCH</b>
-        <small>Alpha Computer · Snapshot 2</small>
+        <small>Code & Copper · 1.0</small>
       </span>
     </a>
 
@@ -110,6 +110,7 @@
       <a href="#fps">FPS</a>
       <a href="#nowosci">Nowości</a>
       <a href="#wersje">Wersje</a>
+      <a href="#mody">Mody</a>
       <a href="#galeria">Galeria</a>
     </nav>
 
@@ -124,7 +125,7 @@
     <!-- ============================ HERO ============================ -->
     <section class="hero wrap">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span> WYZWANIE 365 DNI · BUILD SNAPSHOT 2</p>
+        <p class="eyebrow"><span class="live-dot"></span> WYZWANIE 365 DNI · STABILNA 1.0</p>
 
         <p class="hero-logo" aria-label="PIXEL PATCH">
           <canvas id="pixelLogo" width="480" height="64" aria-hidden="true">PIXEL PATCH</canvas>
@@ -137,7 +138,7 @@
         <div class="hero-day" style="--d:.68s">
           <span class="live-dot"></span>
           <span>DZIEŃ <b id="hero-day">1</b> Z 365</span>
-          <span class="hero-day-sub">publiczny build Snapshot 2</span>
+          <span class="hero-day-sub">stabilna wersja 1.0</span>
         </div>
 
         <p class="lead" style="--d:.80s">
@@ -149,7 +150,7 @@
         </p>
 
         <div class="hero-actions" style="--d:.92s">
-          <a class="btn btn-primary" href="#pobierz">Pobierz Snapshot 2</a>
+          <a class="btn btn-primary" href="#pobierz">Pobierz Code & Copper</a>
           <a class="btn btn-ghost" href="#o-projekcie">Poznaj projekt</a>
         </div>
 
@@ -370,11 +371,11 @@
     <section class="section wrap" id="nowosci">
       <div class="section-head reveal">
         <p class="kicker">Nowości</p>
-        <h2>Alpha Computer — Snapshot 2</h2>
+        <h2>Code &amp; Copper — 1.0</h2>
         <p class="lede">
-          Snapshot 2 dokłada anty-cheat AC-02, ukryty legalny kod, odświeżony wygląd
-          miasta i panel integralności save’a. Mechaniki z jedynki zostają: płyta główna,
-          skrzyżowania, podatki, umowy i trzy dystrykty.
+          Pierwsza stabilna wersja. Dochodzi anty-autoclicker, kary pieniężne AC,
+          jeden scalony samouczek i system modyfikacji z trzema wbudowanymi modami.
+          Wszystkie mechaniki z poprzednich buildów zostają.
         </p>
       </div>
 
@@ -398,6 +399,12 @@
           <h3>Anty-cheat AC-02</h3>
           <p>Suma kontrolna save’a, skoki kasy, teleporty i anomalie statystyk. Raport i skan w pauzie. Jest też ukryty legalny kod, który AC rozpoznaje jako dozwolony.</p>
           <div class="mini-tags"><span>ANTY-CHEAT</span><span>AC-02</span><span>LEGALNY KOD</span></div>
+        </article>
+
+        <article class="update-card reveal">
+          <h3>Anty-autoclicker</h3>
+          <p>Stałe odstępy klikania podczas naprawy są wykrywane. Efekt: przerwana naprawa, kara 250 ZL i wpis w raporcie AC.</p>
+          <div class="mini-tags"><span>ANTY-AUTOCLICKER</span><span>KARA 250 ZL</span></div>
         </article>
 
         <article class="update-card reveal">
@@ -463,25 +470,41 @@
 
       <div class="versions">
         <article class="version-card version-new reveal">
-          <div class="vc-top"><span class="vc-tag new">NAJNOWSZA</span><span class="vc-ver">v0.13-snapshot2</span></div>
-          <h3>Snapshot 2</h3>
-          <p class="vc-sub">Anty-cheat, ukryty legalny kod i odświeżony wygląd miasta.</p>
+          <div class="vc-top"><span class="vc-tag new">STABILNA 1.0</span><span class="vc-ver">v1.0-code-and-copper</span></div>
+          <h3>Code &amp; Copper</h3>
+          <p class="vc-sub">Pierwsza stabilna wersja: AC, kary, scalony samouczek i mody.</p>
           <ul>
-            <li>Anty-cheat AC-02 i panel integralności w pauzie</li>
-            <li>Ukryty legalny kod na +3000 ZL, raz na zapis</li>
-            <li>Złote efekty aktywacji i animacja kasy</li>
-            <li>Markizy, neonowe szyldy i marker dworca</li>
-            <li>Wszystkie mechaniki ze Snapshotu 1</li>
-            <li>PC + Android, versionCode 6</li>
+            <li>Anty-autoclicker i kara 250 ZL</li>
+            <li>Kary pieniężne za złamanie zasad AC</li>
+            <li>Jeden samouczek 17 kroków</li>
+            <li>3 wbudowane mody + mody lokalne</li>
+            <li>Wszystkie mechaniki ze Snapshotu 2</li>
+            <li>PC + Android, versionCode 8</li>
           </ul>
           <div class="vc-actions">
-            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.exe">Pobierz PC</a>
-            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v1.0-code-and-copper/PixelPatch.exe">Pobierz PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v1.0-code-and-copper/PixelPatch.apk">Pobierz APK</a>
           </div>
         </article>
 
         <article class="version-card reveal">
-          <div class="vc-top"><span class="vc-tag">POPRZEDNIA</span><span class="vc-ver">v0.12-snapshot1</span></div>
+          <div class="vc-top"><span class="vc-tag">POPRZEDNIA</span><span class="vc-ver">v0.13-snapshot2</span></div>
+          <h3>Snapshot 2</h3>
+          <p class="vc-sub">Anty-cheat, ukryty legalny kod i odświeżony wygląd miasta.</p>
+          <ul>
+            <li>Anty-cheat AC-02 i panel integralności</li>
+            <li>Ukryty legalny kod na +3000 ZL</li>
+            <li>Markizy, neonowe szyldy i marker dworca</li>
+            <li>PC + Android, versionCode 6</li>
+          </ul>
+          <div class="vc-actions">
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.exe">PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.apk">APK</a>
+          </div>
+        </article>
+
+        <article class="version-card reveal">
+          <div class="vc-top"><span class="vc-tag old">STARSZA</span><span class="vc-ver">v0.12-snapshot1</span></div>
           <h3>Snapshot 1</h3>
           <p class="vc-sub">Mechaniki, miasto i naprawy w jednym dużym skoku.</p>
           <ul>
@@ -548,6 +571,51 @@
         Android: plik APK (debug, arm64, Android 7+). PC: Windows 10/11 x64.
         Buildy są darmowe i będą aktualizowane wraz z kolejnymi etapami wyzwania.
       </p>
+    </section>
+
+    <!-- ============================ MODY ============================ -->
+    <section class="section wrap" id="mody">
+      <div class="section-head reveal">
+        <p class="kicker">Mody</p>
+        <h2>Trzy mody wbudowane. Więcej dodasz lokalnie.</h2>
+        <p class="lede">
+          W grze wejdź w pauzę → <strong>MODYFIKACJE</strong>. Trzy mody są już na liście.
+          Dodatkowy plik JSON dodasz przyciskiem <strong>DODAJ LOKALNĄ</strong>.
+        </p>
+      </div>
+
+      <div class="mods-grid">
+        <article class="mod-card reveal">
+          <div class="mod-top"><span class="mod-tag">WBUDOWANY</span><span class="mod-ver">v1.0</span></div>
+          <h3>NEON OVERDRIVE</h3>
+          <p>Mocniejsze neonowe szyldy i różowy puls miasta.</p>
+          <div class="mod-actions">
+            <a class="btn btn-ghost" href="assets/mods/neon.json" download="neon.json">Pobierz .JSON</a>
+          </div>
+        </article>
+
+        <article class="mod-card reveal">
+          <div class="mod-top"><span class="mod-tag">WBUDOWANY</span><span class="mod-ver">v1.0</span></div>
+          <h3>WINTER FOREVER</h3>
+          <p>Zima na stałe: śnieg, białe dachy i zimne światło.</p>
+          <div class="mod-actions">
+            <a class="btn btn-ghost" href="assets/mods/winter.json" download="winter.json">Pobierz .JSON</a>
+          </div>
+        </article>
+
+        <article class="mod-card reveal">
+          <div class="mod-top"><span class="mod-tag">WBUDOWANY</span><span class="mod-ver">v1.0</span></div>
+          <h3>HARDCORE SERWIS</h3>
+          <p>Krótsze naprawy i wyższe podatki. Dla ludzi z nerwami ze stali.</p>
+          <div class="mod-actions">
+            <a class="btn btn-ghost" href="assets/mods/hardcore.json" download="hardcore.json">Pobierz .JSON</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="mods-how reveal">
+        <p><b>JAK DODAĆ MOD:</b> pobierz plik JSON, w grze otwórz pauzę → MODYFIKACJE → DODAJ LOKALNĄ i wskaż plik. Mod pojawi się na liście i zapisze się w <code>user://mods</code>.</p>
+      </div>
     </section>
 
     <!-- ============================ GALERIA ============================ -->
@@ -619,7 +687,7 @@
         </details>
         <details class="reveal">
           <summary>Czy da się grać we dwójkę?</summary>
-          <p>Tak. W Snapshot 2 jest co-op przez LAN lub Tailscale: wspólny portfel, te same zlecenia, czat i auta innych graczy. Na PC czat otwierasz klawiszem T.</p>
+          <p>Tak. W Code & Copper jest co-op przez LAN lub Tailscale: wspólny portfel, te same zlecenia, czat i auta innych graczy. Na PC czat otwierasz klawiszem T.</p>
         </details>
         <details class="reveal">
           <summary>Dlaczego APK jest debug?</summary>
@@ -627,7 +695,7 @@
         </details>
         <details class="reveal">
           <summary>Co się dzieje ze starszymi wersjami?</summary>
-          <p>Zostają na GitHub Releases. Możesz pobrać 0.11-alpha, 0.10-alpha albo 0.9.7 i porównać, jak gra wyglądała wcześniej.</p>
+          <p>Zostają na GitHub Releases. Możesz pobrać Snapshot 2, Snapshot 1, 0.11-alpha, 0.10-alpha albo 0.9.7 i porównać, jak gra wyglądała wcześniej.</p>
         </details>
         <details class="reveal">
           <summary>Jak śledzić postęp?</summary>
@@ -641,14 +709,14 @@
       <div class="download-card reveal">
         <div>
           <p class="kicker">Pobierz</p>
-          <h2>Zagraj w Alpha Computer — Snapshot 2</h2>
+          <h2>Zagraj w Pixel Patch — Code & Copper 1.0</h2>
           <p>
-            Windows 10/11 x64 albo Android 7+ (arm64). Snapshot 2 zawiera anty-cheat, ukryty kod, płytę główną,
+            Windows 10/11 x64 albo Android 7+ (arm64). Code & Copper 1.0 zawiera anty-cheat, anty-autoclicker, kary, mody i płytę główną,
             skrzyżowania, podatki, umowy i trzy dystrykty. Starsze wersje są niżej.
           </p>
           <div class="download-actions">
-            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.exe">Pobierz na PC</a>
-            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v1.0-code-and-copper/PixelPatch.exe">Pobierz na PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v1.0-code-and-copper/PixelPatch.apk">Pobierz APK</a>
             <a class="btn btn-text" href="https://github.com/tznsec/PixelPatch/releases" target="_blank" rel="noopener">Wszystkie wydania ↗</a>
           </div>
         </div>
