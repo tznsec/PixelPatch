@@ -186,7 +186,7 @@
   brand.addEventListener("click", function (event) {
     clicks += 1;
     window.clearTimeout(resetTimer);
-    resetTimer = window.setTimeout(function () { clicks = 0; }, 1600);
+    resetTimer = window.setTimeout(function () { clicks = 0; }, 2600);
     if (clicks >= 6) {
       clicks = 0;
       window.clearTimeout(resetTimer);
