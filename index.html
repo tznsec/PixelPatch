@@ -7,7 +7,7 @@
   <meta name="description" content="Pixel Patch to pixel-artowy symulator serwisu komputerowego. TZNsec i K2STUDIO rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Zobacz devlog, wersje do pobrania i plan roku.">
   <meta name="theme-color" content="#050a08">
   <meta property="og:title" content="Pixel Patch — Snapshot 1. Dwóch ziomków, rok, jedna gra">
-  <meta property="og:description" content="Wyzwanie 365 dni: od pustego projektu do premiery na Steam. Pixel-artowy symulator serwisu komputerowego. Pobierz Snapshot 1.">
+  <meta property="og:description" content="Wyzwanie 365 dni: od pustego projektu do premiery na Steam. Pixel-artowy symulator serwisu komputerowego. Pobierz Snapshot 2.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/alpha-coop.png">
   <link rel="icon" href="assets/logo.png" type="image/png">
@@ -21,7 +21,7 @@
     <div class="splash-inner">
       <div class="splash-brand">
         <img src="assets/logo.png" alt="" width="56" height="56">
-        <span class="splash-logo"><b>PIXEL PATCH</b><small>Alpha Computer · Snapshot 1</small></span>
+        <span class="splash-logo"><b>PIXEL PATCH</b><small>Alpha Computer · Snapshot 2</small></span>
       </div>
 
       <div class="duo">
@@ -100,7 +100,7 @@
       <img src="assets/logo.png" alt="" width="42" height="42">
       <span>
         <b>PIXEL PATCH</b>
-        <small>Alpha Computer · Snapshot 1</small>
+        <small>Alpha Computer · Snapshot 2</small>
       </span>
     </a>
 
@@ -123,7 +123,7 @@
     <!-- ============================ HERO ============================ -->
     <section class="hero wrap">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span> WYZWANIE 365 DNI · BUILD SNAPSHOT 1</p>
+        <p class="eyebrow"><span class="live-dot"></span> WYZWANIE 365 DNI · BUILD SNAPSHOT 2</p>
 
         <p class="hero-logo" aria-label="PIXEL PATCH">
           <canvas id="pixelLogo" width="480" height="64" aria-hidden="true">PIXEL PATCH</canvas>
@@ -136,7 +136,7 @@
         <div class="hero-day" style="--d:.68s">
           <span class="live-dot"></span>
           <span>DZIEŃ <b id="hero-day">1</b> Z 365</span>
-          <span class="hero-day-sub">publiczny build Snapshot 1</span>
+          <span class="hero-day-sub">publiczny build Snapshot 2</span>
         </div>
 
         <p class="lead" style="--d:.80s">
@@ -148,7 +148,7 @@
         </p>
 
         <div class="hero-actions" style="--d:.92s">
-          <a class="btn btn-primary" href="#pobierz">Pobierz Snapshot 1</a>
+          <a class="btn btn-primary" href="#pobierz">Pobierz Snapshot 2</a>
           <a class="btn btn-ghost" href="#o-projekcie">Poznaj projekt</a>
         </div>
 
@@ -291,11 +291,11 @@
     <section class="section wrap" id="nowosci">
       <div class="section-head reveal">
         <p class="kicker">Nowości</p>
-        <h2>Alpha Computer — Snapshot 1</h2>
+        <h2>Alpha Computer — Snapshot 2</h2>
         <p class="lede">
-          Największy skok mechanik od początku projektu. Płyta główna w naprawie,
-          prawdziwe skrzyżowania, podatki, umowy z podpisami i trzy dystrykty miasta.
-          Do tego późny poradnik i klient, który potrafi odrzucić zbyt droga ofertę.
+          Snapshot 2 dokłada anty-cheat AC-02, ukryty legalny kod, odświeżony wygląd
+          miasta i panel integralności save’a. Mechaniki z jedynki zostają: płyta główna,
+          skrzyżowania, podatki, umowy i trzy dystrykty.
         </p>
       </div>
 
@@ -313,6 +313,12 @@
               Przy innym graczu <kbd>E</kbd> otwiera wymianę pieniędzy.
             </p>
           </div>
+        </article>
+
+        <article class="update-card reveal">
+          <h3>Anty-cheat AC-02</h3>
+          <p>Suma kontrolna save’a, skoki kasy, teleporty i anomalie statystyk. Raport i skan w pauzie. Jest też ukryty legalny kod, który AC rozpoznaje jako dozwolony.</p>
+          <div class="mini-tags"><span>ANTY-CHEAT</span><span>AC-02</span><span>LEGALNY KOD</span></div>
         </article>
 
         <article class="update-card reveal">
@@ -378,25 +384,41 @@
 
       <div class="versions">
         <article class="version-card version-new reveal">
-          <div class="vc-top"><span class="vc-tag new">NAJNOWSZA</span><span class="vc-ver">v0.12-snapshot1</span></div>
-          <h3>Snapshot 1</h3>
-          <p class="vc-sub">Mechaniki, miasto i naprawy w jednym dużym skoku.</p>
+          <div class="vc-top"><span class="vc-tag new">NAJNOWSZA</span><span class="vc-ver">v0.13-snapshot2</span></div>
+          <h3>Snapshot 2</h3>
+          <p class="vc-sub">Anty-cheat, ukryty legalny kod i odświeżony wygląd miasta.</p>
           <ul>
-            <li>Płyta główna, części, jakość i combo w naprawie</li>
-            <li>Skrzyżowania, pasy i prawy pas jazdy</li>
-            <li>Podatki, bank i umowy z podpisami</li>
-            <li>Późny poradnik krok po kroku</li>
-            <li>Trzy dystrykty: Centrum, Port, Stare Miasto</li>
-            <li>Klienci mogą odrzucić ofertę</li>
+            <li>Anty-cheat AC-02 i panel integralności w pauzie</li>
+            <li>Ukryty legalny kod na +3000 ZL, raz na zapis</li>
+            <li>Złote efekty aktywacji i animacja kasy</li>
+            <li>Markizy, neonowe szyldy i marker dworca</li>
+            <li>Wszystkie mechaniki ze Snapshotu 1</li>
+            <li>PC + Android, versionCode 6</li>
           </ul>
           <div class="vc-actions">
-            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.12-snapshot1/PixelPatch.exe">Pobierz PC</a>
-            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.12-snapshot1/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.exe">Pobierz PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.apk">Pobierz APK</a>
           </div>
         </article>
 
         <article class="version-card reveal">
-          <div class="vc-top"><span class="vc-tag">POPRZEDNIA</span><span class="vc-ver">v0.11-alpha</span></div>
+          <div class="vc-top"><span class="vc-tag">POPRZEDNIA</span><span class="vc-ver">v0.12-snapshot1</span></div>
+          <h3>Snapshot 1</h3>
+          <p class="vc-sub">Mechaniki, miasto i naprawy w jednym dużym skoku.</p>
+          <ul>
+            <li>Płyta główna, części, jakość i combo</li>
+            <li>Skrzyżowania, pasy i prawy pas jazdy</li>
+            <li>Podatki, bank i umowy z podpisami</li>
+            <li>Trzy dystrykty i późny poradnik</li>
+          </ul>
+          <div class="vc-actions">
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.12-snapshot1/PixelPatch.exe">PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.12-snapshot1/PixelPatch.apk">APK</a>
+          </div>
+        </article>
+
+        <article class="version-card reveal">
+          <div class="vc-top"><span class="vc-tag old">STARSZA</span><span class="vc-ver">v0.11-alpha</span></div>
           <h3>Alpha Computer</h3>
           <p class="vc-sub">Co-op, pogoda, wnętrza, minimapa i zdrowie.</p>
           <ul>
@@ -462,6 +484,14 @@
           <img src="assets/alpha-coop.png" alt="Wspólna gra i auto innego gracza" loading="lazy" width="1280" height="960">
           <span>Co-op · V0idVex i Kormeliuszk</span>
         </button>
+        <button class="shot reveal" data-src="assets/snapshot2-anticheat.png" aria-label="Powiększ: panel anty-cheat">
+          <img src="assets/snapshot2-anticheat.png" alt="Panel anty-cheat AC-02" loading="lazy" width="1280" height="960">
+          <span>Anty-cheat AC-02</span>
+        </button>
+        <button class="shot reveal" data-src="assets/snapshot2-cheat.png" aria-label="Powiększ: legalny kod">
+          <img src="assets/snapshot2-cheat.png" alt="Efekt legalnego kodu +3000 ZL" loading="lazy" width="1280" height="960">
+          <span>Legalny kod · +3000 ZL</span>
+        </button>
         <button class="shot reveal" data-src="assets/snapshot-repair.png" aria-label="Powiększ: płyta główna w naprawie">
           <img src="assets/snapshot-repair.png" alt="Płyta główna i części w naprawie" loading="lazy" width="1280" height="960">
           <span>Naprawa · płyta główna</span>
@@ -510,7 +540,7 @@
         </details>
         <details class="reveal">
           <summary>Czy da się grać we dwójkę?</summary>
-          <p>Tak. W Snapshot 1 jest co-op przez LAN lub Tailscale: wspólny portfel, te same zlecenia, czat i auta innych graczy. Na PC czat otwierasz klawiszem T.</p>
+          <p>Tak. W Snapshot 2 jest co-op przez LAN lub Tailscale: wspólny portfel, te same zlecenia, czat i auta innych graczy. Na PC czat otwierasz klawiszem T.</p>
         </details>
         <details class="reveal">
           <summary>Dlaczego APK jest debug?</summary>
@@ -532,14 +562,14 @@
       <div class="download-card reveal">
         <div>
           <p class="kicker">Pobierz</p>
-          <h2>Zagraj w Alpha Computer — Snapshot 1</h2>
+          <h2>Zagraj w Alpha Computer — Snapshot 2</h2>
           <p>
-            Windows 10/11 x64 albo Android 7+ (arm64). Snapshot 1 zawiera płytę główną,
+            Windows 10/11 x64 albo Android 7+ (arm64). Snapshot 2 zawiera anty-cheat, ukryty kod, płytę główną,
             skrzyżowania, podatki, umowy i trzy dystrykty. Starsze wersje są niżej.
           </p>
           <div class="download-actions">
-            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.12-snapshot1/PixelPatch.exe">Pobierz na PC</a>
-            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.12-snapshot1/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.exe">Pobierz na PC</a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v0.13-snapshot2/PixelPatch.apk">Pobierz APK</a>
             <a class="btn btn-text" href="https://github.com/tznsec/PixelPatch/releases" target="_blank" rel="noopener">Wszystkie wydania ↗</a>
           </div>
         </div>

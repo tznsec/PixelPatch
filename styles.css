@@ -1329,3 +1329,10 @@ body.intro-open { overflow: hidden; }
 /* canvas assembly: nie ukrywaj nag??wk?w, animacja dzieje si? w canvasie */
 .hero-logo { opacity: 1; animation: none; }
 .hero-title { opacity: 1; animation: none; }
+
+
+/* Snapshot 2: najnowsza karta na całą szerokość */
+@media (min-width: 900px) {
+  .version-new { grid-column: 1 / -1; }
+  .version-new ul { columns: 2; column-gap: 28px; }
+}

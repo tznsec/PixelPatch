@@ -6,7 +6,7 @@
   const splash = document.getElementById("splash");
   const splashSkip = document.getElementById("splash-skip");
   const replayIntro = document.getElementById("replay-intro");
-  const INTRO_KEY = "pixel_patch_intro_12";
+  const INTRO_KEY = "pixel_patch_intro_13";
   let introTimers = [];
   let heroStarted = false;
 
