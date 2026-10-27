@@ -1527,3 +1527,129 @@ body.intro-open { overflow: hidden; }
 @media (min-width: 900px) {
   .versions .version-card:last-child { grid-column: 1 / -1; }
 }
+
+
+/* ------------------------------------------------------------ Halloween easter egg */
+body.halloween-mode {
+  --bg: #070208;
+  --bg-2: #12040c;
+  --panel: #190713;
+  --panel-2: #230a1a;
+  --panel-3: #2c0d1e;
+  --line: #4a1833;
+  --line-2: #7a2944;
+  --mint: #ff9d2e;
+  --mint-2: #ff6a00;
+  --mint-dim: #8d3b12;
+  --amber: #ffd36b;
+  --cyan: #c879ff;
+  --red: #ff5c5c;
+  --text: #fff1de;
+  --dim: #d8ac8e;
+  --dim-2: #aa7b67;
+}
+body.halloween-mode::before {
+  background:
+    radial-gradient(900px 560px at 78% -10%, rgba(255, 106, 0, 0.14), transparent 64%),
+    radial-gradient(800px 520px at 6% 10%, rgba(170, 70, 255, 0.10), transparent 62%),
+    linear-gradient(180deg, #15050e 0%, #09030a 48%, #050106 100%);
+}
+body.halloween-mode::after {
+  background-image:
+    linear-gradient(rgba(255, 157, 46, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 121, 255, 0.035) 1px, transparent 1px);
+}
+body.halloween-mode .site-header {
+  background: rgba(9, 2, 8, 0.78);
+  border-bottom-color: var(--line);
+}
+body.halloween-mode .site-header.scrolled { background: rgba(9, 2, 8, 0.96); }
+body.halloween-mode .brand img {
+  filter: drop-shadow(0 0 9px rgba(255, 106, 0, 0.55)) saturate(1.3);
+}
+body.halloween-mode .hero-logo {
+  text-shadow: 4px 4px 0 #000, 0 0 42px rgba(255, 106, 0, 0.30);
+}
+body.halloween-mode .hero-logo canvas,
+body.halloween-mode .hero-title canvas {
+  filter: hue-rotate(-112deg) saturate(1.35) drop-shadow(0 0 22px rgba(255, 106, 0, 0.28));
+}
+body.halloween-mode .hero-title span.mint { color: var(--amber); }
+body.halloween-mode .hero-logo span:last-child { color: var(--mint); }
+body.halloween-mode .section-head h2,
+body.halloween-mode .download-card h2,
+body.halloween-mode .cd-head h2 { color: #ffd9ae; }
+body.halloween-mode .version-new {
+  border-color: #8d3b12;
+  box-shadow: 0 0 0 1px rgba(255, 157, 46, 0.18), 0 24px 80px rgba(70, 0, 20, 0.55);
+}
+body.halloween-mode .version-new::before {
+  background: radial-gradient(320px 160px at 92% 0%, rgba(255, 106, 0, 0.18), transparent 70%);
+}
+body.halloween-mode .game-frame,
+body.halloween-mode .fps-widget,
+body.halloween-mode .download-card {
+  box-shadow: 0 0 0 1px rgba(255, 157, 46, 0.10), 0 24px 80px rgba(50, 0, 15, 0.65);
+}
+body.halloween-mode .btn-primary {
+  background: linear-gradient(180deg, #ffb347, #ff7a00);
+  color: #1a0800;
+  border-color: #ffb347;
+}
+body.halloween-mode .status-strip span,
+body.halloween-mode .fps-score span { color: var(--mint); }
+
+.halloween-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: none;
+  pointer-events: none;
+  overflow: hidden;
+}
+body.halloween-mode .halloween-layer { display: block; }
+.h-decor {
+  position: absolute;
+  filter: drop-shadow(0 0 14px rgba(255, 106, 0, 0.35));
+  opacity: 0.75;
+  animation: halloween-float 9s ease-in-out infinite alternate;
+}
+@keyframes halloween-float {
+  0% { transform: translate3d(0, 0, 0) rotate(-5deg); }
+  50% { transform: translate3d(18px, -26px, 0) rotate(7deg); }
+  100% { transform: translate3d(-12px, 16px, 0) rotate(-2deg); }
+}
+.halloween-badge {
+  display: none;
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 70;
+  padding: 9px 12px;
+  border: 1px solid #8d3b12;
+  background: rgba(12, 3, 9, 0.94);
+  color: #ffd9ae;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+body.halloween-mode .halloween-badge { display: block; }
+.halloween-badge:hover { border-color: #ff9d2e; color: #fff; }
+.halloween-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 58px;
+  z-index: 71;
+  transform: translate(-50%, 16px);
+  opacity: 0;
+  pointer-events: none;
+  padding: 8px 12px;
+  border: 1px solid #8d3b12;
+  background: rgba(12, 3, 9, 0.95);
+  color: #ffd9ae;
+  font-family: var(--mono);
+  font-size: 10px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.halloween-toast.show { opacity: 1; transform: translate(-50%, 0); }
