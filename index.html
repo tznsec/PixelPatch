@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixel Patch — Snapshot 1. Dwóch ziomków, rok, jedna gra</title>
-  <meta name="description" content="Pixel Patch to pixel-artowy symulator serwisu komputerowego. TZNsec i K2STUDIO rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Zobacz devlog, wersje do pobrania i plan roku.">
+  <title>Pixel Patch — Snapshot 2. Dwóch ziomków, rok, jedna gra</title>
+  <meta name="description" content="Pixel Patch to pixel-artowy symulator serwisu komputerowego. TZNsec i K2STUDIO rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Zobacz devlog, kalkulator FPS i wersje do pobrania.">
   <meta name="theme-color" content="#050a08">
-  <meta property="og:title" content="Pixel Patch — Snapshot 1. Dwóch ziomków, rok, jedna gra">
+  <meta property="og:title" content="Pixel Patch — Snapshot 2. Dwóch ziomków, rok, jedna gra">
   <meta property="og:description" content="Wyzwanie 365 dni: od pustego projektu do premiery na Steam. Pixel-artowy symulator serwisu komputerowego. Pobierz Snapshot 2.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/alpha-coop.png">
@@ -107,6 +107,7 @@
     <nav class="nav" id="nav" aria-label="Nawigacja">
       <a href="#o-projekcie">O projekcie</a>
       <a href="#gra">Gra</a>
+      <a href="#fps">FPS</a>
       <a href="#nowosci">Nowości</a>
       <a href="#wersje">Wersje</a>
       <a href="#galeria">Galeria</a>
@@ -285,6 +286,84 @@
           </article>
         </div>
       </div>
+    </section>
+
+    <!-- ============================ KALKULATOR FPS ============================ -->
+    <section class="section wrap" id="fps">
+      <div class="section-head reveal">
+        <p class="kicker">Kalkulator FPS</p>
+        <h2>Ile FPS-ów wyciśnie Twój sprzęt?</h2>
+        <p class="lede">
+          Wybierz podzespoły i sprawdź szacunkową płynność Pixel Patch. Gra renderuje
+          w 640×480 i skaluje obraz, więc najbardziej liczą się procesor i karta graficzna.
+        </p>
+      </div>
+
+      <div class="fps-widget reveal">
+        <form class="fps-form" id="fpsForm">
+          <label>Procesor
+            <select id="fpsCpu">
+              <option value="celeron" data-score="10">Celeron / stary 2-rdzeniowy</option>
+              <option value="i3" data-score="38" selected>Intel i3 / Ryzen 3 (4 rdzenie)</option>
+              <option value="i5" data-score="62">Intel i5 / Ryzen 5 (6 rdzeni)</option>
+              <option value="i7" data-score="82">Intel i7 / Ryzen 7 (8+ rdzeni)</option>
+              <option value="i9" data-score="100">Intel i9 / Ryzen 9 (16+ rdzeni)</option>
+            </select>
+          </label>
+
+          <label>Karta graficzna
+            <select id="fpsGpu">
+              <option value="igpu" data-score="12">Zintegrowana (Intel HD / Vega 8)</option>
+              <option value="1050" data-score="35" selected>GTX 1050 / RX 560</option>
+              <option value="1660" data-score="58">GTX 1660 / RX 580</option>
+              <option value="3060" data-score="82">RTX 3060 / RX 6600</option>
+              <option value="4070" data-score="100">RTX 4070 / RX 7800 XT i wyżej</option>
+            </select>
+          </label>
+
+          <label>Pamięć RAM
+            <select id="fpsRam">
+              <option value="4" data-score="0">4 GB</option>
+              <option value="8" data-score="6" selected>8 GB</option>
+              <option value="16" data-score="12">16 GB</option>
+              <option value="32" data-score="16">32 GB lub więcej</option>
+            </select>
+          </label>
+
+          <label>Rozdzielczość
+            <select id="fpsRes">
+              <option value="720" data-penalty="0" selected>1280 × 720</option>
+              <option value="1080" data-penalty="4">1920 × 1080</option>
+              <option value="1440" data-penalty="12">2560 × 1440</option>
+              <option value="2160" data-penalty="24">3840 × 2160 (4K)</option>
+            </select>
+          </label>
+
+          <label class="fps-check">
+            <input type="checkbox" id="fpsVsync" checked>
+            <span>Ograniczenie VSync 60 FPS</span>
+          </label>
+
+          <button class="btn btn-primary fps-button" type="button" id="fpsCalc">Przelicz FPS</button>
+        </form>
+
+        <div class="fps-result" aria-live="polite">
+          <div class="fps-topline">
+            <span class="fps-mini">SZACOWANY WYNIK</span>
+            <span class="fps-badge" id="fpsBadge">VSync</span>
+          </div>
+          <div class="fps-score"><span id="fpsValue">60</span><small>FPS</small></div>
+          <div class="fps-bar"><span id="fpsBar"></span></div>
+          <p class="fps-label" id="fpsLabel">Płynnie</p>
+          <p class="fps-detail" id="fpsDetail">Wybierz podzespoły, żeby zobaczyć wynik.</p>
+          <p class="fps-limit" id="fpsLimit"></p>
+        </div>
+      </div>
+
+      <p class="fps-note reveal">
+        To szacunek oparty na typowych przedziałach sprzętowych, nie benchmark.
+        Rzeczywisty FPS zależy od tła w systemie, sterowników i ustawień gry.
+      </p>
     </section>
 
     <!-- ============================ NOWOŚCI ============================ -->

@@ -141,4 +141,124 @@
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape" && lightbox && !lightbox.hidden) closeLightbox();
   });
+
+  // ------------------------------------------------------------ kalkulator FPS
+  const fpsForm = document.getElementById("fpsForm");
+  if (fpsForm) {
+    const fpsCpu = document.getElementById("fpsCpu");
+    const fpsGpu = document.getElementById("fpsGpu");
+    const fpsRam = document.getElementById("fpsRam");
+    const fpsRes = document.getElementById("fpsRes");
+    const fpsVsync = document.getElementById("fpsVsync");
+    const fpsValue = document.getElementById("fpsValue");
+    const fpsBar = document.getElementById("fpsBar");
+    const fpsLabel = document.getElementById("fpsLabel");
+    const fpsDetail = document.getElementById("fpsDetail");
+    const fpsLimit = document.getElementById("fpsLimit");
+    const fpsBadge = document.getElementById("fpsBadge");
+    const fpsResult = document.querySelector(".fps-result");
+    const FPS_STORAGE = "pixel_patch_fps_v1";
+
+    const num = (el) => Number(el && el.selectedOptions && el.selectedOptions[0] ? el.selectedOptions[0].dataset.score : 0) || 0;
+    const penalty = () => Number(fpsRes && fpsRes.selectedOptions[0] ? fpsRes.selectedOptions[0].dataset.penalty : 0) || 0;
+    const selectedText = (el) => el && el.selectedOptions[0] ? el.selectedOptions[0].textContent.trim() : "";
+
+    function calculateFps(animate) {
+      const cpu = num(fpsCpu);
+      const gpu = num(fpsGpu);
+      const ram = num(fpsRam);
+      const raw = Math.max(12, Math.round(16 + cpu * 1.1 + gpu * 0.65 + ram * 0.8 - penalty()));
+      const vsync = !fpsVsync || fpsVsync.checked;
+      const shown = vsync ? Math.min(60, raw) : raw;
+
+      let label = "Płynnie";
+      let badge = "BARDZO PŁYNNIE";
+      let cls = "good";
+      if (raw < 30) {
+        label = "Za mało mocy";
+        badge = "NISKO";
+        cls = "bad";
+      } else if (raw < 45) {
+        label = "Grywalnie, ale mogą być spadki";
+        badge = "GRYWALNIE";
+        cls = "warn";
+      } else if (raw < 60) {
+        label = "Blisko pełnej płynności";
+        badge = "OK";
+        cls = "warn";
+      } else if (raw < 100) {
+        label = "Płynnie";
+        badge = "PŁYNNIE";
+        cls = "good";
+      } else {
+        label = "Bardzo płynnie — duży zapas";
+        badge = "BARDZO PŁYNNIE";
+        cls = "good";
+      }
+
+      const cpuPart = cpu * 1.1;
+      const gpuPart = gpu * 0.65;
+      let bottleneck = "Zbalansowany";
+      if (cpuPart < gpuPart * 0.55) bottleneck = "CPU";
+      else if (gpuPart < cpuPart * 0.45) bottleneck = "GPU";
+
+      if (fpsValue) fpsValue.textContent = String(shown);
+      if (fpsLabel) fpsLabel.textContent = label;
+      if (fpsBadge) {
+        fpsBadge.textContent = badge;
+        fpsBadge.className = "fps-badge " + cls;
+      }
+      if (fpsBar) {
+        fpsBar.style.width = Math.max(5, Math.min(100, (shown / 120) * 100)) + "%";
+        fpsBar.style.background = raw < 30 ? "var(--red)" : (raw < 60 ? "var(--amber)" : "var(--mint)");
+      }
+      if (fpsValue) fpsValue.style.color = raw < 30 ? "var(--red)" : (raw < 60 ? "var(--amber)" : "var(--mint)");
+      if (fpsDetail) {
+        fpsDetail.textContent = selectedText(fpsCpu) + " · " + selectedText(fpsGpu) + " · " +
+          selectedText(fpsRam) + " RAM · " + selectedText(fpsRes) + " · wąskie gardło: " + bottleneck;
+      }
+      if (fpsLimit) {
+        fpsLimit.textContent = raw < 60
+          ? "VSync nie obniża wyniku — bez limitu ok. " + raw + " FPS."
+          : (vsync ? "VSync: max 60 FPS · bez limitu ok. " + raw + " FPS." : "Bez limitu · VSync 60 FPS.");
+      }
+      if (animate && fpsResult) {
+        fpsResult.classList.remove("pop");
+        void fpsResult.offsetWidth;
+        fpsResult.classList.add("pop");
+      }
+    }
+
+    function saveFps() {
+      try {
+        localStorage.setItem(FPS_STORAGE, JSON.stringify({
+          cpu: fpsCpu.value, gpu: fpsGpu.value, ram: fpsRam.value,
+          res: fpsRes.value, vsync: !!(fpsVsync && fpsVsync.checked),
+        }));
+      } catch (_) { /* ignore */ }
+    }
+
+    function restoreFps() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(FPS_STORAGE) || "{}");
+        if (saved.cpu) fpsCpu.value = saved.cpu;
+        if (saved.gpu) fpsGpu.value = saved.gpu;
+        if (saved.ram) fpsRam.value = saved.ram;
+        if (saved.res) fpsRes.value = saved.res;
+        if (fpsVsync && typeof saved.vsync === "boolean") fpsVsync.checked = saved.vsync;
+      } catch (_) { /* ignore */ }
+    }
+
+    [fpsCpu, fpsGpu, fpsRam, fpsRes].forEach(function (sel) {
+      if (!sel) return;
+      sel.addEventListener("change", function () { saveFps(); calculateFps(true); });
+    });
+    if (fpsVsync) fpsVsync.addEventListener("change", function () { saveFps(); calculateFps(true); });
+    const fpsCalc = document.getElementById("fpsCalc");
+    if (fpsCalc) fpsCalc.addEventListener("click", function () { saveFps(); calculateFps(true); });
+
+    restoreFps();
+    calculateFps(false);
+  }
+
 })();
