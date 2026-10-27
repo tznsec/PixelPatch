@@ -167,7 +167,7 @@
   function startMusic() {
     const ctx = getCtx();
     if (!ctx) return;
-    if (ctx.state === "suspended") ctx.resume();
+    if (ctx.state === "suspended") ctx.resume().catch(function () {});
     if (musicTimer) window.clearTimeout(musicTimer);
     scheduleLoop();
   }
@@ -176,7 +176,7 @@
     if (musicTimer) window.clearTimeout(musicTimer);
     musicTimer = null;
     if (audioCtx) {
-      audioCtx.close();
+      audioCtx.close().catch(function () {});
       audioCtx = null;
       master = null;
       noiseBuffer = null;
