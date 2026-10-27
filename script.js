@@ -28,7 +28,7 @@
   // ------------------------------------------------------------ odliczanie
   const START = new Date(2026, 9, 25, 0, 0, 0); // 25.10.2026
   const END = new Date(2027, 9, 25, 0, 0, 0);   // 25.10.2027
-  const BUILD_DATE = new Date(2026, 9, 26, 0, 0, 0); // build 0.11-alpha
+  const BUILD_DATE = new Date(2026, 9, 27, 0, 0, 0); // build Snapshot 1
 
   const cdD = document.getElementById("cd-d");
   const cdH = document.getElementById("cd-h");
