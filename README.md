@@ -1,4 +1,4 @@
-# Pixel Patch: Alpha Computer — Snapshot 1
+# Pixel Patch: Code & Copper 1.0
 
 Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.0** to pierwsza stabilna wersja; starsze buildy zostają online.
 
@@ -29,11 +29,19 @@ TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeli
 - **Jakość naprawy** — combo, błędy i jakość wpływają na bonus do wypłaty.
 - **Skrzyżowania i pasy** — drogi poprzeczne, przejścia, sygnalizacja i poprawne pasy ruchu.
 - **Auto na pasie** — prawy pas, zawracanie `R` / `A-D` przy hamowaniu, efekty szybkiej jazdy.
-- **Późny poradnik** — po pierwszym zleceniu prowadzi krok po kroku przez recepcję, warsztat, części, umowę i podatek.
+- **Samouczek 17 kroków** — jeden poradnik prowadzi od pierwszej naprawy przez warsztat, części, umowę i podatek.
 - **Podatki i bank** — cotygodniowy podatek, termin i kara; płatność w banku.
 - **Umowy z podpisami** — każda skończona naprawa tworzy umowę z kwotą, jakością i podpisem.
 - **Trzy dystrykty** — Centrum, Port i Stare Miasto; zmiana na dworcu.
 - **Klienci mogą odrzucić ofertę** — zbyt agresywna cena może zakończyć negocjację.
+- **Anty-cheat AC-02** — suma kontrolna save’a, skoki kasy, teleporty i anomalie statystyk; raport i skan w pauzie.
+- **Anty-autoclicker** — stałe odstępy klikania podczas naprawy kończą się karą 250 ZL i wpisem w raporcie AC.
+- **Trzy wbudowane mody** — NEON OVERDRIVE, WINTER FOREVER i HARDCORE SERWIS; własny plik JSON dodasz przez „DODAJ LOKALNĄ”.
+- **Co-op** — LAN lub Tailscale, wspólny portfel, czat `T` i wymiana pieniędzy `E` przy innym graczu.
+
+## Strona
+
+Strona projektu ma zielony motyw warsztatu, animowaną scenę CRT z dniem i nocą, voxelowe miasto 3D renderowane w WebGL (Three.js), kalkulator FPS, galerię z lightboxem, sekcję modów i animowane pobieranie.
 
 ## Sterowanie
 
