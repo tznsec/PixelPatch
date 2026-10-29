@@ -23,7 +23,7 @@
     layer.className = "halloween-layer";
     layer.setAttribute("aria-hidden", "true");
     const items = [
-      { icon: "🎃", x: "6%", y: "18%", size: 44, dur: 9, delay: 0 },
+      { icon: "🎃", x: "2%", y: "42%", size: 44, dur: 9, delay: 0 },
       { icon: "🎃", x: "88%", y: "64%", size: 34, dur: 11, delay: 1.2 },
       { icon: "🦇", x: "14%", y: "72%", size: 28, dur: 8, delay: 0.4 },
       { icon: "🦇", x: "72%", y: "14%", size: 22, dur: 10, delay: 0.9 },

@@ -46,15 +46,15 @@
     c.imageSmoothingEnabled = false;
 
     const segments = [
-      { text: "PIXEL ", color: "#e7f3ec" },
-      { text: "PATCH", color: "#5cffa5" },
+      { text: "PIXEL ", color: "#edf7ea" },
+      { text: "PATCH", color: "#7ad696" },
     ];
     const full = segments.map(function (s) { return s.text; }).join("");
     const size = fitFont(c, full, canvas.width - 18, 42);
     c.font = size + 'px "Press Start 2P", monospace';
     c.textBaseline = "alphabetic";
     const total = segments.reduce(function (sum, seg) { return sum + c.measureText(seg.text).width; }, 0);
-    let x = (canvas.width - total) / 2;
+    let x = 0;
     const baseline = Math.round(canvas.height * 0.73);
     segments.forEach(function (seg) {
       c.fillStyle = seg.color;
@@ -78,19 +78,19 @@
     c.imageSmoothingEnabled = false;
 
     const lines = [
-      { text: "DWÓCH", color: "#e7f3ec" },
-      { text: "ZIOMKÓW.", color: "#e7f3ec" },
-      { text: "ROK.", color: "#5cffa5" },
-      { text: "JEDNA GRA.", color: "#e7f3ec" },
+      { text: "DWÓCH", color: "#edf7ea" },
+      { text: "ZIOMKÓW.", color: "#edf7ea" },
+      { text: "ROK.", color: "#7ad696" },
+      { text: "JEDNA GRA.", color: "#edf7ea" },
     ];
-    c.font = '23px "Press Start 2P", monospace';
+    c.font = '38px "Press Start 2P", monospace';
     c.textBaseline = "alphabetic";
-    c.textAlign = "center";
-    const lineH = 42;
-    const startY = 34;
+    c.textAlign = "left";
+    const lineH = 66;
+    const startY = 46;
     lines.forEach(function (line, i) {
       c.fillStyle = line.color;
-      c.fillText(line.text, canvas.width / 2, startY + i * lineH);
+      c.fillText(line.text, 4, startY + i * lineH);
     });
     animatePixels(canvas, off, 7, 29);
   }
@@ -129,7 +129,7 @@
         y: Math.floor(rnd() * h),
         s: 1 + Math.floor(rnd() * 2),
         start: rnd() * 0.55,
-        color: rnd() > 0.55 ? "#5cffa5" : "#e7f3ec",
+        color: rnd() > 0.55 ? "#7ad696" : "#edf7ea",
       });
     }
 

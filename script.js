@@ -109,10 +109,12 @@
   const lightboxClose = document.getElementById("lightboxClose");
   const shots = document.querySelectorAll(".shot");
 
-  function openLightbox(src, alt) {
+  function openLightbox(src, alt, caption) {
     if (!lightbox || !lightboxImg) return;
     lightboxImg.src = src;
     lightboxImg.alt = alt || "";
+    const cap = document.getElementById("lightboxCap");
+    if (cap) cap.textContent = caption || alt || "";
     lightbox.hidden = false;
     document.body.style.overflow = "hidden";
     if (lightboxClose) lightboxClose.focus();
@@ -128,7 +130,8 @@
   shots.forEach(function (shot) {
     shot.addEventListener("click", function () {
       const img = shot.querySelector("img");
-      openLightbox(shot.dataset.src, img ? img.alt : "");
+      const label = shot.querySelector("span");
+      openLightbox(shot.dataset.src, img ? img.alt : "", label ? label.textContent : "");
     });
   });
 
@@ -156,7 +159,7 @@
     const fpsDetail = document.getElementById("fpsDetail");
     const fpsLimit = document.getElementById("fpsLimit");
     const fpsBadge = document.getElementById("fpsBadge");
-    const fpsResult = document.querySelector(".fps-result");
+    const fpsResult = document.querySelector(".bench-result");
     const FPS_STORAGE = "pixel_patch_fps_v1";
 
     const num = (el) => Number(el && el.selectedOptions && el.selectedOptions[0] ? el.selectedOptions[0].dataset.score : 0) || 0;
@@ -262,3 +265,156 @@
   }
 
 })();
+
+
+/* Odslanianie wiekszych blokow + aktywna sekcja w nawigacji. */
+(function () {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  if (!("IntersectionObserver" in window)) return;
+
+  const blocks = document.querySelectorAll(
+    ".sec-head, .story, .game, .voxel-stage, .bench, .patch-hero, .release-latest, .mods, .gallery, .faq, .download"
+  );
+
+  if (!reduce.matches) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("in");
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.06 });
+
+    blocks.forEach(function (el) {
+      el.classList.add("reveal");
+      io.observe(el);
+    });
+    window.setTimeout(function () {
+      blocks.forEach(function (el) { el.classList.add("in"); });
+    }, 2600);
+  }
+
+  const links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+  const sections = links
+    .map(function (link) {
+      const id = link.getAttribute("href");
+      return id && id.length > 1 ? document.querySelector(id) : null;
+    })
+    .filter(Boolean);
+
+  if (sections.length) {
+    const navIo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        const id = "#" + entry.target.id;
+        links.forEach(function (link) {
+          link.classList.toggle("active", link.getAttribute("href") === id);
+        });
+      });
+    }, { rootMargin: "-42% 0px -50% 0px", threshold: 0 });
+    sections.forEach(function (section) { navIo.observe(section); });
+  }
+})();
+
+/* Galeria: strzalki, licznik, przeciaganie. */
+(function () {
+  const gallery = document.getElementById("gallery");
+  if (!gallery) return;
+  const shots = Array.prototype.slice.call(gallery.querySelectorAll(".shot"));
+  const prev = document.getElementById("galleryPrev");
+  const next = document.getElementById("galleryNext");
+  const index = document.getElementById("galleryIndex");
+  const pad = function (n) { return n < 10 ? "0" + n : String(n); };
+
+  function step() {
+    const first = shots[0];
+    if (!first) return 440;
+    const gap = parseFloat(getComputedStyle(gallery).columnGap || "14") || 14;
+    return first.getBoundingClientRect().width + gap;
+  }
+
+  function sync() {
+    const s = step();
+    const current = Math.min(shots.length, Math.max(1, Math.round(gallery.scrollLeft / s) + 1));
+    if (index) index.textContent = pad(current);
+    if (prev) prev.disabled = gallery.scrollLeft < 8;
+    if (next) next.disabled = gallery.scrollLeft > gallery.scrollWidth - gallery.clientWidth - 8;
+  }
+
+  function setIndexAt(left) {
+    if (!index) return;
+    const s = step();
+    const current = Math.min(shots.length, Math.max(1, Math.round(left / s) + 1));
+    index.textContent = pad(current);
+  }
+
+  function go(dir) {
+    const s = step();
+    const max = Math.max(0, gallery.scrollWidth - gallery.clientWidth);
+    const target = Math.max(0, Math.min(max, gallery.scrollLeft + dir * s));
+    setIndexAt(target);
+    gallery.scrollTo({ left: target, behavior: "smooth" });
+    if (prev) prev.disabled = target < 8;
+    if (next) next.disabled = target > max - 8;
+  }
+
+  if (prev) prev.addEventListener("click", function () { go(-1); });
+  if (next) next.addEventListener("click", function () { go(1); });
+  gallery.addEventListener("scroll", function () {
+    window.clearTimeout(sync._t);
+    sync._t = window.setTimeout(sync, 80);
+  }, { passive: true });
+  gallery.addEventListener("scrollend", sync);
+
+  let down = false, startX = 0, startLeft = 0, moved = false;
+  gallery.addEventListener("pointerdown", function (e) {
+    if (e.pointerType === "touch") return;
+    down = true;
+    moved = false;
+    startX = e.clientX;
+    startLeft = gallery.scrollLeft;
+    gallery.classList.add("dragging");
+  });
+  window.addEventListener("pointermove", function (e) {
+    if (!down) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 5) moved = true;
+    gallery.scrollLeft = startLeft - dx;
+  });
+  window.addEventListener("pointerup", function () {
+    if (!down) return;
+    down = false;
+    gallery.classList.remove("dragging");
+    if (moved) {
+      const guard = function (ev) { ev.stopPropagation(); };
+      gallery.addEventListener("click", guard, { capture: true, once: true });
+    }
+  });
+
+  sync();
+  window.addEventListener("resize", sync);
+})();
+
+/* Delikatny tilt na kartach modow. */
+(function () {
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  document.querySelectorAll(".mod").forEach(function (card) {
+    card.addEventListener("pointermove", function (e) {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.setProperty("--ry", (px * 7).toFixed(2) + "deg");
+      card.style.setProperty("--rx", (-py * 7).toFixed(2) + "deg");
+      card.classList.add("tilting");
+    });
+    card.addEventListener("pointerleave", function () {
+      card.classList.remove("tilting");
+      card.style.removeProperty("--rx");
+      card.style.removeProperty("--ry");
+    });
+  });
+})();
+
