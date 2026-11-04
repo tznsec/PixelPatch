@@ -28,7 +28,7 @@
   // ------------------------------------------------------------ odliczanie
   const START = new Date(2026, 9, 25, 0, 0, 0); // 25.10.2026
   const END = new Date(2027, 9, 25, 0, 0, 0);   // 25.10.2027
-  const BUILD_DATE = new Date(2026, 9, 27, 0, 0, 0); // build Code & Copper 1.0
+  const BUILD_DATE = new Date(2026, 10, 4, 0, 0, 0); // build Code & Copper 1.1 - New Year
 
   const cdD = document.getElementById("cd-d");
   const cdH = document.getElementById("cd-h");
