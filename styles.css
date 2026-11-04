@@ -1635,7 +1635,7 @@ kbd {
 }
 
 /* ---------------------------------------------------------------- mods */
-.mods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.mods { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .mod {
   --mod: var(--copper);
   position: relative;
@@ -1695,10 +1695,10 @@ kbd {
 .mod p { margin-top: 9px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .mod-dl {
   display: flex;
+  margin-top: auto;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin-top: 18px;
   padding-top: 12px;
   border-top: 1px solid var(--line);
   color: var(--mod);
@@ -1800,6 +1800,7 @@ kbd {
   opacity: 0.88;
   transition: opacity 0.2s ease;
 }
+.shot img.shot-wide { aspect-ratio: 16 / 9; }
 .shot:hover img { transform: scale(1.035); filter: brightness(1.08); }
 .shot:hover span { opacity: 1; }
 
@@ -2302,86 +2303,92 @@ kbd {
 .splash.out { opacity: 0; transition: opacity 0.4s ease; }
 body.intro-open { overflow: hidden; }
 
-/* ---------------------------------------------------------------- halloween */
-body.halloween-mode {
-  --ink: #0a0402;
-  --ink-2: #160703;
-  --panel: #1d0a05;
-  --panel-2: #261006;
-  --panel-3: #301508;
-  --line: #5a2410;
-  --line-2: #8a3a14;
-  --line-hot: rgba(255, 157, 46, 0.42);
-  --copper: #ff9d2e;
-  --copper-hot: #ffb347;
-  --copper-deep: #8d3b12;
-  --mint: #ffd36b;
-  --mint-dim: #8d5a12;
-  --cyan: #ff8a52;
-  --amber: #ffd36b;
-  --cream: #fff1de;
-  --text: #f3d9c4;
-  --muted: #d8ac8e;
-  --muted-2: #aa7b67;
+/* ---------------------------------------------------------------- new year */
+body.newyear-mode {
+  --ink: #050912;
+  --ink-2: #081120;
+  --panel: #0b1424;
+  --panel-2: #0f1b30;
+  --panel-3: #14233c;
+  --line: rgba(214, 232, 255, 0.12);
+  --line-2: rgba(214, 232, 255, 0.26);
+  --line-hot: rgba(255, 209, 102, 0.45);
+  --copper: #ffd166;
+  --copper-hot: #ffe9a8;
+  --copper-deep: #a67c1f;
+  --mint: #8fe3ff;
+  --mint-dim: #4b93b0;
+  --cyan: #ffd166;
+  --amber: #ff8a5c;
+  --red: #ff6b6b;
+  --cream: #fff8e7;
+  --text: #e8eef7;
+  --muted: #94a3b8;
+  --muted-2: #6b7a8c;
 }
-body.halloween-mode::before {
+body.newyear-mode::before {
   background:
-    radial-gradient(900px 560px at 78% -10%, rgba(255, 106, 0, 0.18), transparent 64%),
-    radial-gradient(800px 520px at 6% 10%, rgba(255, 60, 0, 0.10), transparent 62%),
-    linear-gradient(180deg, #1a0703 0%, #0a0301 48%, #060201 100%);
+    radial-gradient(900px 560px at 78% -10%, rgba(255, 209, 102, 0.15), transparent 64%),
+    radial-gradient(800px 520px at 6% 10%, rgba(91, 168, 255, 0.12), transparent 62%),
+    radial-gradient(700px 500px at 50% 100%, rgba(255, 107, 107, 0.06), transparent 65%),
+    linear-gradient(180deg, #060b17 0%, #050912 48%, #03060d 100%);
 }
-body.halloween-mode #cityCanvas { filter: hue-rotate(-100deg) saturate(1.3); }
-body.halloween-mode #voxelCity { filter: hue-rotate(-100deg) saturate(1.35) brightness(1.06); }
-body.halloween-mode .hero-wordmark canvas,
-body.halloween-mode .hero-title canvas {
-  filter: hue-rotate(-105deg) saturate(1.35) drop-shadow(0 10px 30px rgba(255, 106, 0, 0.22));
+body.newyear-mode::after {
+  background-image:
+    linear-gradient(rgba(255, 209, 102, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(143, 227, 255, 0.035) 1px, transparent 1px);
 }
-body.halloween-mode .voxel-stage {
+body.newyear-mode .site-header { background: rgba(5, 9, 18, 0.82); border-bottom-color: var(--line); }
+body.newyear-mode .site-header.scrolled { background: rgba(5, 9, 18, 0.96); }
+body.newyear-mode .brand img { filter: drop-shadow(0 0 10px rgba(255, 209, 102, 0.35)); }
+body.newyear-mode .hero-wordmark canvas,
+body.newyear-mode .hero-title canvas { filter: hue-rotate(-75deg) saturate(1.25) drop-shadow(0 10px 30px rgba(255, 209, 102, 0.2)); }
+body.newyear-mode #cityCanvas { filter: hue-rotate(-75deg) saturate(1.3); }
+body.newyear-mode #voxelCity { filter: hue-rotate(-72deg) saturate(1.25) brightness(1.05); }
+body.newyear-mode .voxel-stage {
   background:
-    radial-gradient(600px 260px at 50% 110%, rgba(255, 106, 0, 0.14), transparent 70%),
-    #0e0409;
+    radial-gradient(600px 260px at 50% 110%, rgba(255, 209, 102, 0.14), transparent 70%),
+    #060b17;
 }
-body.halloween-mode .voxel-scanline {
-  background: linear-gradient(180deg, transparent, rgba(255, 157, 46, 0.05), transparent);
+body.newyear-mode .voxel-scanline { background: linear-gradient(180deg, transparent, rgba(255, 209, 102, 0.05), transparent); }
+body.newyear-mode .crt {
+  border-color: #23395b;
+  background: linear-gradient(180deg, #22395c 0%, #14243d 42%, #0b1424 100%);
 }
-body.halloween-mode .crt {
-  border-color: #4a2410;
-  background: linear-gradient(180deg, #3a2418 0%, #241308 42%, #160b05 100%);
+body.newyear-mode .crt-dialog { background: rgba(4, 9, 18, 0.9); border-color: rgba(255, 232, 176, 0.4); }
+body.newyear-mode .crt-district { background: rgba(4, 9, 18, 0.65); }
+body.newyear-mode .crt-sticker { color: #1c1405; }
+body.newyear-mode .btn-primary {
+  background: linear-gradient(180deg, #ffe29a, #e3b449);
+  border-color: #ffe9a8;
+  color: #1c1405;
 }
-body.halloween-mode .crt-dialog { background: rgba(14, 5, 2, 0.88); border-color: rgba(255, 220, 180, 0.34); }
-body.halloween-mode .crt-district { background: rgba(14, 5, 2, 0.6); }
-body.halloween-mode .download {
+body.newyear-mode .btn-primary .btn-meta { border-left-color: rgba(28, 20, 5, 0.3); }
+body.newyear-mode .btn-ghost { --btn-bg: rgba(255, 209, 102, 0.04); }
+body.newyear-mode .btn-ghost:hover { background: rgba(255, 209, 102, 0.09); border-color: rgba(255, 209, 102, 0.45); }
+body.newyear-mode .download {
   background:
-    radial-gradient(700px 340px at 0% 0%, rgba(255, 106, 0, 0.16), transparent 68%),
-    linear-gradient(120deg, rgba(46, 24, 12, 0.94), rgba(12, 5, 2, 0.96));
+    radial-gradient(700px 340px at 0% 0%, rgba(255, 209, 102, 0.16), transparent 68%),
+    radial-gradient(500px 260px at 100% 100%, rgba(91, 168, 255, 0.10), transparent 70%),
+    linear-gradient(120deg, rgba(14, 27, 48, 0.96), rgba(5, 9, 18, 0.98));
 }
-body.halloween-mode .download-card {
-  background: linear-gradient(180deg, rgba(36, 19, 9, 0.98), rgba(12, 5, 2, 0.98));
+body.newyear-mode .download-card { background: linear-gradient(180deg, rgba(15, 27, 48, 0.98), rgba(4, 8, 16, 0.98)); }
+body.newyear-mode .mods-how { background: #050a13; }
+body.newyear-mode .mod-neon { --mod: #ffd166; }
+body.newyear-mode .mod-winter { --mod: #8fe3ff; }
+body.newyear-mode .mod-hardcore { --mod: #ff6b6b; }
+body.newyear-mode .mod-newyear { --mod: #fff0b8; }
+body.newyear-mode .bench,
+body.newyear-mode .release-latest,
+body.newyear-mode .releases,
+body.newyear-mode .patch-hero,
+body.newyear-mode .patch-card,
+body.newyear-mode .patch-list,
+body.newyear-mode .dev-card {
+  box-shadow: inset 0 0 0 1000px rgba(20, 38, 68, 0.45);
 }
-body.halloween-mode .mods-how { background: #0c0502; }
-body.halloween-mode .bench,
-body.halloween-mode .release-latest,
-body.halloween-mode .releases,
-body.halloween-mode .patch-hero,
-body.halloween-mode .patch-card,
-body.halloween-mode .patch-list,
-body.halloween-mode .dev-card {
-  box-shadow: inset 0 0 0 1000px rgba(70, 26, 8, 0.45);
-}
-body.halloween-mode .crt-sticker { color: #2a1507; }
-body.halloween-mode .mod-neon { --mod: #ff9d2e; }
-body.halloween-mode .mod-winter { --mod: #ffd36b; }
-body.halloween-mode .mod-hardcore { --mod: #ff6a00; }
-body.halloween-mode .btn-primary {
-  background: linear-gradient(180deg, #ffb347, #ff7a00);
-  border-color: #ffb347;
-  color: #1a0800;
-}
-body.halloween-mode .btn-ghost { --btn-bg: rgba(255, 157, 46, 0.05); }
-body.halloween-mode .btn-ghost:hover { background: rgba(255, 157, 46, 0.1); border-color: rgba(255, 157, 46, 0.45); }
-body.halloween-mode .btn-primary .btn-meta { border-left-color: rgba(26, 8, 0, 0.28); }
 
-.halloween-layer {
+.newyear-layer {
   position: fixed;
   inset: 0;
   z-index: 30;
@@ -2389,49 +2396,75 @@ body.halloween-mode .btn-primary .btn-meta { border-left-color: rgba(26, 8, 0, 0
   pointer-events: none;
   overflow: hidden;
 }
-body.halloween-mode .halloween-layer { display: block; }
-.h-decor {
+body.newyear-mode .newyear-layer { display: block; }
+.ny-fireworks {
   position: absolute;
-  filter: drop-shadow(0 0 14px rgba(255, 106, 0, 0.35));
-  opacity: 0.75;
-  animation: halloween-float 9s ease-in-out infinite alternate;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  mix-blend-mode: screen;
 }
-@keyframes halloween-float {
-  0% { transform: translate3d(0, 0, 0) rotate(-5deg); }
-  50% { transform: translate3d(18px, -26px, 0) rotate(7deg); }
-  100% { transform: translate3d(-12px, 16px, 0) rotate(-2deg); }
+.ny-snow {
+  position: absolute;
+  top: -8vh;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #f4fbff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.55);
+  animation: ny-snowfall linear infinite;
 }
-.halloween-badge {
+@keyframes ny-snowfall {
+  to { transform: translate3d(18px, 118vh, 0); }
+}
+.ny-decor {
+  position: absolute;
+  color: #ffd166;
+  font-family: var(--font-pixel);
+  letter-spacing: 0.06em;
+  opacity: 0.55;
+  text-shadow: 0 0 18px rgba(255, 209, 102, 0.35);
+  animation: ny-float 10s ease-in-out infinite alternate;
+}
+@keyframes ny-float {
+  0% { transform: translate3d(0, 0, 0) rotate(-3deg); }
+  50% { transform: translate3d(14px, -18px, 0) rotate(3deg); }
+  100% { transform: translate3d(-10px, 12px, 0) rotate(-1deg); }
+}
+.newyear-badge {
   display: none;
   position: fixed;
-  right: 14px; bottom: 14px;
+  right: 14px;
+  bottom: 14px;
   z-index: 130;
   padding: 9px 12px;
-  border: 1px solid #8d3b12;
-  background: rgba(12, 3, 9, 0.94);
-  color: #ffd9ae;
+  border: 1px solid #a67c1f;
+  background: rgba(5, 9, 18, 0.95);
+  color: #ffe9a8;
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.04em;
 }
-body.halloween-mode .halloween-badge { display: block; }
-.halloween-badge:hover { border-color: #ff9d2e; color: #fff; }
-.halloween-toast {
+body.newyear-mode .newyear-badge { display: block; }
+.newyear-badge:hover { border-color: #ffd166; color: #fff; }
+.newyear-toast {
   position: fixed;
-  left: 50%; bottom: 58px;
+  left: 50%;
+  bottom: 58px;
   z-index: 131;
   transform: translate(-50%, 16px);
   opacity: 0;
   pointer-events: none;
   padding: 8px 12px;
-  border: 1px solid #8d3b12;
-  background: rgba(12, 3, 9, 0.95);
-  color: #ffd9ae;
+  border: 1px solid #a67c1f;
+  background: rgba(5, 9, 18, 0.96);
+  color: #ffe9a8;
   font-family: var(--font-mono);
   font-size: 10px;
   transition: opacity 0.2s, transform 0.2s;
 }
-.halloween-toast.show { opacity: 1; transform: translate(-50%, 0); }
+.newyear-toast.show { opacity: 1; transform: translate(-50%, 0); }
 
 /* ---------------------------------------------------------------- responsive */
 @media (max-width: 1080px) {
@@ -2507,7 +2540,7 @@ body.halloween-mode .halloween-badge { display: block; }
   .rr-desc { display: none; }
   .rr-body { padding-left: 88px; grid-template-columns: 1fr; }
 
-  .mods { grid-template-columns: 1fr; }
+  .mods { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .mod h3 { margin-top: 32px; }
   .mod-emblem { top: 30px; }
 
@@ -2524,6 +2557,8 @@ body.halloween-mode .halloween-badge { display: block; }
 
 @media (max-width: 620px) {
   body { font-size: 16px; }
+  .mods { grid-template-columns: 1fr; }
+  .ny-decor { display: none; }
   .hero { padding-top: 88px; }
   .hero-title { margin-left: -2px; }
   .hero-meta div { flex-basis: 46%; border-right: 0; padding-right: 0; margin-right: 0; }

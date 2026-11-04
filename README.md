@@ -1,8 +1,12 @@
-# Pixel Patch: Code & Copper 1.0
+# Pixel Patch: Code & Copper 1.1 — New Year
 
-Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.0** to pierwsza stabilna wersja; starsze buildy zostają online.
+Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.1 — New Year** to najnowsza stabilna wersja; starsze buildy zostają online.
 
 - **Strona:** https://tznsec.github.io/PixelPatch/
+- **Code & Copper 1.1 — New Year (v1.1-new-year):**
+  - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.1-new-year/PixelPatch.exe
+  - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.1-new-year/PixelPatch.apk
+  - Mod Nowy Rok: https://github.com/tznsec/PixelPatch/releases/download/v1.1-new-year/new_year.json
 - **Code & Copper 1.0 (v1.0-code-and-copper):**
   - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.0-code-and-copper/PixelPatch.exe
   - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.0-code-and-copper/PixelPatch.apk
@@ -23,7 +27,20 @@ Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.0** to pierwsza 
 
 TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeliuszk**. To oni rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Pixel Patch jest publicznym zapisem tej drogi.
 
-## Co nowego w Code & Copper 1.0
+## Co nowego w Code & Copper 1.1 — New Year
+
+- **14 osiągnięć** — menu osiągnięć w pauzie, licznik i powiadomienia.
+- **Poziomy serwisu** — reputacja i liczba napraw podnoszą poziom; każdy daje bonus do wypłat.
+- **Dzienny streak** — bonus rośnie z serią dni; 7. dzień odblokowuje osiągnięcie.
+- **Pogoda i prognoza** — deszcz, burza, śnieg, liście i świetliki; mod może wymusić własną pogodę.
+- **Stwory z modów** — Balwan, Prezent i Klausik wędrują po mieście; podejdź i wciśnij `E`.
+- **Auta z modów** — własna prędkość, przyspieszenie i kolor; osobny ekran w garażu.
+- **Muzyka z modów** — styl muzyki z JSON; Nowy Rok dodaje dzwonki i świąteczną melodię.
+- **Tryb Nowy Rok** — fajerwerki, konfetti, girlandy i neon 2027.
+- **F2** — zdjęcie ekranu do `user://screenshots`.
+- **Paginacja modów** — lokalne mody nie znikają po czterech wpisach.
+
+## Baza 1.0
 
 - **Płyta główna w naprawie** — widać PCB, CPU, RAM, GPU, PSU i dysk; aktywny podzespół jest podświetlony.
 - **Jakość naprawy** — combo, błędy i jakość wpływają na bonus do wypłaty.
@@ -36,12 +53,12 @@ TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeli
 - **Klienci mogą odrzucić ofertę** — zbyt agresywna cena może zakończyć negocjację.
 - **Anty-cheat AC-02** — suma kontrolna save’a, skoki kasy, teleporty i anomalie statystyk; raport i skan w pauzie.
 - **Anty-autoclicker** — stałe odstępy klikania podczas naprawy kończą się karą 250 ZL i wpisem w raporcie AC.
-- **Trzy wbudowane mody** — NEON OVERDRIVE, WINTER FOREVER i HARDCORE SERWIS; własny plik JSON dodasz przez „DODAJ LOKALNĄ”.
+- **Cztery wbudowane mody** — NEON OVERDRIVE, WINTER FOREVER, HARDCORE SERWIS i NOWY ROK 2027; własny plik JSON dodasz przez „DODAJ LOKALNĄ”.
 - **Co-op** — LAN lub Tailscale, wspólny portfel, czat `T` i wymiana pieniędzy `E` przy innym graczu.
 
 ## Strona
 
-Strona projektu ma zielony motyw warsztatu, animowaną scenę CRT z dniem i nocą, voxelowe miasto 3D renderowane w WebGL (Three.js), kalkulator FPS, galerię z lightboxem, sekcję modów i animowane pobieranie.
+Strona projektu ma zielony motyw warsztatu, animowaną scenę CRT z dniem i nocą, voxelowe miasto 3D renderowane w WebGL (Three.js), kalkulator FPS, galerię z lightboxem, cztery mody i animowane pobieranie. Sześć kliknięć w logo uruchamia noworoczny easter egg: złoty motyw, śnieg, fajerwerki i muzykę.
 
 ## Sterowanie
 

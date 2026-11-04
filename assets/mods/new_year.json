@@ -1,0 +1,59 @@
+{
+  "id": "new_year",
+  "name": "NOWY ROK 2027",
+  "version": "1.1",
+  "author": "TZNsec",
+  "desc": "Fajerwerki, stwory, sanie i muzyka.",
+  "hidden": false,
+  "weather": { "type": "fireworks" },
+  "music": { "style": "festive", "bpm": 126 },
+  "cars": [
+    {
+      "id": "sleigh",
+      "name": "SANIE 2027",
+      "price": 1800,
+      "speed": 440,
+      "accel": 300,
+      "color": [0.95, 0.78, 0.30],
+      "desc": "Zloty zaprzag z gwiazda na dachu. Prezent od serwisu."
+    },
+    {
+      "id": "countdown",
+      "name": "COUNTDOWN GT",
+      "price": 2600,
+      "speed": 520,
+      "accel": 340,
+      "color": [0.35, 0.66, 1.0],
+      "desc": "Sportowa limuzyna na nocne odliczanie do 2027."
+    }
+  ],
+  "mobs": [
+    {
+      "id": "snowman",
+      "name": "BALWAN",
+      "kind": "snowman",
+      "hp": 3,
+      "reward": 120,
+      "speed": 22,
+      "color": [0.90, 0.96, 1.0]
+    },
+    {
+      "id": "gift",
+      "name": "PREZENT",
+      "kind": "gift",
+      "hp": 2,
+      "reward": 200,
+      "speed": 30,
+      "color": [0.85, 0.20, 0.18]
+    },
+    {
+      "id": "imp",
+      "name": "KLAUSIK",
+      "kind": "imp",
+      "hp": 4,
+      "reward": 180,
+      "speed": 34,
+      "color": [0.60, 0.82, 1.0]
+    }
+  ]
+}
