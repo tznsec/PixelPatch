@@ -4,6 +4,7 @@ Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.2.1 — Hitbox F
 
 - **Strona:** https://tznsec.github.io/PixelPatch/
 - **Code & Copper 1.2.1 — Hitbox Fix (v1.2.1-fix):**
+  - Instalator PC (wybór wersji): https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatchSetup.exe
   - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.exe
   - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.apk
 - **Code & Copper 1.2 — New Life (v1.2-new-life):**
