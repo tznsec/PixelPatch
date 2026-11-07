@@ -1,0 +1,41 @@
+{
+  "id": "city_lights",
+  "name": "CITY LIGHTS",
+  "version": "1.2",
+  "author": "K2STUDIO",
+  "desc": "Deszcz, syntezator i nocne auta. Miasto jak z teledysku.",
+  "hidden": false,
+  "weather": { "type": "rain" },
+  "music": { "style": "synth", "bpm": 118 },
+  "cars": [
+    {
+      "id": "night_rider",
+      "name": "NIGHT RIDER",
+      "price": 2100,
+      "speed": 480,
+      "accel": 310,
+      "color": [0.25, 0.55, 1.0],
+      "desc": "Niebieski coupe do nocnych kursow."
+    }
+  ],
+  "mobs": [
+    {
+      "id": "neon_bug",
+      "name": "NEONOWY ROBAL",
+      "kind": "blob",
+      "hp": 3,
+      "reward": 140,
+      "speed": 36,
+      "color": [0.45, 0.95, 1.0]
+    },
+    {
+      "id": "puddle",
+      "name": "KALUZA",
+      "kind": "gift",
+      "hp": 2,
+      "reward": 90,
+      "speed": 18,
+      "color": [0.30, 0.55, 0.90]
+    }
+  ]
+}

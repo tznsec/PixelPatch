@@ -1,0 +1,41 @@
+{
+  "id": "arcade_rush",
+  "name": "ARCADE RUSH",
+  "version": "1.2",
+  "author": "TZNsec",
+  "desc": "Szybka muzyka, turbo auto i duchy z automatow.",
+  "hidden": false,
+  "weather": { "type": "clear" },
+  "music": { "style": "arcade", "bpm": 142 },
+  "cars": [
+    {
+      "id": "turbo_gt",
+      "name": "TURBO GT",
+      "price": 2400,
+      "speed": 560,
+      "accel": 360,
+      "color": [1.0, 0.35, 0.25],
+      "desc": "Czerwony automat do bicia rekordow."
+    }
+  ],
+  "mobs": [
+    {
+      "id": "pixel_ghost",
+      "name": "PIXEL GHOST",
+      "kind": "imp",
+      "hp": 3,
+      "reward": 160,
+      "speed": 40,
+      "color": [0.95, 0.45, 0.25]
+    },
+    {
+      "id": "coin",
+      "name": "MONETA",
+      "kind": "gift",
+      "hp": 1,
+      "reward": 70,
+      "speed": 28,
+      "color": [1.0, 0.82, 0.25]
+    }
+  ]
+}

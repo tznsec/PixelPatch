@@ -1,8 +1,13 @@
-# Pixel Patch: Code & Copper 1.1 — New Year
+# Pixel Patch: Code & Copper 1.2 — New Life
 
-Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.1 — New Year** to najnowsza stabilna wersja; starsze buildy zostają online.
+Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.2 — New Life** to najnowsza stabilna wersja; starsze buildy zostają online.
 
 - **Strona:** https://tznsec.github.io/PixelPatch/
+- **Code & Copper 1.2 — New Life (v1.2-new-life):**
+  - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.exe
+  - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.apk
+  - Texture pack VGA: https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/vga.json
+  - Texture pack GAME BOY: https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/gameboy.json
 - **Code & Copper 1.1 — New Year (v1.1-new-year):**
   - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.1-new-year/PixelPatch.exe
   - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.1-new-year/PixelPatch.apk
@@ -27,8 +32,14 @@ Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.1 — New Year**
 
 TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeliuszk**. To oni rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Pixel Patch jest publicznym zapisem tej drogi.
 
-## Co nowego w Code & Copper 1.1 — New Year
+## Co nowego w Code & Copper 1.2 — New Life
 
+- **Realistyczne naprawy** — śruby, czyszczenie, pasta, rozsmarowanie i przykręcanie; sekwencja zależy od podzespołu.
+- **5 szaf** po 6 slotów — bez kupowania części w magazynie.
+- **Handlarz Mirek** — wieczorem skupuje zużyte komponenty na ulicy.
+- **Szansa akceptacji ceny** — widoczna przy podnoszeniu ceny przed oddaniem.
+- **Texture packi** — VGA 256 i GAME BOY, własne JSON-y w `user://texturepacks`.
+- **Animacja snu** — powieki zamykają się i otwierają w nowym dniu.
 - **14 osiągnięć** — menu osiągnięć w pauzie, licznik i powiadomienia.
 - **Poziomy serwisu** — reputacja i liczba napraw podnoszą poziom; każdy daje bonus do wypłat.
 - **Dzienny streak** — bonus rośnie z serią dni; 7. dzień odblokowuje osiągnięcie.
@@ -53,7 +64,7 @@ TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeli
 - **Klienci mogą odrzucić ofertę** — zbyt agresywna cena może zakończyć negocjację.
 - **Anty-cheat AC-02** — suma kontrolna save’a, skoki kasy, teleporty i anomalie statystyk; raport i skan w pauzie.
 - **Anty-autoclicker** — stałe odstępy klikania podczas naprawy kończą się karą 250 ZL i wpisem w raporcie AC.
-- **Cztery wbudowane mody** — NEON OVERDRIVE, WINTER FOREVER, HARDCORE SERWIS i NOWY ROK 2027; własny plik JSON dodasz przez „DODAJ LOKALNĄ”.
+- **Sześć wbudowanych modów** — NEON OVERDRIVE, WINTER FOREVER, HARDCORE SERWIS, NOWY ROK 2027, CITY LIGHTS i ARCADE RUSH; własny plik JSON dodasz przez „DODAJ LOKALNĄ”.
 - **Co-op** — LAN lub Tailscale, wspólny portfel, czat `T` i wymiana pieniędzy `E` przy innym graczu.
 
 ## Strona

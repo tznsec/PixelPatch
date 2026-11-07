@@ -1,0 +1,11 @@
+{
+  "id": "gameboy",
+  "name": "GAME BOY",
+  "author": "K2STUDIO",
+  "desc": "Cztery odcienie zieleni, zero koloru i nostalgia malej konsoli.",
+  "saturation": 0.08,
+  "contrast": 1.14,
+  "brightness": 1.04,
+  "posterize": 4,
+  "tint": [0.62, 0.92, 0.48]
+}

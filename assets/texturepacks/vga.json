@@ -1,0 +1,11 @@
+{
+  "id": "vga",
+  "name": "VGA 256",
+  "author": "TZNsec",
+  "desc": "Nasycone kolory, mocny kontrast i 8-stopniowa paleta jak z VGA.",
+  "saturation": 1.45,
+  "contrast": 1.12,
+  "brightness": 1.02,
+  "posterize": 8,
+  "tint": [1.02, 1.0, 0.95]
+}
