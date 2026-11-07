@@ -38,6 +38,8 @@ TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeli
 ## Fix 1.2.1 - Hitbox Fix
 
 - Kursor jest rysowany dokładnie pod prawdziwą myszką (także w naprawie).
+- Górny pasek HUD ma osobne miejsca dla zlecenia, dnia, kasy, REP i AC — nic nie nachodzi.
+- PixelPatch.exe jest podpisany certyfikatem TZNsec (SHA-256 + timestamp).
 - Kliknięcia w naprawie trafiają w śruby, procesor, kable i testy.
 - Auta mają prostokąt kolizji dopasowany do nadwozia.
 - Gracz jest liczony jako sylwetka, nie punkt.
