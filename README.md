@@ -1,8 +1,11 @@
-# Pixel Patch: Code & Copper 1.2 — New Life
+# Pixel Patch: Code & Copper 1.2.1 — Hitbox Fix
 
-Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.2 — New Life** to najnowsza stabilna wersja; starsze buildy zostają online.
+Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.2.1 — Hitbox Fix** to najnowsza stabilna wersja; starsze buildy zostają online.
 
 - **Strona:** https://tznsec.github.io/PixelPatch/
+- **Code & Copper 1.2.1 — Hitbox Fix (v1.2.1-fix):**
+  - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.exe
+  - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.apk
 - **Code & Copper 1.2 — New Life (v1.2-new-life):**
   - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.exe
   - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.apk
@@ -31,6 +34,13 @@ Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.2 — New Life**
 ## Wyzwanie
 
 TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeliuszk**. To oni rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Pixel Patch jest publicznym zapisem tej drogi.
+
+## Fix 1.2.1 — Hitbox Fix
+
+- Kliknięcia w naprawie trafiają w śruby, procesor, kable i testy.
+- Auta mają prostokąt kolizji dopasowany do nadwozia.
+- Gracz jest liczony jako sylwetka, nie punkt.
+- Anty-autoclicker nie karze normalnego odkręcania śrub.
 
 ## Co nowego w Code & Copper 1.2 — New Life
 

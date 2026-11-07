@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pixel Patch — Code &amp; Copper 1.2 — New Life. Dwóch ziomków, rok, jedna gra</title>
+  <title>Pixel Patch — Code &amp; Copper 1.2.1 — Hitbox Fix. Dwóch ziomków, rok, jedna gra</title>
   <meta name="description" content="Pixel Patch to pixel-artowy symulator serwisu komputerowego. TZNsec i K2STUDIO rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Devlog, kalkulator FPS, miasto 3D i wersje do pobrania.">
   <meta name="theme-color" content="#06100b">
-  <meta property="og:title" content="Pixel Patch — Code &amp; Copper 1.2 — New Life. Dwóch ziomków, rok, jedna gra">
-  <meta property="og:description" content="Wyzwanie 365 dni: od pustego projektu do premiery na Steam. Pixel-artowy symulator serwisu komputerowego. Code &amp; Copper 1.2 — New Life do pobrania.">
+  <meta property="og:title" content="Pixel Patch — Code &amp; Copper 1.2.1 — Hitbox Fix. Dwóch ziomków, rok, jedna gra">
+  <meta property="og:description" content="Wyzwanie 365 dni: od pustego projektu do premiery na Steam. Pixel-artowy symulator serwisu komputerowego. Code &amp; Copper 1.2.1 — Hitbox Fix do pobrania.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/alpha-coop.png">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="preload" href="assets/fonts/SpaceGrotesk-700-ext.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/IBMPlexMono-400-ext.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=1.2">
+  <link rel="stylesheet" href="styles.css?v=1.2.1">
 </head>
 <body>
   <a class="skip" href="#main">Przejdź do treści</a>
@@ -23,7 +23,7 @@
     <div class="splash-inner">
       <div class="splash-brand">
         <img src="assets/logo.png" alt="" width="52" height="52">
-        <span class="splash-logo"><b>PIXEL PATCH</b><small>code &amp; copper · 1.2 new life</small></span>
+        <span class="splash-logo"><b>PIXEL PATCH</b><small>code &amp; copper · 1.2.1 hitbox fix</small></span>
       </div>
 
       <div class="duo">
@@ -102,7 +102,7 @@
       <img src="assets/logo.png" alt="" width="38" height="38">
       <span class="brand-text">
         <b>PIXEL PATCH</b>
-        <small>code &amp; copper · 1.2 new life</small>
+        <small>code &amp; copper · 1.2.1 hitbox fix</small>
       </span>
     </a>
 
@@ -156,7 +156,7 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary btn-lg" href="#pobierz">
-              Pobierz New Life 1.2
+              Pobierz Hitbox Fix 1.2.1
               <span class="btn-meta">PC · APK</span>
             </a>
             <a class="btn btn-ghost btn-lg" href="#miasto3d">Zobacz miasto 3D</a>
@@ -197,7 +197,7 @@
               <span class="crt-power">POWER</span>
             </div>
           </div>
-          <div class="crt-sticker" aria-hidden="true">NEW LIFE<br><b>1.2</b></div>
+          <div class="crt-sticker" aria-hidden="true">HITBOX FIX<br><b>1.2.1</b></div>
           <div class="crt-shadow" aria-hidden="true"></div>
         </div>
       </div>
@@ -243,7 +243,7 @@
         <span class="status-sub">cel: Steam 2027</span>
       </div>
       <div class="status-cell">
-        <span class="status-label">wiek builda 1.2</span>
+        <span class="status-label">wiek builda 1.2.1</span>
         <span class="status-value" id="st-build">0</span>
         <span class="status-sub">dni od wydania</span>
       </div>
@@ -566,11 +566,11 @@
       <div class="sec-head">
         <span class="sec-tag">05 / nowości</span>
         <div>
-          <h2>Code &amp; Copper 1.2 — New Life.</h2>
+          <h2>Code &amp; Copper 1.2.1 — Hitbox Fix.</h2>
           <p class="lede">
-            Nowe życie serwisu: realistyczne naprawy krok po kroku, 5 szaf na części,
-            handlarz Mirek, dwa texture packi, animacja zasypiania i sześć modów.
-            Mody nadal mogą dodawać moby, auta, pogodę i muzykę.
+            Fix po 1.2: kliknięcia w naprawie nie są już przechwytywane przez hity tła,
+            auta mają dopasowany prostokąt kolizji, a gracz jest liczony jako
+            sylwetka, nie punkt. Do tego poprawiony anty-autoclicker.
           </p>
         </div>
       </div>
@@ -619,9 +619,9 @@
             <span>10 pozycji</span>
           </div>
           <ul>
-            <li><b>Realistyczne naprawy</b><span>Odkręcanie, czyszczenie, pasta, rozsmarowanie i przykręcanie. Sekwencja zależy od podzespołu i stanu.</span><em>KROK PO KROKU</em></li>
-            <li><b>Diagnoza bez spamu</b><span>Jedno kliknięcie pokazuje stan wszystkich podzespołów. Nie musisz testować każdego po trzy razy.</span><em>1 KLIK</em></li>
-            <li><b>Pięć szaf</b><span>Magazyn to 5 szaf po 6 slotów. Części trafiają tu z dostaw i zleceń.</span><em>30 SLOTÓW</em></li>
+            <li><b>Hitboxy napraw</b><span>Kliknięcia trafiają w śruby, procesor i kable, a nie w ukryte przyciski z tła.</span><em>FIX</em></li>
+            <li><b>Hitbox auta i gracza</b><span>Auto ma prostokąt nadwozia, gracz sylwetkę. Nie ma już trafień z powietrza.</span><em>FIX</em></li>
+            <li><b>Anty-autoclicker</b><span>Normalne odkręcanie czterech śrub nie jest już karane. Autoclicker nadal jest wykrywany.</span><em>FIX</em></li>
             <li><b>Handlarz Mirek</b><span>Wieczorem chodzi po ulicach i skupuje zużyte komponenty. Sprzedasz pojedynczo albo wszystko.</span><em>18:00–2:00</em></li>
             <li><b>Szansa negocjacji</b><span>Przy oddaniu komputera widzisz procent szansy, że klient zaakceptuje podniesioną cenę.</span><em>% SZANSY</em></li>
             <li><b>Texture packi</b><span>VGA 256 i GAME BOY. Przełączasz w USTAWIENIA → TEKSTURY; własny plik JSON w user://texturepacks.</span><em>2 PAKIETY</em></li>
@@ -641,7 +641,7 @@
         <div>
           <h2>Każda wersja zostaje online.</h2>
           <p class="lede">
-            Code &amp; Copper 1.2 — New Life to najnowsza, stabilna gałąź.
+            Code &amp; Copper 1.2.1 — Hitbox Fix to najnowsza, stabilna gałąź.
             Starsze buildy zostają na GitHubie, żeby można było zobaczyć,
             jak gra wyglądała wcześniej — razem z ich wpadkami.
           </p>
@@ -651,26 +651,26 @@
       <article class="release-latest">
         <div class="release-latest-head">
           <div class="release-ver">
-            <span class="release-badge"><i aria-hidden="true"></i> stabilna 1.2</span>
-            <code>v1.2-new-life</code>
+            <span class="release-badge"><i aria-hidden="true"></i> fix 1.2.1</span>
+            <code>v1.2.1-fix</code>
           </div>
           <div class="release-title">
-            <h3>Code &amp; Copper — New Life</h3>
-            <p>Realistyczne naprawy, 5 szaf, Mirek, tekstury i animacja snu.</p>
+            <h3>Code &amp; Copper — Hitbox Fix</h3>
+            <p>Naprawione hitboxy napraw, auta i gracza.</p>
           </div>
           <div class="release-actions">
-            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.exe">Pobierz PC <span>.exe</span></a>
-            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.apk">Pobierz APK</a>
+            <a class="btn btn-primary" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.exe">Pobierz PC <span>.exe</span></a>
+            <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.apk">Pobierz APK</a>
           </div>
         </div>
         <div class="release-body">
           <ul class="release-list-checks">
-            <li>Naprawy krok po kroku: śruby, pasta, rozsmarowanie</li>
-            <li>5 szaf na części i handlarz Mirek</li>
-            <li>Szansa akceptacji ceny przy oddaniu</li>
-            <li>2 texture packi do przełączenia w menu</li>
-            <li>6 modów i nowe auta/stwory</li>
-            <li>PC + Android, versionCode 10</li>
+            <li>Kliknięcia w naprawie nie gubią się</li>
+            <li>Hitbox auta dopasowany do nadwozia</li>
+            <li>Gracz liczony jako sylwetka</li>
+            <li>Anty-autoclicker bez fałszywych kar</li>
+            <li>Poprawione śruby, pasta, kable i test</li>
+            <li>PC + Android, versionCode 11</li>
           </ul>
           <dl class="release-specs">
             <div><dt>Windows</dt><dd>10 / 11 · x64</dd></div>
@@ -682,6 +682,28 @@
       </article>
 
       <div class="releases">
+        <details class="release-row">
+          <summary>
+            <span class="rr-ver">v1.2</span>
+            <span class="rr-name">Code &amp; Copper — New Life</span>
+            <span class="rr-tag">poprzednia</span>
+            <span class="rr-desc">Realistyczne naprawy, 5 szaf, Mirek i tekstury.</span>
+            <span class="rr-chev" aria-hidden="true"></span>
+          </summary>
+          <div class="rr-body">
+            <ul>
+              <li>Naprawy krok po kroku i 5 szaf</li>
+              <li>Handlarz Mirek i szansa ceny</li>
+              <li>2 texture packi i animacja snu</li>
+              <li>PC + Android, versionCode 10</li>
+            </ul>
+            <div class="rr-actions">
+              <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.exe">PC .exe</a>
+              <a class="btn btn-ghost" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.apk">APK</a>
+            </div>
+          </div>
+        </details>
+
         <details class="release-row">
           <summary>
             <span class="rr-ver">v1.1</span>
@@ -862,7 +884,7 @@
           <div class="mod-head"><span class="mod-tag">wbudowany</span><span class="mod-ver">v1.0</span></div>
           <h3>NEON OVERDRIVE</h3>
           <p>Mocniejsze neonowe szyldy i różowy puls miasta.</p>
-          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/neon.json" download="neon.json">
+          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/neon.json" download="neon.json">
             <span>pobierz .json</span><i aria-hidden="true">↓</i>
           </a>
         </article>
@@ -872,7 +894,7 @@
           <div class="mod-head"><span class="mod-tag">wbudowany</span><span class="mod-ver">v1.0</span></div>
           <h3>WINTER FOREVER</h3>
           <p>Zima na stałe: śnieg, białe dachy i zimne światło.</p>
-          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/winter.json" download="winter.json">
+          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/winter.json" download="winter.json">
             <span>pobierz .json</span><i aria-hidden="true">↓</i>
           </a>
         </article>
@@ -882,7 +904,7 @@
           <div class="mod-head"><span class="mod-tag">wbudowany</span><span class="mod-ver">v1.0</span></div>
           <h3>HARDCORE SERWIS</h3>
           <p>Krótsze naprawy i wyższe podatki. Dla ludzi z nerwami ze stali.</p>
-          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/hardcore.json" download="hardcore.json">
+          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/hardcore.json" download="hardcore.json">
             <span>pobierz .json</span><i aria-hidden="true">↓</i>
           </a>
         </article>
@@ -892,7 +914,7 @@
           <div class="mod-head"><span class="mod-tag">wbudowany</span><span class="mod-ver">v1.1</span></div>
           <h3>NOWY ROK 2027</h3>
           <p>Fajerwerki, 3 stwory, 2 auta i świąteczna muzyka. Noworoczny event w mieście.</p>
-          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/new_year.json" download="new_year.json">
+          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/new_year.json" download="new_year.json">
             <span>pobierz .json</span><i aria-hidden="true">↓</i>
           </a>
         </article>
@@ -902,7 +924,7 @@
           <div class="mod-head"><span class="mod-tag">wbudowany</span><span class="mod-ver">v1.2</span></div>
           <h3>CITY LIGHTS</h3>
           <p>Deszcz, syntezator i nocne auto. Miasto jak z teledysku.</p>
-          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/city_lights.json" download="city_lights.json">
+          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/city_lights.json" download="city_lights.json">
             <span>pobierz .json</span><i aria-hidden="true">↓</i>
           </a>
         </article>
@@ -912,7 +934,7 @@
           <div class="mod-head"><span class="mod-tag">wbudowany</span><span class="mod-ver">v1.2</span></div>
           <h3>ARCADE RUSH</h3>
           <p>Szybka muzyka, turbo auto i duchy z automatów.</p>
-          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/arcade_rush.json" download="arcade_rush.json">
+          <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/arcade_rush.json" download="arcade_rush.json">
             <span>pobierz .json</span><i aria-hidden="true">↓</i>
           </a>
         </article>
@@ -947,7 +969,7 @@
             <span class="tex-num">01</span>
             <h3>VGA 256</h3>
             <p>Nasycone kolory, mocny kontrast i 8-stopniowa paleta jak z VGA.</p>
-            <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/vga.json" download="vga.json">
+            <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/vga.json" download="vga.json">
               <span>pobierz .json</span><i aria-hidden="true">↓</i>
             </a>
           </div>
@@ -959,7 +981,7 @@
             <span class="tex-num">02</span>
             <h3>GAME BOY</h3>
             <p>Cztery odcienie zieleni, zero koloru i nostalgia małej konsoli.</p>
-            <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/gameboy.json" download="gameboy.json">
+            <a class="mod-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/gameboy.json" download="gameboy.json">
               <span>pobierz .json</span><i aria-hidden="true">↓</i>
             </a>
           </div>
@@ -1075,7 +1097,7 @@
       <div class="faq">
         <details>
           <summary>Czy gra jest darmowa?</summary>
-          <p>Tak. Code &amp; Copper 1.2 — New Life, Code &amp; Copper 1.1, Code &amp; Copper 1.0, Snapshot 2, Snapshot 1 i Garage Days są darmowe do pobrania. Przy premierze na Steam planujemy pełną wersję — szczegóły pojawią się na karcie Steam.</p>
+          <p>Tak. Code &amp; Copper 1.2.1 — Hitbox Fix, Code &amp; Copper 1.1, Code &amp; Copper 1.0, Snapshot 2, Snapshot 1 i Garage Days są darmowe do pobrania. Przy premierze na Steam planujemy pełną wersję — szczegóły pojawią się na karcie Steam.</p>
         </details>
         <details>
           <summary>Czy da się grać we dwójkę?</summary>
@@ -1120,16 +1142,15 @@
           <span class="sec-tag">11 / pobierz</span>
           <h2>Zagraj teraz.<br>Zobacz, co będzie dalej.</h2>
           <p>
-            Windows 10/11 x64 albo Android 7+ (arm64). Code &amp; Copper 1.2 —
-            New Life dodaje realistyczne naprawy, 5 szaf, Mirka, tekstury,
-            animację snu i sześć modów.
+            Windows 10/11 x64 albo Android 7+ (arm64). Code &amp; Copper 1.2.1 — Hitbox Fix poprawia kliknięcia w naprawach,
+            kolizje aut i sylwetkę gracza. Baza 1.2 zostaje bez zmian.
           </p>
           <div class="download-actions">
-            <a class="btn btn-primary btn-lg btn-sheen" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.exe">
+            <a class="btn btn-primary btn-lg btn-sheen" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.exe">
               Pobierz na PC
               <span class="btn-meta">108 MB · .exe</span>
             </a>
-            <a class="btn btn-ghost btn-lg btn-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2-new-life/PixelPatch.apk">
+            <a class="btn btn-ghost btn-lg btn-dl" href="https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.apk">
               <span class="dl-ico" aria-hidden="true">↓</span>
               Pobierz APK
               <span class="btn-meta">28 MB · arm64</span>
@@ -1145,12 +1166,12 @@
           <div class="dc-top"><span>release</span><span class="dc-online"><i></i>online</span></div>
           <div class="dc-logo">
             <img src="assets/logo.png" alt="" width="72" height="72">
-            <b>1.2</b>
+            <b>1.2.1</b>
           </div>
-          <p>new life</p>
+          <p>hitbox fix</p>
           <ul>
             <li><span>platformy</span><b>PC · APK</b></li>
-            <li><span>versionCode</span><b>10</b></li>
+            <li><span>versionCode</span><b>11</b></li>
             <li><span>build</span><b>07.11.2026</b></li>
             <li><span>cena</span><b>0 ZL</b></li>
           </ul>
@@ -1166,13 +1187,13 @@
           <div class="download-strip-track">
             <span>Windows 10 / 11 x64</span><i>◆</i>
             <span>Android 7+ · arm64</span><i>◆</i>
-            <span>versionCode 10</span><i>◆</i>
+            <span>versionCode 11</span><i>◆</i>
             <span>6 modów</span><i>◆</i>
             <span>2 texture packi</span><i>◆</i>
             <span>GitHub Releases</span><i>◆</i>
             <span>Windows 10 / 11 x64</span><i>◆</i>
             <span>Android 7+ · arm64</span><i>◆</i>
-            <span>versionCode 10</span><i>◆</i>
+            <span>versionCode 11</span><i>◆</i>
             <span>6 modów</span><i>◆</i>
             <span>2 texture packi</span><i>◆</i>
             <span>GitHub Releases</span><i>◆</i>
@@ -1196,9 +1217,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Pixel Patch · Code &amp; Copper 1.2 — New Life</span>
+      <span>© 2026 Pixel Patch · Code &amp; Copper 1.2.1 — Hitbox Fix</span>
       <button class="footer-replay" id="replay-intro" type="button">Odtwórz intro</button>
-      <span class="footer-build">build 1.2 · versionCode 10</span>
+      <span class="footer-build">build 1.2.1 · versionCode 11</span>
     </div>
   </footer>
 
@@ -1208,10 +1229,10 @@
     <p class="lightbox-cap" id="lightboxCap"></p>
   </div>
 
-  <script src="script.js?v=1.2" defer></script>
-  <script src="pixel-intro.js?v=1.2" defer></script>
-  <script src="newyear.js?v=1.2" defer></script>
-  <script src="city-scene.js?v=1.2" defer></script>
-  <script type="module" src="voxel-city.js?v=1.2"></script>
+  <script src="script.js?v=1.2.1" defer></script>
+  <script src="pixel-intro.js?v=1.2.1" defer></script>
+  <script src="newyear.js?v=1.2.1" defer></script>
+  <script src="city-scene.js?v=1.2.1" defer></script>
+  <script type="module" src="voxel-city.js?v=1.2.1"></script>
 </body>
 </html>
