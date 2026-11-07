@@ -35,8 +35,9 @@ Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.2.1 — Hitbox F
 
 TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeliuszk**. To oni rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Pixel Patch jest publicznym zapisem tej drogi.
 
-## Fix 1.2.1 — Hitbox Fix
+## Fix 1.2.1 - Hitbox Fix
 
+- Kursor jest rysowany dokładnie pod prawdziwą myszką (także w naprawie).
 - Kliknięcia w naprawie trafiają w śruby, procesor, kable i testy.
 - Auta mają prostokąt kolizji dopasowany do nadwozia.
 - Gracz jest liczony jako sylwetka, nie punkt.
