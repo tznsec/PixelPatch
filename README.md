@@ -39,6 +39,7 @@ TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeli
 
 - Kursor jest rysowany dokładnie pod prawdziwą myszką (także w naprawie).
 - Górny pasek HUD ma osobne miejsca dla zlecenia, dnia, kasy, REP i AC — nic nie nachodzi.
+- Nowe wydanie startuje bez modów i bez texture packa (CZYSTA).
 - PixelPatch.exe jest podpisany certyfikatem TZNsec (SHA-256 + timestamp).
 - Kliknięcia w naprawie trafiają w śruby, procesor, kable i testy.
 - Auta mają prostokąt kolizji dopasowany do nadwozia.
