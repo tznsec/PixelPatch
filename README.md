@@ -1,8 +1,12 @@
-# Pixel Patch: Code & Copper 1.2.1 — Hitbox Fix
+# Pixel Patch: Code & Copper 1.3 — Historia i Montaż
 
-Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.2.1 — Hitbox Fix** to najnowsza stabilna wersja; starsze buildy zostają online.
+Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.3 — Historia i Montaż** to najnowsza stabilna wersja; starsze buildy zostają online.
 
 - **Strona:** https://tznsec.github.io/PixelPatch/
+- **Code & Copper 1.3 — Historia i Montaż (v1.3-story-build):**
+  - Instalator PC (wybór wersji): https://github.com/tznsec/PixelPatch/releases/download/v1.3-story-build/PixelPatchSetup.exe
+  - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.3-story-build/PixelPatch.exe
+  - Android: https://github.com/tznsec/PixelPatch/releases/download/v1.3-story-build/PixelPatch.apk
 - **Code & Copper 1.2.1 — Hitbox Fix (v1.2.1-fix):**
   - Instalator PC (wybór wersji): https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatchSetup.exe
   - PC: https://github.com/tznsec/PixelPatch/releases/download/v1.2.1-fix/PixelPatch.exe
@@ -35,6 +39,17 @@ Pixel-artowy symulator serwisu komputerowego. **Code & Copper 1.2.1 — Hitbox F
 ## Wyzwanie
 
 TZNsec i K2STUDIO wybrały po jednym przedstawicielu — **V0idVex** i **Kormeliuszk**. To oni rzucili sobie wyzwanie: w 365 dni zrobić grę od zera i doprowadzić ją do premiery na Steam. Pixel Patch jest publicznym zapisem tej drogi.
+
+## Nowe w 1.3 — Historia i Montaż
+
+- **Fabuła RPG** — 7 scen z dialogami pisanymi na żywo, portretami i wyborami.
+- **Dziennik / poradnik** — klawisz J: sekwencje napraw, porady, licznik napraw i zakładka fabuły.
+- **Konfigurator PC** — składanie na zamówienie z kontrolą socketu, DDR i mocy zasilacza.
+- **Marketing** — ulotki, social media, radio spot i sponsoring.
+- **Radio w aucie** — PIXEL FM, COPPER WAVE i NIGHT SHIFT (M, [ ]).
+- **Lutowanie / reballing** — nowy minigame w GPU i płycie głównej.
+- **4 nowe osiągnięcia** — Architekt, Montażysta, Reballing i Złoty Śrubokręt (18 razem).
+- Poprawki z 1.2.1: kursor, HUD, hitboxy i czysty start bez modów.
 
 ## Fix 1.2.1 - Hitbox Fix
 
